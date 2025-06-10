@@ -31,3 +31,7 @@
 *.exe
 *.out
 *.app
+
+build/
+advisor_reports/
+.vscode/
