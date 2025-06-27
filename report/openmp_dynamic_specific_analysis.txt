@@ -1,0 +1,113 @@
+=== OpenMP Dynamic Scheduling Performance Analysis ===
+Generated: Fri 27 Jun 18:29:27 CEST 2025
+Configurations Tested:
+- 1000x1000 resolution, 1000 iterations
+- 2000x2000 resolution, 1000 iterations
+- 3000x3000 resolution, 1000 iterations
+- 1000x1000 resolution, 3000 iterations
+- 1000x1000 resolution, 5000 iterations
+
+Thread counts: 64 32 24 16 8 4 2 1
+Runs per configuration: 3
+Timing: High-precision nanosecond timing (best of 3 runs)
+Compiler: Intel C Compiler (icc) with -qopenmp
+Scheduling: OpenMP dynamic scheduling
+
+=== Performance Results by Configuration ===
+
+--- Resolution 1000x1000, Iterations 1000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+2       | 6724.932  | 6.724932  | 1.968   | 90.0         
+4       | 3439.033  | 3.439033  | 3.849   | 90.0         
+8       | 1822.279  | 1.822279  | 7.265   | 90.0         
+1       | 13239.425 | 13.239425 | .999    | 90.0         
+16      | 1150.071  | 1.150071  | 11.511  | 70.0         
+24      | 1066.787  | 1.066787  | 12.410  | 50.0         
+32      | 1066.486  | 1.066486  | 12.414  | 30.0         
+64      | 1075.258  | 1.075258  | 12.312  | 10.0         
+
+Best Performance: 32 threads at 1066.486 ms (12.414x speedup)
+
+--- Resolution 2000x2000, Iterations 1000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+8       | 7270.208  | 7.270208  | 7.281   | 90.0         
+1       | 52934.739 | 52.934739 | 1.000   | 100.0        
+16      | 4580.181  | 4.580181  | 11.557  | 70.0         
+2       | 26873.108 | 26.873108 | 1.969   | 90.0         
+24      | 4219.152  | 4.219152  | 12.546  | 50.0         
+32      | 4220.925  | 4.220925  | 12.541  | 30.0         
+4       | 13726.304 | 13.726304 | 3.856   | 90.0         
+64      | 4216.859  | 4.216859  | 12.553  | 10.0         
+
+Best Performance: 64 threads at 4216.859 ms (12.553x speedup)
+
+--- Resolution 3000x3000, Iterations 1000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+24      | 9460.315  | 9.460315  | 12.591  | 50.0         
+2       | 60506.364 | 60.506364 | 1.968   | 90.0         
+32      | 9496.004  | 9.496004  | 12.544  | 30.0         
+4       | 30876.515 | 30.876515 | 3.857   | 90.0         
+64      | 9476.620  | 9.476620  | 12.569  | 10.0         
+8       | 16291.613 | 16.291613 | 7.311   | 90.0         
+1       | 119113.241 | 119.113241 | 1.000   | 100.0        
+16      | 10280.359 | 10.280359 | 11.586  | 70.0         
+
+Best Performance: 24 threads at 9460.315 ms (12.591x speedup)
+
+--- Resolution 1000x1000, Iterations 3000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+4       | 9798.273  | 9.798273  | 3.946   | 90.0         
+8       | 5070.967  | 5.070967  | 7.625   | 90.0         
+1       | 38666.110 | 38.666110 | 1.000   | 100.0        
+16      | 3082.357  | 3.082357  | 12.544  | 70.0         
+2       | 19442.583 | 19.442583 | 1.988   | 90.0         
+24      | 2828.660  | 2.828660  | 13.669  | 50.0         
+32      | 2848.218  | 2.848218  | 13.575  | 40.0         
+64      | 2834.747  | 2.834747  | 13.640  | 20.0         
+
+Best Performance: 24 threads at 2828.660 ms (13.669x speedup)
+
+--- Resolution 1000x1000, Iterations 5000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+8       | 8223.805  | 8.223805  | 7.792   | 90.0         
+1       | 64075.955 | 64.075955 | 1.000   | 100.0        
+16      | 5059.800  | 5.059800  | 12.664  | 70.0         
+2       | 32152.770 | 32.152770 | 1.993   | 90.0         
+24      | 4590.205  | 4.590205  | 13.960  | 50.0         
+32      | 4593.936  | 4.593936  | 13.949  | 40.0         
+4       | 16156.335 | 16.156335 | 3.966   | 90.0         
+64      | 4600.668  | 4.600668  | 13.928  | 20.0         
+
+Best Performance: 24 threads at 4590.205 ms (13.960x speedup)
+
+=== Dynamic vs Static Scheduling Comparison ===
+
+Dynamic scheduling is particularly beneficial for irregular workloads where:
+• Work distribution is uneven across iterations
+• Load balancing is critical for performance
+• Runtime work stealing can improve efficiency
+
+Key Findings:
+• Dynamic scheduling shows different performance characteristics compared to static
+• Better load balancing may improve performance on irregular problems
+• Overhead of dynamic scheduling may impact small problems
+
+=== Recommendations ===
+
+1. Problem Size Considerations:
+   - Small problems (1000x1000): Static scheduling often performs better due to lower overhead
+   - Large problems (3000x3000): Dynamic scheduling may provide better load balancing
+
+2. Thread Count Optimization:
+   - Monitor efficiency vs. thread count relationship
+   - Dynamic scheduling may show different optimal thread counts than static
+
+3. Workload Characteristics:
+   - Dynamic scheduling excels with irregular computation patterns
+   - For regular Mandelbrot computation, static may be more predictable
+

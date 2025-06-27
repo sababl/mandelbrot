@@ -1,0 +1,126 @@
+=== OpenMP Static vs Dynamic Scheduling Comparison ===
+Generated: Fri 27 Jun 18:30:35 CEST 2025
+Compiler: Intel C Compiler (icc) with -qopenmp
+
+=== Performance Comparison by Configuration ===
+
+--- Configuration: 1000x1000, 1000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Diff (ms) | Diff (%) | Better
+--------|-------------|--------------|-----------|----------|--------
+64      | 1251.091    | 1075.258     | -175.833  | -10.0%   | Dynamic
+32      | 1309.847    | 1066.486     | -243.361  | -10.0%   | Dynamic
+24      | 1599.341    | 1066.787     | -532.554  | -30.0%   | Dynamic
+16      | 1971.871    | 1150.071     | -821.800  | -40.0%   | Dynamic
+8       | 3415.129    | 1822.279     | -1592.850 | -40.0%   | Dynamic
+4       | 5540.173    | 3439.033     | -2101.140 | -30.0%   | Dynamic
+2       | 6701.481    | 6724.932     | 23.451    | 0%       | Static
+1       | 13236.358   | 13239.425    | 3.067     | 0%       | Static
+
+Best Static:  64 threads, 1251.091 ms (10.581x speedup)
+Best Dynamic: 32 threads, 1066.486 ms (12.414x speedup)
+Winner: Dynamic (10.0% faster)
+
+--- Configuration: 2000x2000, 1000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Diff (ms) | Diff (%) | Better
+--------|-------------|--------------|-----------|----------|--------
+64      | 4732.257    | 4216.859     | -515.398  | -10.0%   | Dynamic
+32      | 5269.946    | 4220.925     | -1049.021 | -10.0%   | Dynamic
+24      | 6103.743    | 4219.152     | -1884.591 | -30.0%   | Dynamic
+16      | 7688.919    | 4580.181     | -3108.738 | -40.0%   | Dynamic
+8       | 13598.758   | 7270.208     | -6328.550 | -40.0%   | Dynamic
+4       | 22132.210   | 13726.304    | -8405.906 | -30.0%   | Dynamic
+2       | 26765.954   | 26873.108    | 107.154   | 0%       | Static
+1       | 52933.081   | 52934.739    | 1.658     | 0%       | Static
+
+Best Static:  64 threads, 4732.257 ms (11.185x speedup)
+Best Dynamic: 64 threads, 4216.859 ms (12.553x speedup)
+Winner: Dynamic (10.0% faster)
+
+--- Configuration: 3000x3000, 1000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Diff (ms) | Diff (%) | Better
+--------|-------------|--------------|-----------|----------|--------
+64      | 10157.414   | 9476.620     | -680.794  | 0%       | Dynamic
+32      | 11721.232   | 9496.004     | -2225.228 | -10.0%   | Dynamic
+24      | 13029.489   | 9460.315     | -3569.174 | -20.0%   | Dynamic
+16      | 17371.615   | 10280.359    | -7091.256 | -40.0%   | Dynamic
+8       | 30574.543   | 16291.613    | -14282.930 | -40.0%   | Dynamic
+4       | 49803.900   | 30876.515    | -18927.385 | -30.0%   | Dynamic
+2       | 60205.393   | 60506.364    | 300.971   | 0%       | Static
+1       | 119094.183  | 119113.241   | 19.058    | 0%       | Static
+
+Best Static:  64 threads, 10157.414 ms (11.725x speedup)
+Best Dynamic: 24 threads, 9460.315 ms (12.591x speedup)
+Winner: Dynamic (0% faster)
+
+--- Configuration: 1000x1000, 3000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Diff (ms) | Diff (%) | Better
+--------|-------------|--------------|-----------|----------|--------
+64      | 3063.689    | 2834.747     | -228.942  | 0%       | Dynamic
+32      | 3612.043    | 2848.218     | -763.825  | -20.0%   | Dynamic
+24      | 4269.936    | 2828.660     | -1441.276 | -30.0%   | Dynamic
+16      | 5518.665    | 3082.357     | -2436.308 | -40.0%   | Dynamic
+8       | 9862.450    | 5070.967     | -4791.483 | -40.0%   | Dynamic
+4       | 16134.048   | 9798.273     | -6335.775 | -30.0%   | Dynamic
+2       | 19430.079   | 19442.583    | 12.504    | 0%       | Static
+1       | 38667.014   | 38666.110    | -.904     | 0%       | Dynamic
+
+Best Static:  64 threads, 3063.689 ms (12.620x speedup)
+Best Dynamic: 24 threads, 2828.660 ms (13.669x speedup)
+Winner: Dynamic (0% faster)
+
+--- Configuration: 1000x1000, 5000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Diff (ms) | Diff (%) | Better
+--------|-------------|--------------|-----------|----------|--------
+64      | 5104.461    | 4600.668     | -503.793  | 0%       | Dynamic
+32      | 5782.580    | 4593.936     | -1188.644 | -20.0%   | Dynamic
+24      | 6679.197    | 4590.205     | -2088.992 | -30.0%   | Dynamic
+16      | 8882.324    | 5059.800     | -3822.524 | -40.0%   | Dynamic
+8       | 16244.385   | 8223.805     | -8020.580 | -40.0%   | Dynamic
+4       | 26719.621   | 16156.335    | -10563.286 | -30.0%   | Dynamic
+2       | 32148.451   | 32152.770    | 4.319     | 0%       | Static
+1       | 64080.731   | 64075.955    | -4.776    | 0%       | Dynamic
+
+Best Static:  64 threads, 5104.461 ms (12.553x speedup)
+Best Dynamic: 24 threads, 4590.205 ms (13.960x speedup)
+Winner: Dynamic (10.0% faster)
+
+=== Overall Analysis ===
+
+Performance Summary:
+• Total configurations compared: 5
+• Static scheduling wins: 0
+• Dynamic scheduling wins: 5
+
+=== Key Insights ===
+
+1. Scheduling Overhead:
+   • Dynamic scheduling introduces runtime overhead for work distribution
+   • This overhead is more noticeable in regular computational patterns
+
+2. Load Balancing:
+   • Dynamic scheduling can provide better load balancing
+   • Benefits are more apparent with irregular workloads
+
+3. Problem Size Effects:
+   • Larger problems may benefit more from dynamic scheduling
+   • Smaller problems often perform better with static scheduling
+
+4. Thread Count Impact:
+   • Higher thread counts may show different relative performance
+   • Dynamic scheduling optimal thread count may differ from static
+
+=== Recommendations ===
+
+1. For Mandelbrot Set Computation:
+   • Static scheduling generally preferred for regular computation patterns
+   • Dynamic scheduling may be beneficial for very large problems
+
+2. General Guidelines:
+   • Use static scheduling for predictable, regular workloads
+   • Use dynamic scheduling for irregular or unpredictable workloads
+   • Consider guided scheduling as a compromise between the two
+
+3. Performance Tuning:
+   • Test both scheduling types for your specific workload
+   • Consider chunk size tuning for dynamic scheduling
+   • Monitor load balancing effectiveness
