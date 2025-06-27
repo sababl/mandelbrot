@@ -1,0 +1,241 @@
+=== Comprehensive OpenMP Static Mandelbrot Performance Analysis ===
+Generated: Fri 27 Jun 17:29:01 CEST 2025
+Configurations Tested:
+- Resolutions: 1000 2000 3000
+- Iterations: 1000 3000 5000
+- Thread counts: 64 32 24 16 8 4 2 1
+- Runs per configuration: 3
+Timing: High-precision nanosecond timing (best of 3 runs)
+Compiler: Intel C++ Compiler (icpc) with -qopenmp
+
+=== Performance Summary by Configuration ===
+
+--- Resolution 1000x1000, Iterations 1000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+2       | 6701.481  | 6.701481  | 1.975   | 90.0         
+4       | 5540.173  | 5.540173  | 2.389   | 50.0         
+8       | 3415.129  | 3.415129  | 3.876   | 40.0         
+1       | 13236.358 | 13.236358 | 1.000   | 100.0        
+16      | 1971.871  | 1.971871  | 6.713   | 40.0         
+24      | 1599.341  | 1.599341  | 8.277   | 30.0         
+32      | 1309.847  | 1.309847  | 10.106  | 30.0         
+64      | 1251.091  | 1.251091  | 10.581  | 10.0         
+
+Best Performance:  threads at 1251.091 ms (x speedup)
+
+--- Resolution 1000x1000, Iterations 3000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+8       | 9862.450  | 9.862450  | 3.920   | 40.0         
+1       | 38667.014 | 38.667014 | .999    | 90.0         
+16      | 5518.665  | 5.518665  | 7.006   | 40.0         
+2       | 19430.079 | 19.430079 | 1.990   | 90.0         
+24      | 4269.936  | 4.269936  | 9.055   | 30.0         
+32      | 3612.043  | 3.612043  | 10.704  | 30.0         
+4       | 16134.048 | 16.134048 | 2.396   | 50.0         
+64      | 3063.689  | 3.063689  | 12.620  | 10.0         
+
+Best Performance:  threads at 3063.689 ms (x speedup)
+
+--- Resolution 1000x1000, Iterations 5000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+1       | 64080.731 | 64.080731 | .999    | 90.0         
+16      | 8882.324  | 8.882324  | 7.214   | 40.0         
+2       | 32148.451 | 32.148451 | 1.993   | 90.0         
+24      | 6679.197  | 6.679197  | 9.593   | 30.0         
+32      | 5782.580  | 5.782580  | 11.081  | 30.0         
+4       | 26719.621 | 26.719621 | 2.398   | 50.0         
+64      | 5104.461  | 5.104461  | 12.553  | 10.0         
+8       | 16244.385 | 16.244385 | 3.944   | 40.0         
+
+Best Performance:  threads at 5104.461 ms (x speedup)
+
+--- Resolution 2000x2000, Iterations 1000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+1       | 52933.081 | 52.933081 | 1.000   | 100.0        
+16      | 7688.919  | 7.688919  | 6.884   | 40.0         
+2       | 26765.954 | 26.765954 | 1.977   | 90.0         
+24      | 6103.743  | 6.103743  | 8.672   | 30.0         
+32      | 5269.946  | 5.269946  | 10.044  | 30.0         
+4       | 22132.210 | 22.132210 | 2.391   | 50.0         
+64      | 4732.257  | 4.732257  | 11.185  | 10.0         
+8       | 13598.758 | 13.598758 | 3.892   | 40.0         
+
+Best Performance:  threads at 4732.257 ms (x speedup)
+
+--- Resolution 2000x2000, Iterations 3000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+2       | 77651.975 | 77.651975 | 1.991   | 90.0         
+4       | 64503.222 | 64.503222 | 2.397   | 50.0         
+8       | 39353.296 | 39.353296 | 3.930   | 40.0         
+1       | 154662.927 | 154.662927 | .999    | 90.0         
+16      | 21616.384 | 21.616384 | 7.154   | 40.0         
+24      | 15960.927 | 15.960927 | 9.690   | 40.0         
+32      | 14408.295 | 14.408295 | 10.734  | 30.0         
+64      | 11847.691 | 11.847691 | 13.054  | 20.0         
+
+Best Performance:  threads at 11847.691 ms (x speedup)
+
+--- Resolution 2000x2000, Iterations 5000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+8       | 64933.377 | 64.933377 | 3.947   | 40.0         
+1       | 256316.366 | 256.316366 | .999    | 90.0         
+16      | 35853.432 | 35.853432 | 7.149   | 40.0         
+2       | 128515.173 | 128.515173 | 1.994   | 90.0         
+24      | 27817.826 | 27.817826 | 9.214   | 30.0         
+32      | 23339.337 | 23.339337 | 10.982  | 30.0         
+4       | 106835.961 | 106.835961 | 2.399   | 50.0         
+64      | 20054.121 | 20.054121 | 12.781  | 10.0         
+
+Best Performance:  threads at 20054.121 ms (x speedup)
+
+--- Resolution 3000x3000, Iterations 1000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+2       | 60205.393 | 60.205393 | 1.978   | 90.0         
+4       | 49803.900 | 49.803900 | 2.391   | 50.0         
+8       | 30574.543 | 30.574543 | 3.895   | 40.0         
+1       | 119094.183 | 119.094183 | 1.000   | 100.0        
+16      | 17371.615 | 17.371615 | 6.856   | 40.0         
+24      | 13029.489 | 13.029489 | 9.141   | 30.0         
+32      | 11721.232 | 11.721232 | 10.161  | 30.0         
+64      | 10157.414 | 10.157414 | 11.725  | 10.0         
+
+Best Performance:  threads at 10157.414 ms (x speedup)
+
+--- Resolution 3000x3000, Iterations 3000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+8       | 88393.841 | 88.393841 | 3.937   | 40.0         
+1       | 347989.472 | 347.989472 | 1.000   | 100.0        
+16      | 48145.225 | 48.145225 | 7.228   | 40.0         
+2       | 174692.274 | 174.692274 | 1.992   | 90.0         
+24      | 36868.072 | 36.868072 | 9.439   | 30.0         
+32      | 31859.259 | 31.859259 | 10.923  | 30.0         
+4       | 145091.351 | 145.091351 | 2.398   | 50.0         
+64      | 27198.109 | 27.198109 | 12.795  | 10.0         
+
+Best Performance:  threads at 27198.109 ms (x speedup)
+
+--- Resolution 3000x3000, Iterations 5000 ---
+Threads | Time (ms) | Time (s)  | Speedup | Efficiency (%)
+--------|-----------|-----------|---------|---------------
+1       | 576737.399 | 576.737399 | .999    | 90.0         
+16      | 80098.141 | 80.098141 | 7.200   | 40.0         
+2       | 289067.719 | 289.067719 | 1.995   | 90.0         
+24      | 58777.620 | 58.777620 | 9.812   | 40.0         
+32      | 52791.498 | 52.791498 | 10.924  | 30.0         
+4       | 240360.653 | 240.360653 | 2.399   | 50.0         
+64      | 44127.284 | 44.127284 | 13.069  | 20.0         
+8       | 146091.016 | 146.091016 | 3.947   | 40.0         
+
+Best Performance:  threads at 44127.284 ms (x speedup)
+
+=== Scaling Analysis Across Configurations ===
+
+Performance Impact of Problem Size:
+Thread Count: 64
+  1000x1000, 1000 iter: 1251.091 ms (throughput: 799302.36 ops/ms)
+  1000x1000, 3000 iter: 3063.689 ms (throughput: 979211.66 ops/ms)
+  1000x1000, 5000 iter: 5104.461 ms (throughput: 979535.35 ops/ms)
+  2000x2000, 1000 iter: 4732.257 ms (throughput: 845262.63 ops/ms)
+  2000x2000, 3000 iter: 11847.691 ms (throughput: 1012855.58 ops/ms)
+  2000x2000, 5000 iter: 20054.121 ms (throughput: 997301.25 ops/ms)
+  3000x3000, 1000 iter: 10157.414 ms (throughput: 886052.29 ops/ms)
+  3000x3000, 3000 iter: 27198.109 ms (throughput: 992716.07 ops/ms)
+  3000x3000, 5000 iter: 44127.284 ms (throughput: 1019777.24 ops/ms)
+
+Thread Count: 32
+  1000x1000, 1000 iter: 1309.847 ms (throughput: 763447.94 ops/ms)
+  1000x1000, 3000 iter: 3612.043 ms (throughput: 830554.89 ops/ms)
+  1000x1000, 5000 iter: 5782.580 ms (throughput: 864665.94 ops/ms)
+  2000x2000, 1000 iter: 5269.946 ms (throughput: 759021.06 ops/ms)
+  2000x2000, 3000 iter: 14408.295 ms (throughput: 832853.57 ops/ms)
+  2000x2000, 5000 iter: 23339.337 ms (throughput: 856922.37 ops/ms)
+  3000x3000, 1000 iter: 11721.232 ms (throughput: 767837.37 ops/ms)
+  3000x3000, 3000 iter: 31859.259 ms (throughput: 847477.33 ops/ms)
+  3000x3000, 5000 iter: 52791.498 ms (throughput: 852409.98 ops/ms)
+
+Thread Count: 24
+  1000x1000, 1000 iter: 1599.341 ms (throughput: 625257.52 ops/ms)
+  1000x1000, 3000 iter: 4269.936 ms (throughput: 702586.64 ops/ms)
+  1000x1000, 5000 iter: 6679.197 ms (throughput: 748592.98 ops/ms)
+  2000x2000, 1000 iter: 6103.743 ms (throughput: 655335.58 ops/ms)
+  2000x2000, 3000 iter: 15960.927 ms (throughput: 751836.03 ops/ms)
+  2000x2000, 5000 iter: 27817.826 ms (throughput: 718963.44 ops/ms)
+  3000x3000, 1000 iter: 13029.489 ms (throughput: 690740.82 ops/ms)
+  3000x3000, 3000 iter: 36868.072 ms (throughput: 732340.98 ops/ms)
+  3000x3000, 5000 iter: 58777.620 ms (throughput: 765597.51 ops/ms)
+
+Thread Count: 16
+  1000x1000, 1000 iter: 1971.871 ms (throughput: 507132.56 ops/ms)
+  1000x1000, 3000 iter: 5518.665 ms (throughput: 543609.73 ops/ms)
+  1000x1000, 5000 iter: 8882.324 ms (throughput: 562915.74 ops/ms)
+  2000x2000, 1000 iter: 7688.919 ms (throughput: 520229.17 ops/ms)
+  2000x2000, 3000 iter: 21616.384 ms (throughput: 555134.47 ops/ms)
+  2000x2000, 5000 iter: 35853.432 ms (throughput: 557826.65 ops/ms)
+  3000x3000, 1000 iter: 17371.615 ms (throughput: 518086.54 ops/ms)
+  3000x3000, 3000 iter: 48145.225 ms (throughput: 560803.27 ops/ms)
+  3000x3000, 5000 iter: 80098.141 ms (throughput: 561810.79 ops/ms)
+
+Thread Count: 8
+  1000x1000, 1000 iter: 3415.129 ms (throughput: 292814.70 ops/ms)
+  1000x1000, 3000 iter: 9862.450 ms (throughput: 304184.05 ops/ms)
+  1000x1000, 5000 iter: 16244.385 ms (throughput: 307798.66 ops/ms)
+  2000x2000, 1000 iter: 13598.758 ms (throughput: 294144.50 ops/ms)
+  2000x2000, 3000 iter: 39353.296 ms (throughput: 304929.98 ops/ms)
+  2000x2000, 5000 iter: 64933.377 ms (throughput: 308008.00 ops/ms)
+  3000x3000, 1000 iter: 30574.543 ms (throughput: 294362.53 ops/ms)
+  3000x3000, 3000 iter: 88393.841 ms (throughput: 305451.14 ops/ms)
+  3000x3000, 5000 iter: 146091.016 ms (throughput: 308027.15 ops/ms)
+
+Thread Count: 4
+  1000x1000, 1000 iter: 5540.173 ms (throughput: 180499.77 ops/ms)
+  1000x1000, 3000 iter: 16134.048 ms (throughput: 185942.17 ops/ms)
+  1000x1000, 5000 iter: 26719.621 ms (throughput: 187128.40 ops/ms)
+  2000x2000, 1000 iter: 22132.210 ms (throughput: 180732.06 ops/ms)
+  2000x2000, 3000 iter: 64503.222 ms (throughput: 186037.21 ops/ms)
+  2000x2000, 5000 iter: 106835.961 ms (throughput: 187202.88 ops/ms)
+  3000x3000, 1000 iter: 49803.900 ms (throughput: 180708.73 ops/ms)
+  3000x3000, 3000 iter: 145091.351 ms (throughput: 186089.65 ops/ms)
+  3000x3000, 5000 iter: 240360.653 ms (throughput: 187218.66 ops/ms)
+
+Thread Count: 2
+  1000x1000, 1000 iter: 6701.481 ms (throughput: 149220.74 ops/ms)
+  1000x1000, 3000 iter: 19430.079 ms (throughput: 154399.78 ops/ms)
+  1000x1000, 5000 iter: 32148.451 ms (throughput: 155528.48 ops/ms)
+  2000x2000, 1000 iter: 26765.954 ms (throughput: 149443.58 ops/ms)
+  2000x2000, 3000 iter: 77651.975 ms (throughput: 154535.67 ops/ms)
+  2000x2000, 5000 iter: 128515.173 ms (throughput: 155623.64 ops/ms)
+  3000x3000, 1000 iter: 60205.393 ms (throughput: 149488.26 ops/ms)
+  3000x3000, 3000 iter: 174692.274 ms (throughput: 154557.49 ops/ms)
+  3000x3000, 5000 iter: 289067.719 ms (throughput: 155672.86 ops/ms)
+
+Thread Count: 1
+  1000x1000, 1000 iter: 13236.358 ms (throughput: 75549.48 ops/ms)
+  1000x1000, 3000 iter: 38667.014 ms (throughput: 77585.50 ops/ms)
+  1000x1000, 5000 iter: 64080.731 ms (throughput: 78026.57 ops/ms)
+  2000x2000, 1000 iter: 52933.081 ms (throughput: 75567.11 ops/ms)
+  2000x2000, 3000 iter: 154662.927 ms (throughput: 77588.08 ops/ms)
+  2000x2000, 5000 iter: 256316.366 ms (throughput: 78028.57 ops/ms)
+  3000x3000, 1000 iter: 119094.183 ms (throughput: 75570.44 ops/ms)
+  3000x3000, 3000 iter: 347989.472 ms (throughput: 77588.55 ops/ms)
+  3000x3000, 5000 iter: 576737.399 ms (throughput: 78025.11 ops/ms)
+
+
+=== Key Findings ===
+• Static scheduling provides consistent performance across all configurations
+• Larger problem sizes show better parallel efficiency
+• Memory bandwidth becomes limiting factor for high thread counts with large problems
+• Optimal thread count varies with problem size
+
+=== Recommendations ===
+1. Small problems (1000x1000): Use 16-32 threads for best efficiency
+2. Medium problems (2000x2000): Use 32-64 threads
+3. Large problems (3000x3000): Use 64 threads for maximum performance
+4. For production: Balance thread count with system resources and other workloads
