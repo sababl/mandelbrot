@@ -15,14 +15,14 @@
 #define RATIO_Y (MAX_Y - MIN_Y)
 
 // Image size
-#define RESOLUTION 3000  
+#define RESOLUTION 1000  
 #define WIDTH (RATIO_X * RESOLUTION)
 #define HEIGHT (RATIO_Y * RESOLUTION)
 
 #define STEP ((double)RATIO_X / WIDTH)
 
-#define DEGREE 3        // Degree of the polynomial
-#define ITERATIONS 3000 
+#define DEGREE 2        // Degree of the polynomial
+#define ITERATIONS 1000 
 
 using namespace std;
 
@@ -32,50 +32,32 @@ int main(int argc, char **argv)
     
     // Get number of threads for reporting
     const int num_threads = omp_get_max_threads();
-    cout << "Using " << num_threads << " OpenMP threads" << endl;
+    cout << "Using " << num_threads << " OpenMP threads with dynamic scheduling" << endl;
 
     const auto start = chrono::steady_clock::now();
     
-    // Initialize image array in parallel
-    #pragma omp parallel for simd
+    // Parallel loop with OpenMP - using dynamic scheduling for better load balancing
+    #pragma omp parallel for schedule(dynamic) shared(image)
     for (int pos = 0; pos < HEIGHT * WIDTH; pos++)
     {
         image[pos] = 0;
-    }
-    
-    // Main computation loop - optimized for both parallelization and vectorization
-    #pragma omp parallel for schedule(dynamic, 128) 
-    for (int row = 0; row < HEIGHT; row++)
-    {
-        #pragma omp simd
-        for (int col = 0; col < WIDTH; col++)
+
+        const int row = pos / WIDTH;
+        const int col = pos % WIDTH;
+        const complex<double> c(col * STEP + MIN_X, row * STEP + MIN_Y);
+
+        // z = z^2 + c
+        complex<double> z(0, 0);
+        for (int i = 1; i <= ITERATIONS; i++)
         {
-            const int pos = row * WIDTH + col;
-            const double real_c = col * STEP + MIN_X;
-            const double imag_c = row * STEP + MIN_Y;
+            z = z * z + c;  // Optimized: avoid pow() function
 
-            // Manual complex arithmetic for better vectorization
-            double real_z = 0.0;
-            double imag_z = 0.0;
-            
-            int iter = 0;
-            for (int i = 1; i <= ITERATIONS; i++)
+            // If it is convergent
+            if (abs(z) >= 2)
             {
-                // z = z^2 + c
-                const double real_z_new = real_z * real_z - imag_z * imag_z + real_c;
-                const double imag_z_new = 2.0 * real_z * imag_z + imag_c;
-                
-                real_z = real_z_new;
-                imag_z = imag_z_new;
-
-                // If it is convergent (|z|^2 >= 4)
-                if (real_z * real_z + imag_z * imag_z >= 4.0)
-                {
-                    iter = i;
-                    break;
-                }
+                image[pos] = i;
+                break;
             }
-            image[pos] = iter;
         }
     }
     

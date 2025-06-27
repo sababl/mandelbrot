@@ -2,6 +2,7 @@
 #include <fstream>
 #include <complex>
 #include <chrono>
+#include <omp.h>
 
 // Ranges of the set
 #define MIN_X -2
@@ -14,22 +15,29 @@
 #define RATIO_Y (MAX_Y - MIN_Y)
 
 // Image size
-#define RESOLUTION 3000  
+#define RESOLUTION 1000
 #define WIDTH (RATIO_X * RESOLUTION)
 #define HEIGHT (RATIO_Y * RESOLUTION)
 
 #define STEP ((double)RATIO_X / WIDTH)
 
-#define DEGREE 3        // Degree of the polynomial
-#define ITERATIONS 3000 
+#define DEGREE 2        // Degree of the polynomial
+#define ITERATIONS 1000 
 
 using namespace std;
 
 int main(int argc, char **argv)
 {
     int *const image = new int[HEIGHT * WIDTH];
+    
+    // Get number of threads for reporting
+    const int num_threads = omp_get_max_threads();
+    cout << "Using " << num_threads << " OpenMP threads" << endl;
 
     const auto start = chrono::steady_clock::now();
+    
+    // Parallel loop with OpenMP - using static scheduling for better load balancing
+    #pragma omp parallel for schedule(static) shared(image)
     for (int pos = 0; pos < HEIGHT * WIDTH; pos++)
     {
         image[pos] = 0;
@@ -42,7 +50,7 @@ int main(int argc, char **argv)
         complex<double> z(0, 0);
         for (int i = 1; i <= ITERATIONS; i++)
         {
-            z = pow(z, 2) + c;
+            z = z * z + c;  // Optimized: avoid pow() function
 
             // If it is convergent
             if (abs(z) >= 2)
@@ -52,6 +60,7 @@ int main(int argc, char **argv)
             }
         }
     }
+    
     const auto end = chrono::steady_clock::now();
     cout << "Time elapsed: "
          << chrono::duration_cast<chrono::seconds>(end - start).count()
@@ -87,6 +96,6 @@ int main(int argc, char **argv)
     }
     matrix_out.close();
 
-    delete[] image; // It's here for coding style, but useless
+    delete[] image;
     return 0;
 }

@@ -1,253 +1,264 @@
-# Makefile for Mandelbrot Set Program
-# Compatible with Intel Compiler (icpx) and Intel Advisor 2023.2
+# Comprehensive Makefile for Mandelbrot Algorithms with Intel Compiler and Advisor
+# Fallback to g++ if Intel compiler is not available
+CXX := $(shell command -v icpc 2> /dev/null || echo g++)
+CXXFLAGS = -O2 -g
+ifeq ($(CXX),g++)
+    OPENMP_FLAGS = -fopenmp
+else
+    OPENMP_FLAGS = -qopenmp
+endif
+MPI_FLAGS = -DWITH_MPI
+CUDA_FLAGS = -DWITH_CUDA
 
-# Compiler and tools
-CXX = icpx
-ADVISOR = advisor
+# Version control - can be overridden via command line
+VERSION ?= sequential
+OUTPUT_FILE ?= output.csv
+THREADS ?= 4
 
-# Executable names
-TARGET_SERIAL = mandelbrot_serial
-TARGET_PARALLEL = mandelbrot_parallel
-TARGET_OPTIMIZED = mandelbrot_optimized
+# Directory structure
+SEQUENTIAL_DIR = sequential
+OPENMP_DIR = openmp
+MPI_DIR = mpi
+CUDA_DIR = cuda
+HYBRID_DIR = hybrid
 
-# Source files
-SOURCES_SERIAL = serial.cpp
-SOURCES_PARALLEL = parallel.cpp
-SOURCES_OPTIMIZED = parallel_optimized.cpp
+# Source files mapping
+SEQUENTIAL_SRC = $(SEQUENTIAL_DIR)/mandelbrot.cpp
+OPENMP_STATIC_SRC = $(OPENMP_DIR)/openmp_static.cpp
+OPENMP_DYNAMIC_SRC = $(OPENMP_DIR)/openmp_dynamic.cpp
+OPENMP_GUIDED_SRC = $(OPENMP_DIR)/openmp_guided.cpp
 
-# Compiler flags
-CXXFLAGS = -O3 -std=c++17 -Wall -Wextra
-AVX2_FLAGS = -xCORE-AVX2 -qopt-report=5 -qopt-report-phase=vec
-OPENMP_FLAGS = -fopenmp -qopenmp-simd
-DEBUG_FLAGS = -g -O0 -DDEBUG
-ADVISOR_FLAGS = -g -O2 -qopt-report=5 -qopt-report-phase=vec
+# Target executables mapping
+SEQUENTIAL_TARGET = $(SEQUENTIAL_DIR)/mandelbrot
+OPENMP_STATIC_TARGET = $(OPENMP_DIR)/mandelbrot_static
+OPENMP_DYNAMIC_TARGET = $(OPENMP_DIR)/mandelbrot_dynamic
+OPENMP_GUIDED_TARGET = $(OPENMP_DIR)/mandelbrot_guided
 
-# Intel Advisor flags
-ADVISOR_COLLECT_FLAGS = --collect=survey,tripcounts
-ADVISOR_REPORT_FLAGS = --report=survey,tripcounts
+# Output files mapping
+SEQUENTIAL_OUTPUT = $(SEQUENTIAL_DIR)/$(OUTPUT_FILE)
+OPENMP_OUTPUT = $(OPENMP_DIR)/$(OUTPUT_FILE)
+MPI_OUTPUT = $(MPI_DIR)/$(OUTPUT_FILE)
+CUDA_OUTPUT = $(CUDA_DIR)/$(OUTPUT_FILE)
 
-# Output directories
-BUILD_DIR = build
-REPORTS_DIR = advisor_reports
+# Advisor results directories
+SEQUENTIAL_ADVISOR = $(SEQUENTIAL_DIR)/advisor-results
+OPENMP_ADVISOR = $(OPENMP_DIR)/advisor-results
+MPI_ADVISOR = $(MPI_DIR)/advisor-results
+CUDA_ADVISOR = $(CUDA_DIR)/advisor-results
 
-# Default target
-all: serial parallel optimized
+# Available versions
+VERSIONS = sequential openmp-static openmp-dynamic openmp-guided
 
-# Build the serial executable
-serial: $(SOURCES_SERIAL)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(CXXFLAGS) -o $(BUILD_DIR)/$(TARGET_SERIAL) $(SOURCES_SERIAL)
-	@echo "Built $(TARGET_SERIAL) successfully!"
-
-# Build the parallel executable
-parallel: $(SOURCES_PARALLEL)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(CXXFLAGS) $(OPENMP_FLAGS) -o $(BUILD_DIR)/$(TARGET_PARALLEL) $(SOURCES_PARALLEL)
-	@echo "Built $(TARGET_PARALLEL) successfully!"
-
-# Build the optimized parallel executable
-optimized: $(SOURCES_OPTIMIZED)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(CXXFLAGS) $(OPENMP_FLAGS) -o $(BUILD_DIR)/$(TARGET_OPTIMIZED) $(SOURCES_OPTIMIZED)
-	@echo "Built $(TARGET_OPTIMIZED) successfully!"
-
-# Legacy target for compatibility
-$(TARGET_SERIAL): serial
-
-# Debug builds
-debug-serial: $(SOURCES_SERIAL)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(DEBUG_FLAGS) -o $(BUILD_DIR)/$(TARGET_SERIAL)_debug $(SOURCES_SERIAL)
-	@echo "Built debug serial version successfully!"
-
-debug-parallel: $(SOURCES_PARALLEL)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(DEBUG_FLAGS) $(OPENMP_FLAGS) -o $(BUILD_DIR)/$(TARGET_PARALLEL)_debug $(SOURCES_PARALLEL)
-	@echo "Built debug parallel version successfully!"
-
-debug: debug-serial debug-parallel
-
-# Build with Intel Advisor instrumentation
-advisor-build-serial: $(SOURCES_SERIAL)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(ADVISOR_FLAGS) -o $(BUILD_DIR)/$(TARGET_SERIAL)_advisor $(SOURCES_SERIAL)
-	@echo "Built Intel Advisor instrumented serial version successfully!"
-
-advisor-build-parallel: $(SOURCES_PARALLEL)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(ADVISOR_FLAGS) $(OPENMP_FLAGS) -o $(BUILD_DIR)/$(TARGET_PARALLEL)_advisor $(SOURCES_PARALLEL)
-	@echo "Built Intel Advisor instrumented parallel version successfully!"
-
-advisor-build: advisor-build-serial advisor-build-parallel
-
-# Run Intel Advisor analysis on serial version
-advisor-collect-serial: advisor-build-serial
-	@mkdir -p $(REPORTS_DIR)/serial
-	@echo "Running Intel Advisor data collection on serial version..."
-	$(ADVISOR) $(ADVISOR_COLLECT_FLAGS) --project-dir=$(REPORTS_DIR)/serial -- $(BUILD_DIR)/$(TARGET_SERIAL)_advisor output_serial.csv
-	@echo "Intel Advisor data collection for serial version completed!"
-
-# Run Intel Advisor analysis on parallel version
-advisor-collect-parallel: advisor-build-parallel
-	@mkdir -p $(REPORTS_DIR)/parallel
-	@echo "Running Intel Advisor data collection on parallel version..."
-	$(ADVISOR) $(ADVISOR_COLLECT_FLAGS) --project-dir=$(REPORTS_DIR)/parallel -- $(BUILD_DIR)/$(TARGET_PARALLEL)_advisor output_parallel.csv
-	@echo "Intel Advisor data collection for parallel version completed!"
-
-advisor-collect: advisor-collect-serial advisor-collect-parallel
-
-# Generate Intel Advisor reports
-advisor-report:
-	@echo "Generating Intel Advisor reports..."
-	@mkdir -p $(REPORTS_DIR)
-	$(ADVISOR) --report=survey --project-dir=$(REPORTS_DIR)/serial --format=text --report-output=$(REPORTS_DIR)/serial_survey_report.txt
-	$(ADVISOR) --report=tripcounts --project-dir=$(REPORTS_DIR)/serial --format=text --report-output=$(REPORTS_DIR)/serial_tripcounts_report.txt
-	$(ADVISOR) --report=survey --project-dir=$(REPORTS_DIR)/parallel --format=text --report-output=$(REPORTS_DIR)/parallel_survey_report.txt
-	$(ADVISOR) --report=tripcounts --project-dir=$(REPORTS_DIR)/parallel --format=text --report-output=$(REPORTS_DIR)/parallel_tripcounts_report.txt
-	@echo "Reports generated in $(REPORTS_DIR)/"
-
-# Full Intel Advisor workflow
-advisor-full: advisor-collect advisor-report
-	@echo "Complete Intel Advisor analysis finished!"
-	@echo "Check reports in $(REPORTS_DIR)/ directory"
-
-# Build with AVX2 vectorization (highest ISA)
-avx2-serial: $(SOURCES_SERIAL)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(CXXFLAGS) $(AVX2_FLAGS) -o $(BUILD_DIR)/$(TARGET_SERIAL)_avx2 $(SOURCES_SERIAL)
-	@echo "Built AVX2-optimized serial version successfully!"
-
-avx2-parallel: $(SOURCES_PARALLEL)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(CXXFLAGS) $(AVX2_FLAGS) $(OPENMP_FLAGS) -o $(BUILD_DIR)/$(TARGET_PARALLEL)_avx2 $(SOURCES_PARALLEL)
-	@echo "Built AVX2-optimized parallel version successfully!"
-
-avx2-optimized: $(SOURCES_OPTIMIZED)
-	@mkdir -p $(BUILD_DIR)
-	$(CXX) $(CXXFLAGS) $(AVX2_FLAGS) $(OPENMP_FLAGS) -o $(BUILD_DIR)/$(TARGET_OPTIMIZED)_avx2 $(SOURCES_OPTIMIZED)
-	@echo "Built AVX2-optimized version successfully!"
-
-avx2: avx2-serial avx2-parallel avx2-optimized
-
-# Run AVX2 versions
-run-avx2-serial: avx2-serial
-	@echo "Running AVX2-optimized serial version..."
-	time ./$(BUILD_DIR)/$(TARGET_SERIAL)_avx2 output_avx2_serial.csv
-
-run-avx2-parallel: avx2-parallel
-	@echo "Running AVX2-optimized parallel version..."
-	time ./$(BUILD_DIR)/$(TARGET_PARALLEL)_avx2 output_avx2_parallel.csv
-
-run-avx2-optimized: avx2-optimized
-	@echo "Running AVX2-optimized version..."
-	time ./$(BUILD_DIR)/$(TARGET_OPTIMIZED)_avx2 output_avx2_optimized.csv
-
-# Complete performance comparison
-performance-test: all avx2
-	@echo "=== PERFORMANCE COMPARISON ==="
-	@echo "1. Serial (baseline):"
-	@time ./$(BUILD_DIR)/$(TARGET_SERIAL) output_serial.csv
-	@echo ""
-	@echo "2. Serial + AVX2:"
-	@time ./$(BUILD_DIR)/$(TARGET_SERIAL)_avx2 output_serial_avx2.csv
-	@echo ""
-	@echo "3. Parallel OpenMP:"
-	@time ./$(BUILD_DIR)/$(TARGET_PARALLEL) output_parallel.csv
-	@echo ""
-	@echo "4. Parallel + AVX2:"
-	@time ./$(BUILD_DIR)/$(TARGET_PARALLEL)_avx2 output_parallel_avx2.csv
-	@echo ""
-	@echo "5. Optimized + AVX2:"
-	@time ./$(BUILD_DIR)/$(TARGET_OPTIMIZED)_avx2 output_optimized_avx2.csv
-
-# Intel Advisor analysis with AVX2
-advisor-avx2: avx2-optimized
-	@mkdir -p $(REPORTS_DIR)/avx2
-	@echo "Running Intel Advisor on AVX2-optimized version..."
-	$(ADVISOR) --collect=survey --project-dir=$(REPORTS_DIR)/avx2 -- $(BUILD_DIR)/$(TARGET_OPTIMIZED)_avx2 output_avx2_advisor.csv
-	@echo "Generating AVX2 report..."
-	$(ADVISOR) --report=survey --project-dir=$(REPORTS_DIR)/avx2 --format=html --report-output=$(REPORTS_DIR)/avx2_survey.html 2>/dev/null || true
-	@echo "AVX2 analysis complete! Check $(REPORTS_DIR)/avx2_survey.html"
-
-# Run the serial program
-run-serial: serial
-	@echo "Running serial Mandelbrot set calculation..."
-	./$(BUILD_DIR)/$(TARGET_SERIAL) output_serial.csv
-
-# Run the parallel program
-run-parallel: parallel
-	@echo "Running parallel Mandelbrot set calculation..."
-	./$(BUILD_DIR)/$(TARGET_PARALLEL) output_parallel.csv
-
-# Run both programs for comparison
-run-both: run-serial run-parallel
-
-# Run with timing
-run-time-serial: serial
-	@echo "Running serial Mandelbrot set calculation with timing..."
-	time ./$(BUILD_DIR)/$(TARGET_SERIAL) output_serial.csv
-
-run-time-parallel: parallel
-	@echo "Running parallel Mandelbrot set calculation with timing..."
-	time ./$(BUILD_DIR)/$(TARGET_PARALLEL) output_parallel.csv
-
-# Performance comparison
-benchmark: serial parallel
-	@echo "=== Performance Benchmark ==="
-	@echo "Serial version:"
-	@time ./$(BUILD_DIR)/$(TARGET_SERIAL) output_serial.csv
-	@echo ""
-	@echo "Parallel version:"
-	@time ./$(BUILD_DIR)/$(TARGET_PARALLEL) output_parallel.csv
-	@echo ""
-	@echo "=== Benchmark Complete ==="
-
-# Clean build artifacts
-clean:
-	rm -rf $(BUILD_DIR)
-	rm -f output_serial.csv output_parallel.csv output.csv
-	@echo "Cleaned build artifacts"
-
-# Clean everything including advisor reports
-clean-all: clean
-	rm -rf $(REPORTS_DIR)
-	@echo "Cleaned all artifacts and reports"
-
-# Install Intel tools (if needed)
-install-intel-tools:
-	@echo "Make sure Intel oneAPI toolkit is installed and sourced:"
-	@echo "source /opt/intel/oneapi/setvars.sh"
+# Default target - shows help
+.DEFAULT_GOAL := help
 
 # Help target
 help:
+	@echo "=== Mandelbrot Algorithm Builder ==="
+	@echo "Available versions: $(VERSIONS)"
+	@echo ""
+	@echo "Usage examples:"
+	@echo "  make build VERSION=sequential"
+	@echo "  make build VERSION=openmp-static"
+	@echo "  make run VERSION=openmp-dynamic THREADS=8"
+	@echo "  make advisor VERSION=sequential"
+	@echo "  make benchmark  # Runs all versions for comparison"
+	@echo ""
 	@echo "Available targets:"
-	@echo "  all              - Build both serial and parallel executables (default)"
-	@echo "  serial           - Build serial version"
-	@echo "  parallel         - Build parallel version with OpenMP"
-	@echo "  debug            - Build debug versions"
-	@echo "  debug-serial     - Build debug serial version"
-	@echo "  debug-parallel   - Build debug parallel version"
-	@echo "  advisor-build    - Build with Intel Advisor instrumentation"
-	@echo "  advisor-collect  - Run Intel Advisor data collection"
-	@echo "  advisor-report   - Generate Intel Advisor reports"
-	@echo "  advisor-full     - Complete Intel Advisor workflow"
-	@echo "  run-serial       - Build and run serial version"
-	@echo "  run-parallel     - Build and run parallel version"
-	@echo "  run-both         - Run both versions for comparison"
-	@echo "  run-time-serial  - Build and run serial version with timing"
-	@echo "  run-time-parallel- Build and run parallel version with timing"
-	@echo "  benchmark        - Performance comparison between versions"
-	@echo "  clean            - Remove build artifacts"
-	@echo "  clean-all        - Remove all artifacts and reports"
-	@echo "  help             - Show this help message"
+	@echo "  build      - Build specific version (requires VERSION=)"
+	@echo "  run        - Run specific version (requires VERSION=)"
+	@echo "  advisor    - Run Intel Advisor analysis (requires VERSION=)"
+	@echo "  benchmark  - Run all versions and compare performance"
+	@echo "  clean      - Clean all build artifacts"
+	@echo "  list       - List all available versions"
 	@echo ""
-	@echo "OpenMP Usage:"
-	@echo "  Set OMP_NUM_THREADS environment variable to control thread count"
-	@echo "  Example: OMP_NUM_THREADS=8 make run-parallel"
-	@echo ""
-	@echo "Intel Advisor Usage:"
-	@echo "  1. make advisor-full    # Complete analysis"
-	@echo "  2. Check reports in advisor_reports/ directory"
+	@echo "Environment variables:"
+	@echo "  VERSION    - Algorithm version (default: sequential)"
+	@echo "  THREADS    - Number of OpenMP threads (default: 4)"
+	@echo "  OUTPUT_FILE- Output filename (default: output.csv)"
 
-# Phony targets
-.PHONY: all serial parallel debug debug-serial debug-parallel advisor-build advisor-build-serial advisor-build-parallel advisor-collect advisor-collect-serial advisor-collect-parallel advisor-report advisor-full run-serial run-parallel run-both run-time-serial run-time-parallel benchmark clean clean-all install-intel-tools help
+# List available versions
+list:
+	@echo "Available algorithm versions:"
+	@for version in $(VERSIONS); do echo "  - $$version"; done
+
+# Build targets
+build: build-$(VERSION)
+
+build-sequential: $(SEQUENTIAL_TARGET)
+$(SEQUENTIAL_TARGET): $(SEQUENTIAL_SRC)
+	@echo "Building sequential version..."
+	$(CXX) $(CXXFLAGS) -o $(SEQUENTIAL_TARGET) $(SEQUENTIAL_SRC)
+
+build-openmp-static: $(OPENMP_STATIC_TARGET)
+$(OPENMP_STATIC_TARGET): $(OPENMP_STATIC_SRC)
+	@echo "Building OpenMP static version..."
+	$(CXX) $(CXXFLAGS) $(OPENMP_FLAGS) -o $(OPENMP_STATIC_TARGET) $(OPENMP_STATIC_SRC)
+
+build-openmp-dynamic: $(OPENMP_DYNAMIC_TARGET)
+$(OPENMP_DYNAMIC_TARGET): $(OPENMP_DYNAMIC_SRC)
+	@echo "Building OpenMP dynamic version..."
+	$(CXX) $(CXXFLAGS) $(OPENMP_FLAGS) -o $(OPENMP_DYNAMIC_TARGET) $(OPENMP_DYNAMIC_SRC)
+
+build-openmp-guided: $(OPENMP_GUIDED_TARGET)
+$(OPENMP_GUIDED_TARGET): $(OPENMP_GUIDED_SRC)
+	@echo "Building OpenMP guided version..."
+	$(CXX) $(CXXFLAGS) $(OPENMP_FLAGS) -o $(OPENMP_GUIDED_TARGET) $(OPENMP_GUIDED_SRC)
+
+# Build all versions
+build-all: build-sequential build-openmp-static build-openmp-dynamic build-openmp-guided
+	@echo "All versions built successfully!"
+
+# Run targets
+run: run-$(VERSION)
+
+run-sequential: build-sequential
+	@echo "Running sequential version..."
+	@echo "Output will be saved to: $(SEQUENTIAL_OUTPUT)"
+	./$(SEQUENTIAL_TARGET) $(SEQUENTIAL_OUTPUT)
+
+run-openmp-static: build-openmp-static
+	@echo "Running OpenMP static version with $(THREADS) threads..."
+	@echo "Output will be saved to: $(OPENMP_OUTPUT)"
+	OMP_NUM_THREADS=$(THREADS) ./$(OPENMP_STATIC_TARGET) $(OPENMP_OUTPUT)
+
+run-openmp-dynamic: build-openmp-dynamic
+	@echo "Running OpenMP dynamic version with $(THREADS) threads..."
+	@echo "Output will be saved to: $(OPENMP_OUTPUT)"
+	OMP_NUM_THREADS=$(THREADS) ./$(OPENMP_DYNAMIC_TARGET) $(OPENMP_OUTPUT)
+
+run-openmp-guided: build-openmp-guided
+	@echo "Running OpenMP guided version with $(THREADS) threads..."
+	@echo "Output will be saved to: $(OPENMP_OUTPUT)"
+	OMP_NUM_THREADS=$(THREADS) ./$(OPENMP_GUIDED_TARGET) $(OPENMP_OUTPUT)
+
+# Benchmark all versions
+benchmark: build-all
+	@echo "=== Performance Benchmark ==="
+	@echo "Running all algorithm versions for comparison..."
+	@echo ""
+	@echo "1. Sequential version:"
+	@make run-sequential --silent
+	@echo ""
+	@echo "2. OpenMP Static ($(THREADS) threads):"
+	@make run-openmp-static THREADS=$(THREADS) --silent
+	@echo ""
+	@echo "3. OpenMP Dynamic ($(THREADS) threads):"
+	@make run-openmp-dynamic THREADS=$(THREADS) --silent
+	@echo ""
+	@echo "4. OpenMP Guided ($(THREADS) threads):"
+	@make run-openmp-guided THREADS=$(THREADS) --silent
+	@echo ""
+	@echo "Benchmark completed! Check individual output files for results."
+
+# Intel Advisor analysis
+advisor: advisor-$(VERSION)
+
+advisor-sequential: build-sequential
+	@echo "Running Intel Advisor analysis on sequential version..."
+	advisor --collect=survey --project-dir=$(SEQUENTIAL_ADVISOR) -- $(SEQUENTIAL_TARGET) $(SEQUENTIAL_OUTPUT)
+	advisor --collect=roofline --project-dir=$(SEQUENTIAL_ADVISOR) -- $(SEQUENTIAL_TARGET) $(SEQUENTIAL_OUTPUT)
+	@echo "Analysis complete. Use 'make advisor-gui VERSION=sequential' to view results."
+
+advisor-openmp-static: build-openmp-static
+	@echo "Running Intel Advisor analysis on OpenMP static version..."
+	advisor --collect=survey --project-dir=$(OPENMP_ADVISOR) -- $(OPENMP_STATIC_TARGET) $(OPENMP_OUTPUT)
+	advisor --collect=roofline --project-dir=$(OPENMP_ADVISOR) -- $(OPENMP_STATIC_TARGET) $(OPENMP_OUTPUT)
+	@echo "Analysis complete. Use 'make advisor-gui VERSION=openmp-static' to view results."
+
+advisor-openmp-dynamic: build-openmp-dynamic
+	@echo "Running Intel Advisor analysis on OpenMP dynamic version..."
+	advisor --collect=survey --project-dir=$(OPENMP_ADVISOR) -- $(OPENMP_DYNAMIC_TARGET) $(OPENMP_OUTPUT)
+	advisor --collect=roofline --project-dir=$(OPENMP_ADVISOR) -- $(OPENMP_DYNAMIC_TARGET) $(OPENMP_OUTPUT)
+	@echo "Analysis complete. Use 'make advisor-gui VERSION=openmp-dynamic' to view results."
+
+advisor-openmp-guided: build-openmp-guided
+	@echo "Running Intel Advisor analysis on OpenMP guided version..."
+	advisor --collect=survey --project-dir=$(OPENMP_ADVISOR) -- $(OPENMP_GUIDED_TARGET) $(OPENMP_OUTPUT)
+	advisor --collect=roofline --project-dir=$(OPENMP_ADVISOR) -- $(OPENMP_GUIDED_TARGET) $(OPENMP_OUTPUT)
+	@echo "Analysis complete. Use 'make advisor-gui VERSION=openmp-guided' to view results."
+
+# View advisor results
+advisor-gui: advisor-gui-$(VERSION)
+
+advisor-gui-sequential:
+	advisor-gui $(SEQUENTIAL_ADVISOR) &
+
+advisor-gui-openmp-static:
+	advisor-gui $(OPENMP_ADVISOR) &
+
+advisor-gui-openmp-dynamic:
+	advisor-gui $(OPENMP_ADVISOR) &
+
+advisor-gui-openmp-guided:
+	advisor-gui $(OPENMP_ADVISOR) &
+
+# Generate text reports
+advisor-report: advisor-report-$(VERSION)
+
+advisor-report-sequential:
+	advisor --report=survey --project-dir=$(SEQUENTIAL_ADVISOR)
+	advisor --report=roofline --project-dir=$(SEQUENTIAL_ADVISOR)
+
+advisor-report-openmp-static:
+	advisor --report=survey --project-dir=$(OPENMP_ADVISOR)
+	advisor --report=roofline --project-dir=$(OPENMP_ADVISOR)
+
+advisor-report-openmp-dynamic:
+	advisor --report=survey --project-dir=$(OPENMP_ADVISOR)
+	advisor --report=roofline --project-dir=$(OPENMP_ADVISOR)
+
+advisor-report-openmp-guided:
+	advisor --report=survey --project-dir=$(OPENMP_ADVISOR)
+	advisor --report=roofline --project-dir=$(OPENMP_ADVISOR)
+
+# Utility targets
+clean:
+	@echo "Cleaning all build artifacts..."
+	rm -f $(SEQUENTIAL_TARGET) $(SEQUENTIAL_OUTPUT)
+	rm -f $(OPENMP_STATIC_TARGET) $(OPENMP_DYNAMIC_TARGET) $(OPENMP_GUIDED_TARGET) $(OPENMP_OUTPUT)
+	rm -rf $(SEQUENTIAL_ADVISOR) $(OPENMP_ADVISOR)
+	@echo "Clean completed!"
+
+# Clean specific version
+clean-sequential:
+	rm -f $(SEQUENTIAL_TARGET) $(SEQUENTIAL_OUTPUT)
+	rm -rf $(SEQUENTIAL_ADVISOR)
+
+clean-openmp:
+	rm -f $(OPENMP_STATIC_TARGET) $(OPENMP_DYNAMIC_TARGET) $(OPENMP_GUIDED_TARGET) $(OPENMP_OUTPUT)
+	rm -rf $(OPENMP_ADVISOR)
+
+# Test if a version is built
+test-build: test-build-$(VERSION)
+
+test-build-sequential:
+	@test -f $(SEQUENTIAL_TARGET) && echo "Sequential version is built" || echo "Sequential version not built"
+
+test-build-openmp-static:
+	@test -f $(OPENMP_STATIC_TARGET) && echo "OpenMP static version is built" || echo "OpenMP static version not built"
+
+test-build-openmp-dynamic:
+	@test -f $(OPENMP_DYNAMIC_TARGET) && echo "OpenMP dynamic version is built" || echo "OpenMP dynamic version not built"
+
+test-build-openmp-guided:
+	@test -f $(OPENMP_GUIDED_TARGET) && echo "OpenMP guided version is built" || echo "OpenMP guided version not built"
+
+# Show current configuration
+config:
+	@echo "=== Current Configuration ==="
+	@echo "Compiler: $(CXX)"
+	@echo "CXXFLAGS: $(CXXFLAGS)"
+	@echo "OpenMP Flags: $(OPENMP_FLAGS)"
+	@echo "Selected Version: $(VERSION)"
+	@echo "Threads: $(THREADS)"
+	@echo "Output File: $(OUTPUT_FILE)"
+	@echo "Available Versions: $(VERSIONS)"
+
+.PHONY: help list build build-all run benchmark advisor advisor-gui advisor-report clean config test-build \
+        build-sequential build-openmp-static build-openmp-dynamic build-openmp-guided \
+        run-sequential run-openmp-static run-openmp-dynamic run-openmp-guided \
+        advisor-sequential advisor-openmp-static advisor-openmp-dynamic advisor-openmp-guided \
+        advisor-gui-sequential advisor-gui-openmp-static advisor-gui-openmp-dynamic advisor-gui-openmp-guided \
+        advisor-report-sequential advisor-report-openmp-static advisor-report-openmp-dynamic advisor-report-openmp-guided \
+        clean-sequential clean-openmp test-build-sequential test-build-openmp-static test-build-openmp-dynamic test-build-openmp-guided

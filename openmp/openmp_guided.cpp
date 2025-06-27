@@ -15,14 +15,14 @@
 #define RATIO_Y (MAX_Y - MIN_Y)
 
 // Image size
-#define RESOLUTION 3000  
+#define RESOLUTION 1000
 #define WIDTH (RATIO_X * RESOLUTION)
 #define HEIGHT (RATIO_Y * RESOLUTION)
 
 #define STEP ((double)RATIO_X / WIDTH)
 
-#define DEGREE 3        // Degree of the polynomial
-#define ITERATIONS 3000 
+#define DEGREE 2        // Degree of the polynomial
+#define ITERATIONS 1000 
 
 using namespace std;
 
@@ -32,12 +32,12 @@ int main(int argc, char **argv)
     
     // Get number of threads for reporting
     const int num_threads = omp_get_max_threads();
-    cout << "Using " << num_threads << " OpenMP threads" << endl;
+    cout << "Using " << num_threads << " OpenMP threads with guided scheduling" << endl;
 
     const auto start = chrono::steady_clock::now();
     
-    // Parallel loop with OpenMP - using static scheduling for better load balancing
-    #pragma omp parallel for schedule(static) shared(image)
+    // Parallel loop with OpenMP - using guided scheduling for adaptive load balancing
+    #pragma omp parallel for schedule(guided) shared(image)
     for (int pos = 0; pos < HEIGHT * WIDTH; pos++)
     {
         image[pos] = 0;
