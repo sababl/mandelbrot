@@ -132,22 +132,20 @@
 
 ## Generated Data Files
 
-### Raw Performance Data
-1. **`openmp_comprehensive_results.csv`** - Complete static scheduling data (72 configurations)
-2. **`openmp_dynamic_specific_results.csv`** - Dynamic scheduling data (40 configurations)
-3. **`openmp_guided_specific_results.csv`** - Guided scheduling data (40 configurations)
+### Consolidated Performance Data
+1. **`openmp_consolidated_results.csv`** - Complete OpenMP data (152 configurations: static, dynamic, guided)
+2. **`sequential_consolidated_results.csv`** - Sequential compiler flags and scaling analysis
 
-### Analysis Reports
-4. **`openmp_comprehensive_analysis.txt`** - Detailed static scheduling technical analysis
-5. **`openmp_comprehensive_summary.txt`** - Static scheduling executive summary  
-6. **`openmp_dynamic_specific_analysis.txt`** - Dynamic scheduling detailed analysis
-7. **`openmp_guided_specific_analysis.txt`** - Guided scheduling detailed analysis
-8. **`openmp_static_vs_dynamic_comparison.txt`** - Head-to-head scheduling comparison
-9. **`openmp_three_way_scheduling_comparison.txt`** - Complete three-way analysis
+### Comprehensive Analysis
+3. **`openmp_complete_analysis.txt`** - Complete three-way OpenMP scheduling analysis including:
+   - Static scheduling detailed results (72 configurations)
+   - Dynamic scheduling detailed results (40 configurations)  
+   - Guided scheduling detailed results (40 configurations)
+   - Head-to-head performance comparison
+   - Technical insights and recommendations
 
 ### Benchmark Results
-7. **`flag_benchmark_results_sequential.csv`** - Sequential optimization analysis
-8. **`resolution_iterations_benchmark_sequential.csv`** - Sequential scaling analysis
+4. **`seq-1000.svg`** - Sequential performance visualization
 
 ## Implementation Files
 
@@ -155,16 +153,21 @@
 - **`openmp/openmp_static_parametric.cpp`** - Configurable static scheduling implementation
 - **`openmp/openmp_dynamic_parametric.cpp`** - Configurable dynamic scheduling implementation
 - **`openmp/openmp_guided_parametric.cpp`** - Configurable guided scheduling implementation
+- **`sequential/mandelbrot.cpp`** - Sequential reference implementation
 
 ### Executables
 - **`openmp/mandelbrot_static_parametric`** - Compiled static version
 - **`openmp/mandelbrot_dynamic_parametric`** - Compiled dynamic version
 - **`openmp/mandelbrot_guided_parametric`** - Compiled guided version
+- **`sequential/mandelbrot`** - Compiled sequential version
 
 ### Benchmark Scripts
-- **`comprehensive_openmp_benchmark.sh`** - Complete static analysis automation
-- **`openmp_dynamic_benchmark.sh`** - Dynamic scheduling benchmark
-- **`openmp_guided_benchmark.sh`** - Guided scheduling benchmark
+- **`scripts/comprehensive_openmp_benchmark.sh`** - Complete static analysis automation
+- **`scripts/openmp_dynamic_benchmark.sh`** - Dynamic scheduling benchmark
+- **`scripts/openmp_guided_benchmark.sh`** - Guided scheduling benchmark
+- **`scripts/benchmark_flags.sh`** - Sequential compiler optimization testing
+- **`scripts/benchmark_resolution_iterations.sh`** - Sequential scaling analysis
+- **`scripts/compare_scheduling.sh`** - Cross-scheduling comparison utilities
 
 ## Recommendations
 
