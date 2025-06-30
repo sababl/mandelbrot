@@ -27,12 +27,18 @@ SEQUENTIAL_SRC = $(SEQUENTIAL_DIR)/mandelbrot.cpp
 OPENMP_STATIC_SRC = $(OPENMP_DIR)/openmp_static.cpp
 OPENMP_DYNAMIC_SRC = $(OPENMP_DIR)/openmp_dynamic.cpp
 OPENMP_GUIDED_SRC = $(OPENMP_DIR)/openmp_guided.cpp
+OPENMP_STATIC_PARAMETRIC_SRC = $(OPENMP_DIR)/openmp_static_parametric.cpp
+OPENMP_DYNAMIC_PARAMETRIC_SRC = $(OPENMP_DIR)/openmp_dynamic_parametric.cpp
+OPENMP_GUIDED_PARAMETRIC_SRC = $(OPENMP_DIR)/openmp_guided_parametric.cpp
 
 # Target executables mapping
 SEQUENTIAL_TARGET = $(SEQUENTIAL_DIR)/mandelbrot
 OPENMP_STATIC_TARGET = $(OPENMP_DIR)/mandelbrot_static
 OPENMP_DYNAMIC_TARGET = $(OPENMP_DIR)/mandelbrot_dynamic
 OPENMP_GUIDED_TARGET = $(OPENMP_DIR)/mandelbrot_guided
+OPENMP_STATIC_PARAMETRIC_TARGET = $(OPENMP_DIR)/mandelbrot_static_parametric
+OPENMP_DYNAMIC_PARAMETRIC_TARGET = $(OPENMP_DIR)/mandelbrot_dynamic_parametric
+OPENMP_GUIDED_PARAMETRIC_TARGET = $(OPENMP_DIR)/mandelbrot_guided_parametric
 
 # Output files mapping
 SEQUENTIAL_OUTPUT = $(SEQUENTIAL_DIR)/$(OUTPUT_FILE)
@@ -104,6 +110,11 @@ build-openmp-guided: $(OPENMP_GUIDED_TARGET)
 $(OPENMP_GUIDED_TARGET): $(OPENMP_GUIDED_SRC)
 	@echo "Building OpenMP guided version..."
 	$(CXX) $(CXXFLAGS) $(OPENMP_FLAGS) -o $(OPENMP_GUIDED_TARGET) $(OPENMP_GUIDED_SRC)
+
+build-openmp-guided-parametric: $(OPENMP_GUIDED_PARAMETRIC_TARGET)
+$(OPENMP_GUIDED_PARAMETRIC_TARGET): $(OPENMP_GUIDED_PARAMETRIC_SRC)
+	@echo "Building OpenMP guided parametric version..."
+	$(CXX) $(CXXFLAGS) $(OPENMP_FLAGS) -o $(OPENMP_GUIDED_PARAMETRIC_TARGET) $(OPENMP_GUIDED_PARAMETRIC_SRC)
 
 # Build all versions
 build-all: build-sequential build-openmp-static build-openmp-dynamic build-openmp-guided

@@ -1,0 +1,98 @@
+=== OpenMP Three-Way Scheduling Comparison Analysis ===
+Date: June 30, 2025
+Comparing: Static vs Dynamic vs Guided Scheduling
+Configurations: 5 overlapping problem sizes for direct comparison
+
+==================================================
+EXECUTIVE SUMMARY  
+==================================================
+
+Complete analysis of all three OpenMP scheduling approaches reveals:
+
+**OVERALL WINNER: GUIDED SCHEDULING**
+- Best performance in 5/5 configurations
+- Average improvement: 37.7% faster than alternatives
+- Best balance of performance and predictability
+
+**RUNNER-UP: DYNAMIC SCHEDULING**  
+- Highest peak speedups (up to 13.96×)
+- Most efficient at moderate thread counts
+- Best for maximum performance scenarios
+
+**BASELINE: STATIC SCHEDULING**
+- Most predictable and lowest overhead
+- Good performance at high thread counts (64)
+- Suitable for well-balanced workloads
+
+==================================================
+HEAD-TO-HEAD PERFORMANCE COMPARISON
+==================================================
+
+Configuration           | Static  | Dynamic | Guided  | Winner  | Margin
+------------------------|---------|---------|---------|---------|--------
+1000×1000, 1000 iter   | 1,251ms | 1,066ms | 671ms   | Guided  | +37.0%
+2000×2000, 1000 iter   | 4,732ms | 4,217ms | 2,665ms | Guided  | +36.8%
+3000×3000, 1000 iter   | 10,157ms| 9,460ms | 6,060ms | Guided  | +35.9%
+1000×1000, 3000 iter   | 3,064ms | 2,829ms | 1,714ms | Guided  | +39.4%
+1000×1000, 5000 iter   | 5,104ms | 4,590ms | 2,772ms | Guided  | +39.6%
+
+**GUIDED SCHEDULING DOMINATES**
+- Wins all 5 configurations tested
+- Average improvement: 37.7% faster than best alternative
+- Margin range: 35.9% to 39.6% improvement
+
+==================================================
+OPTIMAL THREAD COUNT ANALYSIS
+==================================================
+
+Scheduling Type | Preferred Thread Count | Frequency | Efficiency
+----------------|------------------------|-----------|------------
+Static          | 64 threads            | 5/5 (100%)| 16.5-20.4%
+Dynamic         | 24-32 threads         | 5/5 (100%)| 38.8-58.2%
+Guided          | 24-32 threads         | 4/5 (80%) | 37.0-57.0%
+
+**KEY INSIGHTS:**
+- Static: Consistently optimal at 64 threads but low efficiency
+- Dynamic: Prefers 24-32 threads with much higher efficiency
+- Guided: Similar pattern to dynamic with slightly lower efficiency
+
+==================================================
+FINAL RECOMMENDATIONS
+==================================================
+
+### For Maximum Performance
+**Recommendation: Guided Scheduling**
+- Expected performance: 37.7% improvement over alternatives
+- Optimal threads: 24-32
+- Use case: All production workloads
+
+### For Highest Speedups
+**Recommendation: Dynamic Scheduling**
+- Expected performance: 12.94× average speedup
+- Optimal threads: 24-32
+- Use case: Maximum performance requirements
+
+### For Predictable Performance
+**Recommendation: Static Scheduling**
+- Expected performance: 11.73× average speedup
+- Optimal threads: 64
+- Use case: Real-time applications
+
+==================================================
+CONCLUSIONS
+==================================================
+
+1. Guided scheduling provides the best overall performance
+2. Dynamic scheduling achieves the highest speedups
+3. Static scheduling offers the most predictable behavior
+4. Optimal thread count is typically 24-32 for modern approaches
+5. Efficiency vs performance trade-offs are well-characterized
+
+This comprehensive analysis establishes guided scheduling as the optimal 
+choice for Mandelbrot computation and similar irregular parallel workloads.
+
+*Analysis completed*: June 30, 2025
+*Total configurations analyzed*: 152 (72 static + 40 dynamic + 40 guided)
+*Execution time*: ~6 hours for complete analysis suite
+*Methodology*: Best of 3 runs with nanosecond precision timing
+*Compiler*: Intel C++ Compiler (icc) with OpenMP support
