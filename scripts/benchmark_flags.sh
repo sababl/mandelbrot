@@ -12,8 +12,8 @@ IMAGES_DIR="report/images"
 FLAGS=("-O0" "-O1" "-O2" "-O3" "-xhost" "-fast" "-xSSE3")
 
 # Check if Intel compiler is available
-if ! command -v icpx &> /dev/null; then
-    echo "Error: Intel C++ compiler (icpx) not found!"
+if ! command -v icc &> /dev/null; then
+    echo "Error: Intel C++ compiler (icc) not found!"
     echo "Please make sure Intel oneAPI is installed and sourced."
     exit 1
 fi
@@ -57,7 +57,7 @@ benchmark_flag() {
     
     # Compile with the specific flag
     echo "  Compiling..."
-    if icpx $flag -o $executable $SOURCE_FILE; then
+    if icc $flag -o $executable $SOURCE_FILE; then
         echo "  Compilation successful"
         
         # Run the program and capture output

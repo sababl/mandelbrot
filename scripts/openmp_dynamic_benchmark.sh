@@ -3,6 +3,18 @@
 # OpenMP Dynamic Scheduling Benchmark for Specific Configurations
 # Tests the configurations requested by the user
 
+# Check if Intel C Compiler is available
+if ! command -v icc &> /dev/null; then
+    echo "Error: Intel C Compiler (icc) not found!"
+    echo "This script requires the Intel C Compiler (icc)."
+    echo "Please make sure Intel oneAPI is installed and sourced."
+    exit 1
+fi
+
+# Ensure we're using icc compiler
+export CC=icc
+export CXX=icc
+
 # Configuration arrays - specific configurations requested
 CONFIGS=(
     "1000 1000"   # RES 1000 – ITR 1000

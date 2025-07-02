@@ -1,0 +1,141 @@
+=== OpenMP Static vs Dynamic vs Guided Scheduling Comparison ===
+Generated: Wed  2 Jul 12:07:59 CEST 2025
+Compiler: Intel C Compiler (icc) with -qopenmp
+
+=== Performance Comparison by Configuration ===
+
+--- Configuration: 1000x1000, 1000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Guided (ms) | Best    | Static vs Best | Dynamic vs Best | Guided vs Best
+--------|-------------|--------------|-------------|---------|----------------|-----------------|----------------
+64      | 1251.091    | 1075.258     | 674         | Guided  | 80.0%          | 50.0%           | 0%            
+32      | 1309.847    | 1066.486     | 678         | Guided  | 90.0%          | 50.0%           | 0%            
+24      | 1599.341    | 1066.787     | 664         | Guided  | 140.0%         | 60.0%           | 0%            
+16      | 1971.871    | 1150.071     | 782         | Guided  | 150.0%         | 40.0%           | 0%            
+8       | 3415.129    | 1822.279     | 1150        | Guided  | 190.0%         | 50.0%           | 0%            
+4       | 5540.173    | 3439.033     | 2118        | Guided  | 160.0%         | 60.0%           | 0%            
+2       | 6701.481    | 6724.932     | 4083        | Guided  | 60.0%          | 60.0%           | 0%            
+1       | 13236.358   | 13239.425    | 7958        | Guided  | 60.0%          | 60.0%           | 0%            
+
+Best Results:
+• Static:  64 threads, 1251.091 ms (10.581x speedup)
+• Dynamic: 32 threads, 1066.486 ms (12.414x speedup)
+• Guided:  1 threads, 7958 ms (.999x speedup)
+→ Winner: Dynamic scheduling (1066.486 ms)
+
+--- Configuration: 2000x2000, 1000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Guided (ms) | Best    | Static vs Best | Dynamic vs Best | Guided vs Best
+--------|-------------|--------------|-------------|---------|----------------|-----------------|----------------
+64      | 4732.257    | 4216.859     | 2701        | Guided  | 70.0%          | 50.0%           | 0%            
+32      | 5269.946    | 4220.925     | 2683        | Guided  | 90.0%          | 50.0%           | 0%            
+24      | 6103.743    | 4219.152     | 2677        | Guided  | 120.0%         | 50.0%           | 0%            
+16      | 7688.919    | 4580.181     | 3126        | Guided  | 140.0%         | 40.0%           | 0%            
+8       | 13598.758   | 7270.208     | 4563        | Guided  | 190.0%         | 50.0%           | 0%            
+4       | 22132.210   | 13726.304    | 8446        | Guided  | 160.0%         | 60.0%           | 0%            
+2       | 26765.954   | 26873.108    | 16271       | Guided  | 60.0%          | 60.0%           | 0%            
+1       | 52933.081   | 52934.739    | 31754       | Guided  | 60.0%          | 60.0%           | 0%            
+
+Best Results:
+• Static:  64 threads, 4732.257 ms (11.185x speedup)
+• Dynamic: 64 threads, 4216.859 ms (12.553x speedup)
+• Guided:  4 threads, 8446 ms (.941x speedup)
+→ Winner: Dynamic scheduling (4216.859 ms)
+
+--- Configuration: 3000x3000, 1000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Guided (ms) | Best    | Static vs Best | Dynamic vs Best | Guided vs Best
+--------|-------------|--------------|-------------|---------|----------------|-----------------|----------------
+64      | 10157.414   | 9476.620     | 6037        | Guided  | 60.0%          | 50.0%           | 0%            
+32      | 11721.232   | 9496.004     | 6084        | Guided  | 90.0%          | 50.0%           | 0%            
+24      | 13029.489   | 9460.315     | 6006        | Guided  | 110.0%         | 50.0%           | 0%            
+16      | 17371.615   | 10280.359    | 7018        | Guided  | 140.0%         | 40.0%           | 0%            
+8       | 30574.543   | 16291.613    | 10276       | Guided  | 190.0%         | 50.0%           | 0%            
+4       | 49803.900   | 30876.515    | 18916       | Guided  | 160.0%         | 60.0%           | 0%            
+2       | 60205.393   | 60506.364    | 36632       | Guided  | 60.0%          | 60.0%           | 0%            
+1       | 119094.183  | 119113.241   | 71404       | Guided  | 60.0%          | 60.0%           | 0%            
+
+Best Results:
+• Static:  64 threads, 10157.414 ms (11.725x speedup)
+• Dynamic: 24 threads, 9460.315 ms (12.591x speedup)
+• Guided:  8 threads, 10276 ms (.774x speedup)
+→ Winner: Dynamic scheduling (9460.315 ms)
+
+--- Configuration: 1000x1000, 3000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Guided (ms) | Best    | Static vs Best | Dynamic vs Best | Guided vs Best
+--------|-------------|--------------|-------------|---------|----------------|-----------------|----------------
+64      | 3063.689    | 2834.747     | 1710        | Guided  | 70.0%          | 60.0%           | 0%            
+32      | 3612.043    | 2848.218     | 1740        | Guided  | 100.0%         | 60.0%           | 0%            
+24      | 4269.936    | 2828.660     | 1743        | Guided  | 140.0%         | 60.0%           | 0%            
+16      | 5518.665    | 3082.357     | 1945        | Guided  | 180.0%         | 50.0%           | 0%            
+8       | 9862.450    | 5070.967     | 3042        | Guided  | 220.0%         | 60.0%           | 0%            
+4       | 16134.048   | 9798.273     | 5854        | Guided  | 170.0%         | 60.0%           | 0%            
+2       | 19430.079   | 19442.583    | 11572       | Guided  | 60.0%          | 60.0%           | 0%            
+1       | 38667.014   | 38666.110    | 22932       | Guided  | 60.0%          | 60.0%           | 0%            
+
+Best Results:
+• Static:  64 threads, 3063.689 ms (12.620x speedup)
+• Dynamic: 24 threads, 2828.660 ms (13.669x speedup)
+• Guided:  2 threads, 11572 ms (.687x speedup)
+→ Winner: Dynamic scheduling (2828.660 ms)
+
+--- Configuration: 1000x1000, 5000 iterations ---
+Threads | Static (ms) | Dynamic (ms) | Guided (ms) | Best    | Static vs Best | Dynamic vs Best | Guided vs Best
+--------|-------------|--------------|-------------|---------|----------------|-----------------|----------------
+64      | 5104.461    | 4600.668     | 2819        | Guided  | 80.0%          | 60.0%           | 0%            
+32      | 5782.580    | 4593.936     | 2764        | Guided  | 100.0%         | 60.0%           | 0%            
+24      | 6679.197    | 4590.205     | 2808        | Guided  | 130.0%         | 60.0%           | 0%            
+16      | 8882.324    | 5059.800     | 3091        | Guided  | 180.0%         | 60.0%           | 0%            
+8       | 16244.385   | 8223.805     | 4959        | Guided  | 220.0%         | 60.0%           | 0%            
+4       | 26719.621   | 16156.335    | 9595        | Guided  | 170.0%         | 60.0%           | 0%            
+2       | 32148.451   | 32152.770    | 19051       | Guided  | 60.0%          | 60.0%           | 0%            
+1       | 64080.731   | 64075.955    | 37897       | Guided  | 60.0%          | 60.0%           | 0%            
+
+Best Results:
+• Static:  64 threads, 5104.461 ms (12.553x speedup)
+• Dynamic: 24 threads, 4590.205 ms (13.960x speedup)
+• Guided:  4 threads, 9595 ms (.829x speedup)
+→ Winner: Dynamic scheduling (4590.205 ms)
+
+=== Overall Analysis ===
+
+Performance Summary:
+• Total configurations compared: 5
+• Static scheduling wins: 0
+• Dynamic scheduling wins: 5
+• Guided scheduling wins: 0
+
+=== Key Insights ===
+
+1. Scheduling Overhead:
+   • Static: Minimal overhead, work distributed at compile time
+   • Dynamic: Runtime overhead for work distribution
+   • Guided: Adaptive overhead, starts with large chunks, decreases over time
+
+2. Load Balancing:
+   • Static: Poor load balancing for irregular workloads
+   • Dynamic: Excellent load balancing but with overhead cost
+   • Guided: Good compromise between load balancing and overhead
+
+3. Problem Size Effects:
+   • Larger problems: Dynamic and guided may show benefits
+   • Smaller problems: Static often performs best due to low overhead
+
+4. Thread Count Impact:
+   • Higher thread counts: Guided often shows best scaling
+   • Lower thread counts: Static often sufficient
+
+=== Recommendations ===
+
+1. For Mandelbrot Set Computation:
+   • Regular computation patterns favor static scheduling
+   • Guided scheduling provides good balance for various problem sizes
+   • Dynamic scheduling best for highly irregular workloads
+
+2. General Guidelines:
+   • Static: Use for predictable, regular workloads with low overhead priority
+   • Dynamic: Use for highly irregular or unpredictable workloads
+   • Guided: Use as default choice for unknown workload characteristics
+
+3. Performance Tuning:
+   • Test all three scheduling types for your specific workload
+   • Consider chunk size tuning for dynamic and guided scheduling
+   • Monitor scaling behavior with increasing thread counts
+   • Profile load balancing effectiveness

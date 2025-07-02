@@ -3,6 +3,18 @@
 # Comprehensive OpenMP Static Mandelbrot Benchmark
 # Tests multiple resolutions, iterations, and thread counts
 
+# Check if Intel C Compiler is available
+if ! command -v icc &> /dev/null; then
+    echo "Error: Intel C Compiler (icc) not found!"
+    echo "This script requires the Intel C Compiler (icc)."
+    echo "Please make sure Intel oneAPI is installed and sourced."
+    exit 1
+fi
+
+# Ensure we're using icc compiler
+export CC=icc
+export CXX=icc
+
 # Configuration arrays
 RESOLUTIONS=(1000 2000 3000)
 ITERATIONS_ARRAY=(1000 3000 5000)
@@ -130,7 +142,7 @@ Configurations Tested:
 - Thread counts: ${THREADS[@]}
 - Runs per configuration: ${RUNS_PER_CONFIG}
 Timing: High-precision nanosecond timing (best of ${RUNS_PER_CONFIG} runs)
-Compiler: Intel C++ Compiler (icpc) with -qopenmp
+Compiler: Intel C++ Compiler (icc) with -qopenmp
 
 === Performance Summary by Configuration ===
 

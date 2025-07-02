@@ -1,12 +1,8 @@
 # Comprehensive Makefile for Mandelbrot Algorithms with Intel Compiler and Advisor
-# Fallback to g++ if Intel compiler is not available
-CXX := $(shell command -v icpc 2> /dev/null || echo g++)
+# Use only Intel C Compiler (icc) - no fallback
+CXX := icc
 CXXFLAGS = -O2 -g
-ifeq ($(CXX),g++)
-    OPENMP_FLAGS = -fopenmp
-else
-    OPENMP_FLAGS = -qopenmp
-endif
+OPENMP_FLAGS = -qopenmp
 MPI_FLAGS = -DWITH_MPI
 CUDA_FLAGS = -DWITH_CUDA
 
