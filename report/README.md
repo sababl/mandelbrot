@@ -59,6 +59,17 @@
 - Direct comparison with both static and dynamic results
 - Intel C++ Compiler (icc) with -qopenmp
 
+### 5. MPI Distributed Memory Performance
+
+**Best Performance by Configuration:**
+| Configuration    | Best Processes | Time (ms) | Speedup | Efficiency | vs OpenMP Best |
+|------------------|----------------|-----------|---------|------------|----------------|
+| 1000×1000, 1000  | 64             | 1,920     | 6.81×   | 10.6%      | -71.7%         |
+| 2000×2000, 1000  | 256            | 7,760     | 6.74×   | 2.6%       | -83.4%         |
+| 3000×3000, 1000  | 128            | 16,554    | 7.11×   | 5.5%       | -63.4%         |
+| 1000×1000, 3000  | 64             | 5,557     | 6.93×   | 10.8%      | -69.3%         |
+| 1000×1000, 5000  | 32             | 9,662     | 6.62×   | 20.6%      | -65.2%         |
+
 ## Key Results Summary
 
 ### 1. OpenMP Static Scheduling Performance
@@ -113,9 +124,9 @@
 ## Performance Insights
 
 ### Scaling Characteristics
-- **Linear Scaling Region**: 1-2 threads (>90% efficiency)
+- **Linear Scaling Region**: 1-2 threads/processes (>90% efficiency)
 - **Good Scaling Region**: 2-16 threads (40-70% efficiency)  
-- **Diminishing Returns**: Beyond 32 threads
+- **Diminishing Returns**: Beyond 32 threads/processes
 - **Resource Efficiency Sweet Spot**: 4-8 threads for balanced environments
 
 ### Problem Size Effects
@@ -124,28 +135,41 @@
 - **Compute intensity** scales well with iteration count
 - **Dynamic scheduling** benefits increase with problem irregularity
 
-### Thread Count Optimization
-- **Static scheduling**: 64 threads consistently optimal
-- **Dynamic scheduling**: 24-32 threads optimal for most configurations
-- **Efficiency consideration**: 2-4 threads for resource-constrained environments
-- **Load balancing**: Dynamic shows better distribution across thread counts
+### Parallelization Approach Comparison
+- **OpenMP Guided**: Best overall performance (37.7% faster than alternatives)
+- **OpenMP Dynamic**: Highest speedups (up to 13.96×)  
+- **OpenMP Static**: Most predictable, good baseline performance
+- **MPI**: Lower efficiency but scales beyond single node (max 7.11× speedup)
+
+### Thread/Process Count Optimization
+- **OpenMP**: 24-32 threads optimal for guided/dynamic, 64 for static
+- **MPI**: 32-128 processes optimal depending on problem size
+- **High Efficiency**: 2-4 threads/processes for resource-constrained environments
+- **Load Balancing**: Dynamic/guided scheduling shows better distribution
 
 ## Generated Data Files
 
 ### Consolidated Performance Data
 1. **`openmp_consolidated_results.csv`** - Complete OpenMP data (152 configurations: static, dynamic, guided)
 2. **`sequential_consolidated_results.csv`** - Sequential compiler flags and scaling analysis
+3. **`mpi_performance_results.csv`** - Complete MPI distributed memory data (45 configurations)
 
 ### Comprehensive Analysis
-3. **`openmp_complete_analysis.txt`** - Complete three-way OpenMP scheduling analysis including:
+4. **`openmp_complete_analysis.txt`** - Complete three-way OpenMP scheduling analysis including:
    - Static scheduling detailed results (72 configurations)
    - Dynamic scheduling detailed results (40 configurations)  
    - Guided scheduling detailed results (40 configurations)
    - Head-to-head performance comparison
    - Technical insights and recommendations
 
+5. **`mpi_performance_analysis_detailed.txt`** - Complete MPI distributed memory analysis including:
+   - Performance results across all process counts (45 configurations)
+   - Scaling analysis and efficiency breakdown
+   - Comparison with OpenMP approaches
+   - Intel compiler optimization details
+
 ### Benchmark Results
-4. **`seq-1000.svg`** - Sequential performance visualization
+6. **`seq-1000.svg`** - Sequential performance visualization
 
 ## Implementation Files
 
@@ -153,18 +177,21 @@
 - **`openmp/openmp_static_parametric.cpp`** - Configurable static scheduling implementation
 - **`openmp/openmp_dynamic_parametric.cpp`** - Configurable dynamic scheduling implementation
 - **`openmp/openmp_guided_parametric.cpp`** - Configurable guided scheduling implementation
+- **`mpi/mpi_mandelbrot_parametric.cpp`** - MPI distributed memory implementation
 - **`sequential/mandelbrot.cpp`** - Sequential reference implementation
 
 ### Executables
 - **`openmp/mandelbrot_static_parametric`** - Compiled static version
 - **`openmp/mandelbrot_dynamic_parametric`** - Compiled dynamic version
 - **`openmp/mandelbrot_guided_parametric`** - Compiled guided version
+- **`mpi/mpi_mandelbrot_parametric`** - Compiled MPI version (Intel compiler)
 - **`sequential/mandelbrot`** - Compiled sequential version
 
 ### Benchmark Scripts
 - **`scripts/comprehensive_openmp_benchmark.sh`** - Complete static analysis automation
 - **`scripts/openmp_dynamic_benchmark.sh`** - Dynamic scheduling benchmark
 - **`scripts/openmp_guided_benchmark.sh`** - Guided scheduling benchmark
+- **`scripts/mpi_benchmark.sh`** - MPI distributed memory benchmark with Intel compiler
 - **`scripts/benchmark_flags.sh`** - Sequential compiler optimization testing
 - **`scripts/benchmark_resolution_iterations.sh`** - Sequential scaling analysis
 - **`scripts/compare_scheduling.sh`** - Cross-scheduling comparison utilities
@@ -236,19 +263,27 @@
 
 ## Summary
 
-This comprehensive analysis demonstrates that **guided scheduling provides superior performance** for Mandelbrot set computation, with **37.7% average improvements** over other scheduling approaches across all tested configurations. 
+This comprehensive analysis demonstrates that **guided scheduling provides superior performance** for Mandelbrot set computation within shared-memory OpenMP paradigm, with **37.7% average improvements** over other scheduling approaches across all tested configurations. However, the **complete study now includes distributed memory MPI analysis**, providing a full spectrum of parallelization approaches.
 
 **Key Findings:**
-- **Guided scheduling** wins all 5 configurations tested
-- **Dynamic scheduling** achieves highest speedups (up to 13.96×)
-- **Static scheduling** provides predictable baseline performance
+- **OpenMP Guided scheduling** wins all 5 configurations tested for shared-memory
+- **OpenMP Dynamic scheduling** achieves highest speedups (up to 13.96×)
+- **OpenMP Static scheduling** provides predictable baseline performance
+- **MPI approach** achieves maximum 7.11× speedup with different scaling characteristics
 - **Optimal thread count** is typically 24-32 for guided and dynamic scheduling
+- **Optimal process count** is typically 32-128 for MPI depending on problem size
 
-The complete three-way analysis establishes guided scheduling as the optimal choice for most scenarios, while dynamic scheduling excels for maximum performance requirements. This study provides a solid foundation for production deployment decisions and future parallelization research.
+**Performance Hierarchy:**
+1. **OpenMP Guided** (best single-node performance)
+2. **OpenMP Dynamic** (highest peak speedups)  
+3. **OpenMP Static** (most predictable)
+4. **MPI** (distributed memory, scales beyond single node)
+
+This study provides a solid foundation for production deployment decisions and future parallelization research, covering both shared-memory and distributed-memory paradigms.
 
 ---
 
 *Project Duration*: June 26-30, 2025  
-*Total Configurations Tested*: 152 (72 static + 40 dynamic + 40 guided)  
-*Total Execution Time*: ~6 hours for complete benchmark suite  
-*Compiler*: Intel C++ Compiler (icc) with OpenMP support
+*Total Configurations Tested*: 197 (72 static + 40 dynamic + 40 guided + 45 MPI)  
+*Total Execution Time*: ~7 hours for complete benchmark suite  
+*Compilers*: Intel C++ Compiler (icc) with OpenMP and Intel MPI support
