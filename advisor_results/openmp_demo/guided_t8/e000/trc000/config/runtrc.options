@@ -1,0 +1,17 @@
+-r
+/VM/stud/S5843444/mandelbrot/advisor_results/openmp_demo/guided_t8/e000/trc000
+-quiet
+-cs-file
+/VM/stud/S5843444/mandelbrot/advisor_results/openmp_demo/guided_t8/e000/callstacks.def
+--cs-mode=no-count-loops,no-count-flops,stl-profiling,stack-stitching
+--target-loops=n
+--count-flops
+--benchmarks=dram,mcdram,cpu_cache,flop_peak,int,
+--jit-profiling
+--gpu-kernel-of-interest=*
+--target-gpu=0:0:2.0
+--
+./openmp/mandelbrot_guided_parametric
+1000
+1000
+1000

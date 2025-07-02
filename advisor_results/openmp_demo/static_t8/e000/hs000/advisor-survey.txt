@@ -1,0 +1,10 @@
+
+Intel(R) Advisor Command Line Tool
+Copyright (C) 2009-2023 Intel Corporation. All rights reserved.
+Survey Data version="1.1.0"
+
+ID   Function Call Sites and Loops    Total Time   Self Time         Type          Why No Vectorization   Vector ISA   Compiler Estimated Gain   Average Trip Count   Min Trip Count   Max Trip Count   Call Count   Transformations   Source Location              Module              
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ 1   [loop in main]                      13.038s      1.392s   Vectorized (Body)                                SSE2                                                                                                                                     mandelbrot_static_parametric   
+ 2   [loop in main]                      13.070s      0.032s              Scalar                                                                                                                                                                         mandelbrot_static_parametric   
+ 3   [loop in main]                       0.128s          0s              Scalar                                                                                                                                                                         mandelbrot_static_parametric   

@@ -1,0 +1,13 @@
+
+Intel(R) Advisor Command Line Tool
+Copyright (C) 2009-2023 Intel Corporation. All rights reserved.
+Survey Data version="1.1.0"
+
+ID                  Function Call Sites and Loops                   Total Time   Self Time    Type    Why No Vectorization   Vector ISA   Compiler Estimated Gain   Average Trip Count   Min Trip Count   Max Trip Count   Call Count   Transformations          Source Location                       Module              
+___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+ 2   [loop in main._omp_fn.0 at openmp_guided_parametric.cpp:57]        7.860s      1.851s   Scalar                                                                                                                                                       openmp_guided_parametric.cpp:57   mandelbrot_guided_parametric   
+ 3   [loop in main._omp_fn.0 at openmp_guided_parametric.cpp:57]        8.126s      0.266s   Scalar                                                                                                                                                       openmp_guided_parametric.cpp:57   mandelbrot_guided_parametric   
+ 1   [loop in main._omp_fn.0 at openmp_guided_parametric.cpp:57]        9.124s          0s   Scalar                                                                                                                                                       openmp_guided_parametric.cpp:57   mandelbrot_guided_parametric   
+ 4   [loop in main at openmp_guided_parametric.cpp:85]                  0.130s          0s   Scalar                                                                                                                                                       openmp_guided_parametric.cpp:85   mandelbrot_guided_parametric   
+ 5   [loop in main at openmp_guided_parametric.cpp:83]                  0.138s          0s   Scalar                                                                                                                                                       openmp_guided_parametric.cpp:83   mandelbrot_guided_parametric   
+

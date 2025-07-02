@@ -1,0 +1,15 @@
+-r
+/VM/stud/S5843444/mandelbrot/advisor_results/sequential/e000/trc000
+-quiet
+-cs-file
+/VM/stud/S5843444/mandelbrot/advisor_results/sequential/e000/callstacks.def
+--cs-mode=no-count-loops,no-count-flops,stl-profiling,stack-stitching
+--target-loops=n
+--count-flops
+--benchmarks=dram,mcdram,cpu_cache,flop_peak,int,
+--jit-profiling
+--gpu-kernel-of-interest=*
+--target-gpu=0:0:2.0
+--
+./sequential/mandelbrot_advisor
+temp_advisor_output.csv

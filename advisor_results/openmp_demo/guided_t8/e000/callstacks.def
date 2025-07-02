@@ -1,0 +1,221 @@
+# callstacks file version: 8
+#    rowid	    parent	       rva	 loop	 system	                                function	binary	instance_start_rva	instance_size	instance_end_rva	finst_rowid	roi	is_inlined	jit_method_id	tripcounts_roi	flops_roi	cachesim_roi	data_transfer_roi	projection_roi
+         1	        -1	      9776	    0	      0	                                  _start	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9776	34	0	2	0	0	0	0	0	0	0	0
+         2	        -1	      9808	    0	      0	                                  _start	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9776	34	0	2	0	0	0	0	0	0	0	0
+         3	       166	    160516	    1	      1	[Loop at line 347 in __libc_start_main_impl]	/lib/x86_64-linux-gnu/libc.so.6	160486,160616	126,59	0	41	0	0	0	0	0	0	0	0
+         4	         3	    160329	    0	      1	                  __libc_start_call_main	/lib/x86_64-linux-gnu/libc.so.6	160208	172	0	43	0	0	0	0	0	0	0	0
+         5	         4	      9108	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	8736	981	0	3	0	0	0	0	0	0	0	0
+         6	         5	     82096	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	82032	143	0	1	0	0	0	0	0	0	0	0
+         7	       173	    119695	    1	      1	          [Loop@0x1d2b0 in func@0x1cfd4]	/lib/x86_64-linux-gnu/libgomp.so.1	119472,120656,120736,120808,121015,121856	400,73,30,48,76,80	0	4	0	0	0	0	0	0	0	0
+         8	         5	     82101	    0	      1	                           GOMP_parallel	/lib/x86_64-linux-gnu/libgomp.so.1	82032	143	0	1	0	0	0	0	0	0	0	0
+         9	       121	     10206	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+        10	       123	     10375	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        11	        10	    162722	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        12	       120	     10158	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10272	135,155	10102	9	0	0	0	0	0	0	0	0
+        13	        12	     59186	    0	      1	                             func@0xe704	/lib/x86_64-linux-gnu/libgomp.so.1	59140	192	0	22	0	0	0	0	0	0	0	0
+        14	       123	     10384	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        15	       183	    162920	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        16	        10	    162838	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        17	       123	     10272	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        18	        10	    162853	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        19	       183	    162908	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        20	       183	    162872	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        21	       183	    162830	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        22	       183	    162740	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        23	       123	     10317	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        24	       123	     10313	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        25	        10	    162556	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        26	       183	    162756	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        27	       183	    162802	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        28	        10	      8672	    0	      0	                             func@0x21e0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	8672	6	0	11	0	0	0	0	0	0	0	0
+        29	       183	    162786	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        30	        10	    162682	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        31	       183	    162912	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        32	       183	    162760	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        33	       183	    162888	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        34	       123	     10371	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        35	       121	     10214	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+        36	        10	    162842	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        37	       121	     10131	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+        38	       183	    162770	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        39	       121	     10386	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+        40	       135	      9332	    1	      0	               [Loop at line 85 in main]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9312,9480	75,18	9392,9387	12	0	0	0	0	0	0	0	0
+        41	        40	   1248685	    0	      1	           std::ostream::_M_insert<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248624	520	0	18	0	0	0	0	0	0	0	0
+        42	        40	   1248661	    0	      1	           std::ostream::_M_insert<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248624	520	0	18	0	0	0	0	0	0	0	0
+        43	        42	   1244634	    0	      1	            std::ostream::sentry::sentry	/lib/x86_64-linux-gnu/libstdc++.so.6	1244544	126	0	19	0	0	0	0	0	0	0	0
+        44	        40	   1248745	    0	      1	           std::ostream::_M_insert<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248624	520	0	18	0	0	0	0	0	0	0	0
+        45	        44	   1193264	    0	      1	std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::do_put	/lib/x86_64-linux-gnu/libstdc++.so.6	1193264	13	0	20	0	0	0	0	0	0	0	0
+        46	        44	   1192898	    0	      1	std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::_M_insert_int<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1192640	620	0	21	0	0	0	0	0	0	0	0
+        47	        40	   1248790	    0	      1	           std::ostream::_M_insert<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248624	520	0	18	0	0	0	0	0	0	0	0
+        48	        40	   1249239	    0	      1	                std::ostream::operator<<	/lib/x86_64-linux-gnu/libstdc++.so.6	1249216	47	0	23	0	0	0	0	0	0	0	0
+        49	        40	   1248651	    0	      1	           std::ostream::_M_insert<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248624	520	0	18	0	0	0	0	0	0	0	0
+        50	        44	   1192897	    0	      1	std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::_M_insert_int<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1192640	620	0	21	0	0	0	0	0	0	0	0
+        51	        50	   1304013	    0	      1	std::basic_streambuf<char, std::char_traits<char>>::xsputn	/lib/x86_64-linux-gnu/libstdc++.so.6	1304000	201	0	24	0	0	0	0	0	0	0	0
+        52	       140	      9555	    0	      0	std::flush<char, std::char_traits<char>>	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9551	5	0	14	0	1	0	0	0	0	0	0
+        53	        52	   1244263	    0	      1	                     std::ostream::flush	/lib/x86_64-linux-gnu/libstdc++.so.6	1244192	339	0	25	0	0	0	0	0	0	0	0
+        54	        53	   1085292	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::sync	/lib/x86_64-linux-gnu/libstdc++.so.6	1085264	51	0	26	0	0	0	0	0	0	0	0
+        55	        54	   1094109	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::overflow	/lib/x86_64-linux-gnu/libstdc++.so.6	1093904	510	0	33	0	0	0	0	0	0	0	0
+        56	        55	   1093154	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::_M_convert_to_external	/lib/x86_64-linux-gnu/libstdc++.so.6	1092976	346	0	34	0	0	0	0	0	0	0	0
+        57	       181	    826924	    1	      1	[Loop@0xc9e1f in std::__basic_file<char>::xsputn]	/lib/x86_64-linux-gnu/libstdc++.so.6	826911,826944	30,10	0	35	0	0	0	0	0	0	0	0
+        58	       168	   1016639	    0	      1	                                   __GI_	/lib/x86_64-linux-gnu/libc.so.6	1016610,1016696	55,21	0	44	0	1	0	0	0	0	0	0
+        59	       144	      9492	    0	      0	 std::operator<<<std::char_traits<char>>	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9338,9480	40,24	0	17	0	1	0	0	0	0	0	0
+        60	        59	   1245134	    0	      1	                       std::ostream::put	/lib/x86_64-linux-gnu/libstdc++.so.6	1245072	353	0	37	0	0	0	0	0	0	0	0
+        61	        59	   1245137	    0	      1	                       std::ostream::put	/lib/x86_64-linux-gnu/libstdc++.so.6	1245072	353	0	37	0	0	0	0	0	0	0	0
+        62	        -1	    117824	    0	      1	                            func@0x1cbc4	/lib/x86_64-linux-gnu/libgomp.so.1	117700	128	0	27	0	0	0	0	0	0	0	0
+        63	        -1	   1087643	    0	      1	                                __clone3	/lib/x86_64-linux-gnu/libc.so.6	1087600	71	0	46	0	0	0	0	0	0	0	0
+        64	       170	    561652	    1	      1	      [Loop at line 419 in start_thread]	/lib/x86_64-linux-gnu/libc.so.6	561107,561635,561717,561852,561936	357,23,122,71,110	0	47	0	0	0	0	0	0	0	0
+        65	        64	   3621181	    0	      1	       tpss_thread_start_routine_wrapper	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	3620256	1869	0	38	0	0	0	0	0	0	0	0
+        66	       175	    118157	    1	      1	          [Loop@0x1cd60 in func@0x1cc44]	/lib/x86_64-linux-gnu/libgomp.so.1	118112	74	0	28	0	0	0	0	0	0	0	0
+        67	       147	     10158	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10272	135,155	10102	9	0	0	0	0	0	0	0	0
+        68	        67	     59186	    0	      1	                             func@0xe704	/lib/x86_64-linux-gnu/libgomp.so.1	59140	192	0	22	0	0	0	0	0	0	0	0
+        69	       150	     10375	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        70	        69	    162700	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        71	       150	     10313	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        72	       196	    162830	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        73	       150	     10347	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        74	       150	     10371	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        75	        69	    162838	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        76	       150	     10384	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        77	       196	    162740	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        78	       196	    162790	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        79	        69	    162853	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        80	       196	    162786	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        81	        69	    162556	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        82	       196	    162814	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        83	       196	    162888	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        84	        69	    162682	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        85	       196	    162760	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        86	        69	    162722	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+        87	        69	      8672	    0	      0	                             func@0x21e0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	8672	6	0	11	0	0	0	0	0	0	0	0
+        88	       196	    162756	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        89	       150	     10272	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+        90	       196	    162764	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        91	       149	     10131	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+        92	       196	    162770	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        93	       149	     10386	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+        94	       175	    118119	    1	      1	          [Loop@0x1cd60 in func@0x1cc44]	/lib/x86_64-linux-gnu/libgomp.so.1	118112	74	0	28	0	0	0	0	0	0	0	0
+        95	       179	    128546	    1	      1	          [Loop@0x1f620 in func@0x1f5e4]	/lib/x86_64-linux-gnu/libgomp.so.1	128544	17	0	30	0	0	0	0	0	0	0	0
+        96	       196	    162908	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        97	       196	    162872	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        98	       196	    162802	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+        99	       196	    162818	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       100	       150	     10351	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+       101	       196	    162916	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       102	        69	    162842	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       103	       150	     10376	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+       104	       196	    162744	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       105	       150	     10276	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+       106	        69	    162857	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       107	        69	    162668	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       108	       196	    162892	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       109	       150	     10282	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+       110	       196	    162834	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       111	       150	     10317	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10272,10408	114,19	10128,10386	10	0	0	0	0	0	0	0	0
+       112	       196	    162912	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       113	       196	    162774	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       114	        67	     59191	    0	      1	                             func@0xe704	/lib/x86_64-linux-gnu/libgomp.so.1	59140	192	0	22	0	0	0	0	0	0	0	0
+       115	       149	     10222	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+       116	       196	    162822	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       117	       196	    162920	    0	      1	                                  kernel	/lib/x86_64-linux-gnu/libm.so.6	162728,162872	110,56	0	40	0	1	0	0	0	0	0	0
+       118	        69	    162558	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       119	       149	     10206	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+       120	         8	     10128	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       121	       120	     10128	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10272	135,155	10102	9	0	0	0	0	0	0	0	0
+       122	         8	     10206	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       123	       121	     10272	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+       124	         8	     10375	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       125	         8	     10158	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       126	         8	     10384	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       127	         8	     10272	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       128	         8	     10317	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       129	         8	     10313	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       130	         8	     10371	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       131	         8	     10214	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       132	         8	     10131	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       133	         8	     10386	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       134	         4	      9280	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	8736	981	0	3	0	0	0	0	0	0	0	0
+       135	       134	      9312	    1	      0	               [Loop at line 83 in main]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9280,9312,9480,9504,9568	26,115,18,57,42	9427,9704	13	0	0	0	0	0	0	0	0
+       136	         4	      9332	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	8736	981	0	3	0	0	0	0	0	0	0	0
+       137	         4	      9280	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	8736	981	0	3	0	0	0	0	0	0	0	0
+       138	       137	      9504	    1	      0	               [Loop at line 83 in main]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9280,9312,9480,9504,9568	26,115,18,57,42	9427,9704	13	0	0	0	0	0	0	0	0
+       139	       138	      9504	    0	      0	                std::ostream::operator<<	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9504,9704	106,5	0	16	0	1	0	0	0	0	0	0
+       140	       139	      9551	    0	      0	 std::endl<char, std::char_traits<char>>	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9504,9704	106,5	0	15	0	1	0	0	0	0	0	0
+       141	       137	      9555	    1	      0	               [Loop at line 83 in main]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9280,9312,9480,9504,9568	26,115,18,57,42	9427,9704	13	0	0	0	0	0	0	0	0
+       142	         4	      9555	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	8736	981	0	3	0	0	0	0	0	0	0	0
+       143	       137	      9312	    1	      0	               [Loop at line 83 in main]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9280,9312,9480,9504,9568	26,115,18,57,42	9427,9704	13	0	0	0	0	0	0	0	0
+       144	       143	      9338	    1	      0	               [Loop at line 85 in main]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9312,9480	75,18	9392,9387	12	0	0	0	0	0	0	0	0
+       145	       143	      9492	    1	      0	               [Loop at line 85 in main]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	9312,9480	75,18	9392,9387	12	0	0	0	0	0	0	0	0
+       146	         4	      9492	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	8736	981	0	3	0	0	0	0	0	0	0	0
+       147	        66	     10128	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       148	        66	     10158	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       149	       147	     10128	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10272	135,155	10102	9	0	0	0	0	0	0	0	0
+       150	       149	     10272	    1	      0	     [Loop at line 57 in main._omp_fn.0]	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10128,10176,10272,10408	16,87,131,19	10144,10403	6	0	0	0	0	0	0	0	0
+       151	        66	     10375	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       152	        66	     10313	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       153	        66	     10347	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       154	        66	     10371	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       155	        66	     10384	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       156	        66	     10272	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       157	        66	     10131	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       158	        66	     10386	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       159	        66	     10351	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       160	        66	     10376	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       161	        66	     10276	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       162	        66	     10282	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       163	        66	     10317	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       164	        66	     10222	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       165	        66	     10206	    0	      0	                          main._omp_fn.0	/VM/stud/S5843444/mandelbrot/openmp/mandelbrot_guided_parametric	10016	411	0	8	0	0	0	0	0	0	0	0
+       166	         2	    160486	    0	      1	                  __libc_start_main_impl	/lib/x86_64-linux-gnu/libc.so.6	160384	321	0	42	0	0	0	0	0	0	0	0
+       167	         2	    160516	    0	      1	                  __libc_start_main_impl	/lib/x86_64-linux-gnu/libc.so.6	160384	321	0	42	0	0	0	0	0	0	0	0
+       168	        57	   1016610	    0	      1	                                   __GI_	/lib/x86_64-linux-gnu/libc.so.6	1016560	157	0	45	0	0	0	0	0	0	0	0
+       169	        57	   1016639	    0	      1	                                   __GI_	/lib/x86_64-linux-gnu/libc.so.6	1016560	157	0	45	0	0	0	0	0	0	0	0
+       170	        63	    561107	    0	      1	                            start_thread	/lib/x86_64-linux-gnu/libc.so.6	560880	1166	0	48	0	0	0	0	0	0	0	0
+       171	        63	    561652	    0	      1	                            start_thread	/lib/x86_64-linux-gnu/libc.so.6	560880	1166	0	48	0	0	0	0	0	0	0	0
+       172	         6	    119343	    0	      1	                            func@0x1cfd4	/lib/x86_64-linux-gnu/libgomp.so.1	118740	4860	0	5	0	0	0	0	0	0	0	0
+       173	       172	    119472	    1	      1	          [Loop@0x1d22f in func@0x1cfd4]	/lib/x86_64-linux-gnu/libgomp.so.1	119343,119472,120656,120736,120808,120941,121015,121158,121856,122446,122702,123220,123519	125,400,73,30,48,46,76,46,80,99,17,11,63	0	7	0	0	0	0	0	0	0	0
+       174	         6	    119695	    0	      1	                            func@0x1cfd4	/lib/x86_64-linux-gnu/libgomp.so.1	118740	4860	0	5	0	0	0	0	0	0	0	0
+       175	        65	    118112	    0	      1	                            func@0x1cc44	/lib/x86_64-linux-gnu/libgomp.so.1	117828	380	0	29	0	0	0	0	0	0	0	0
+       176	        65	    118157	    0	      1	                            func@0x1cc44	/lib/x86_64-linux-gnu/libgomp.so.1	117828	380	0	29	0	0	0	0	0	0	0	0
+       177	        65	    118119	    0	      1	                            func@0x1cc44	/lib/x86_64-linux-gnu/libgomp.so.1	117828	380	0	29	0	0	0	0	0	0	0	0
+       178	        94	    128512	    0	      1	                            func@0x1f5e4	/lib/x86_64-linux-gnu/libgomp.so.1	128484	236	0	31	0	0	0	0	0	0	0	0
+       179	       178	    128544	    1	      1	          [Loop@0x1f600 in func@0x1f5e4]	/lib/x86_64-linux-gnu/libgomp.so.1	128512,128576,128640	55,60,9	0	32	0	0	0	0	0	0	0	0
+       180	        94	    128546	    0	      1	                            func@0x1f5e4	/lib/x86_64-linux-gnu/libgomp.so.1	128484	236	0	31	0	0	0	0	0	0	0	0
+       181	        56	    826911	    0	      1	         std::__basic_file<char>::xsputn	/lib/x86_64-linux-gnu/libstdc++.so.6	826880	110	0	36	0	0	0	0	0	0	0	0
+       182	        56	    826924	    0	      1	         std::__basic_file<char>::xsputn	/lib/x86_64-linux-gnu/libstdc++.so.6	826880	110	0	36	0	0	0	0	0	0	0	0
+       183	        10	    162728	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       184	        10	    162920	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       185	        10	    162908	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       186	        10	    162872	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       187	        10	    162830	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       188	        10	    162740	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       189	        10	    162756	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       190	        10	    162802	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       191	        10	    162786	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       192	        10	    162912	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       193	        10	    162760	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       194	        10	    162888	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       195	        10	    162770	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       196	        69	    162728	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       197	        69	    162830	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       198	        69	    162740	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       199	        69	    162790	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       200	        69	    162786	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       201	        69	    162814	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       202	        69	    162888	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       203	        69	    162760	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       204	        69	    162756	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       205	        69	    162764	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       206	        69	    162770	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       207	        69	    162908	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       208	        69	    162872	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       209	        69	    162802	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       210	        69	    162818	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       211	        69	    162916	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       212	        69	    162744	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       213	        69	    162892	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       214	        69	    162834	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       215	        69	    162912	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       216	        69	    162774	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       217	        69	    162822	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       218	        69	    162920	    0	      1	                                 __hypot	/lib/x86_64-linux-gnu/libm.so.6	162528	932	0	39	0	0	0	0	0	0	0	0
+       219	        -1	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	50	0	0	0	0	0	0	0	0

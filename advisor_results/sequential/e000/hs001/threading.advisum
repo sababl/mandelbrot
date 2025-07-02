@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename="/VM/stud/S5843444/mandelbrot/sequential/mandelbrot.cpp"
+           line_no="33"
+           routine="main"
+           is_vectorized="0"
+           self_time="1.001024E-02"
+           total_time="1.307988E+01"
+           trip_counts=""
+           func_instance="2"
+           priority="0"/>
+  <hotspot filename="/VM/stud/S5843444/mandelbrot/sequential/mandelbrot.cpp"
+           line_no="43"
+           routine="main"
+           is_vectorized="0"
+           self_time="8.400061E-01"
+           total_time="1.305787E+01"
+           trip_counts=""
+           func_instance="5"
+           priority="0"/>
+  <hotspot filename="/VM/stud/S5843444/mandelbrot/sequential/mandelbrot.cpp"
+           line_no="76"
+           routine="main"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.400000E-01"
+           trip_counts=""
+           func_instance="18"
+           priority="0"/>
+  <hotspot filename="/VM/stud/S5843444/mandelbrot/sequential/mandelbrot.cpp"
+           line_no="78"
+           routine="main"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="1.319974E-01"
+           trip_counts=""
+           func_instance="17"
+           priority="0"/>
+</IntelParallelAdvisorSummary >

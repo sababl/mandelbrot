@@ -1,0 +1,10 @@
+
+=== Start: [2025/07/02 16:12:01] === 
+Peak bandwidth measurement started...
+Peak bandwidth measurement finished.
+Analysis started...
+Result file: /VM/stud/S5843444/mandelbrot/advisor_results/openmp_demo/guided_t8/e000/trc000/trc000.advixe 
+Application exit code: 0 
+Result file: /VM/stud/S5843444/mandelbrot/advisor_results/openmp_demo/guided_t8/e000/trc000/trc000.advixe 
+Analysis completed
+=== End: [2025/07/02 16:12:20] === 
