@@ -26,6 +26,7 @@ OPENMP_GUIDED_SRC = $(OPENMP_DIR)/openmp_guided.cpp
 OPENMP_STATIC_PARAMETRIC_SRC = $(OPENMP_DIR)/openmp_static_parametric.cpp
 OPENMP_DYNAMIC_PARAMETRIC_SRC = $(OPENMP_DIR)/openmp_dynamic_parametric.cpp
 OPENMP_GUIDED_PARAMETRIC_SRC = $(OPENMP_DIR)/openmp_guided_parametric.cpp
+CUDA_SRC = $(CUDA_DIR)/mandelbrot.cu
 
 # Target executables mapping
 SEQUENTIAL_TARGET = $(SEQUENTIAL_DIR)/mandelbrot
@@ -35,6 +36,7 @@ OPENMP_GUIDED_TARGET = $(OPENMP_DIR)/mandelbrot_guided
 OPENMP_STATIC_PARAMETRIC_TARGET = $(OPENMP_DIR)/mandelbrot_static_parametric
 OPENMP_DYNAMIC_PARAMETRIC_TARGET = $(OPENMP_DIR)/mandelbrot_dynamic_parametric
 OPENMP_GUIDED_PARAMETRIC_TARGET = $(OPENMP_DIR)/mandelbrot_guided_parametric
+CUDA_TARGET = $(CUDA_DIR)/mandelbrot_cuda
 
 # Output files mapping
 SEQUENTIAL_OUTPUT = $(SEQUENTIAL_DIR)/$(OUTPUT_FILE)
@@ -112,8 +114,13 @@ $(OPENMP_GUIDED_PARAMETRIC_TARGET): $(OPENMP_GUIDED_PARAMETRIC_SRC)
 	@echo "Building OpenMP guided parametric version..."
 	$(CXX) $(CXXFLAGS) $(OPENMP_FLAGS) -o $(OPENMP_GUIDED_PARAMETRIC_TARGET) $(OPENMP_GUIDED_PARAMETRIC_SRC)
 
+build-cuda: $(CUDA_TARGET)
+$(CUDA_TARGET): $(CUDA_SRC)
+	@echo "Building CUDA version..."
+	$(CXX) $(CXXFLAGS) $(CUDA_FLAGS) -o $(CUDA_TARGET) $(CUDA_SRC) -lcudart
+
 # Build all versions
-build-all: build-sequential build-openmp-static build-openmp-dynamic build-openmp-guided
+build-all: build-sequential build-openmp-static build-openmp-dynamic build-openmp-guided build-cuda
 	@echo "All versions built successfully!"
 
 # Run targets
@@ -139,6 +146,11 @@ run-openmp-guided: build-openmp-guided
 	@echo "Output will be saved to: $(OPENMP_OUTPUT)"
 	OMP_NUM_THREADS=$(THREADS) ./$(OPENMP_GUIDED_TARGET) $(OPENMP_OUTPUT)
 
+run-cuda: build-cuda
+	@echo "Running CUDA version..."
+	@echo "Output will be saved to: $(CUDA_OUTPUT)"
+	./$(CUDA_TARGET) $(CUDA_OUTPUT) $(RUNTIME_RESOLUTION) $(RUNTIME_ITERATIONS)
+
 # Benchmark all versions
 benchmark: build-all
 	@echo "=== Performance Benchmark ==="
@@ -155,6 +167,9 @@ benchmark: build-all
 	@echo ""
 	@echo "4. OpenMP Guided ($(THREADS) threads):"
 	@make run-openmp-guided THREADS=$(THREADS) --silent
+	@echo ""
+	@echo "5. CUDA version:"
+	@make run-cuda --silent
 	@echo ""
 	@echo "Benchmark completed! Check individual output files for results."
 
@@ -224,7 +239,8 @@ clean:
 	@echo "Cleaning all build artifacts..."
 	rm -f $(SEQUENTIAL_TARGET) $(SEQUENTIAL_OUTPUT)
 	rm -f $(OPENMP_STATIC_TARGET) $(OPENMP_DYNAMIC_TARGET) $(OPENMP_GUIDED_TARGET) $(OPENMP_OUTPUT)
-	rm -rf $(SEQUENTIAL_ADVISOR) $(OPENMP_ADVISOR)
+	rm -f $(CUDA_TARGET) $(CUDA_OUTPUT)
+	rm -rf $(SEQUENTIAL_ADVISOR) $(OPENMP_ADVISOR) $(CUDA_ADVISOR)
 	@echo "Clean completed!"
 
 # Clean specific version
@@ -235,6 +251,10 @@ clean-sequential:
 clean-openmp:
 	rm -f $(OPENMP_STATIC_TARGET) $(OPENMP_DYNAMIC_TARGET) $(OPENMP_GUIDED_TARGET) $(OPENMP_OUTPUT)
 	rm -rf $(OPENMP_ADVISOR)
+
+clean-cuda:
+	rm -f $(CUDA_TARGET) $(CUDA_OUTPUT)
+	rm -rf $(CUDA_ADVISOR)
 
 # Test if a version is built
 test-build: test-build-$(VERSION)
@@ -251,6 +271,9 @@ test-build-openmp-dynamic:
 test-build-openmp-guided:
 	@test -f $(OPENMP_GUIDED_TARGET) && echo "OpenMP guided version is built" || echo "OpenMP guided version not built"
 
+test-build-cuda:
+	@test -f $(CUDA_TARGET) && echo "CUDA version is built" || echo "CUDA version not built"
+
 # Show current configuration
 config:
 	@echo "=== Current Configuration ==="
@@ -263,9 +286,9 @@ config:
 	@echo "Available Versions: $(VERSIONS)"
 
 .PHONY: help list build build-all run benchmark advisor advisor-gui advisor-report clean config test-build \
-        build-sequential build-openmp-static build-openmp-dynamic build-openmp-guided \
-        run-sequential run-openmp-static run-openmp-dynamic run-openmp-guided \
+        build-sequential build-openmp-static build-openmp-dynamic build-openmp-guided build-cuda \
+        run-sequential run-openmp-static run-openmp-dynamic run-openmp-guided run-cuda \
         advisor-sequential advisor-openmp-static advisor-openmp-dynamic advisor-openmp-guided \
         advisor-gui-sequential advisor-gui-openmp-static advisor-gui-openmp-dynamic advisor-gui-openmp-guided \
         advisor-report-sequential advisor-report-openmp-static advisor-report-openmp-dynamic advisor-report-openmp-guided \
-        clean-sequential clean-openmp test-build-sequential test-build-openmp-static test-build-openmp-dynamic test-build-openmp-guided
+        clean-sequential clean-openmp clean-cuda test-build-sequential test-build-openmp-static test-build-openmp-dynamic test-build-openmp-guided test-build-cuda
