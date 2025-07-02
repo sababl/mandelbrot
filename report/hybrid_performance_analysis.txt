@@ -1,0 +1,25 @@
+# Hybrid OpenMP+MPI Mandelbrot Performance Analysis
+
+## Executive Summary
+
+This analysis evaluates hybrid OpenMP+MPI performance for Mandelbrot set computation, 
+combining distributed memory parallelization (MPI) with shared memory parallelization 
+(OpenMP) to achieve optimal scaling across different system configurations.
+
+## Methodology
+
+- **Parallelization**: Hybrid MPI (inter-node) + OpenMP (intra-node) approach
+- **Compiler**: Intel C++ Compiler (icc) with Intel MPI and OpenMP support
+- **Threading**: MPI_THREAD_FUNNELED support for thread safety
+- **Timing**: High-precision millisecond measurement (best of 3 runs)
+- **Scheduling**: OpenMP guided scheduling for optimal load balancing
+
+## Hybrid Configuration Strategy
+
+The hybrid approach divides work hierarchically:
+1. **MPI level**: Distributes pixels across processes (nodes/cores)
+2. **OpenMP level**: Parallelizes assigned pixels within each process using guided scheduling
+3. **Communication**: Single MPI_Gatherv at completion (minimal overhead)
+
+## Test Configurations
+
