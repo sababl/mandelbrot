@@ -1,0 +1,3039 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log version="1.0" tool="runtool">
+
+<msg id="1" tool="runtool">
+  <type>log-start</type>
+  <arg>2025/07/02 16:59:57</arg>
+</msg>
+<msg id="2" tool="runtool">
+  <type>bandwidth-measurement-starts</type>
+</msg>
+<msg id="3" tool="runtool">
+  <type>bandwidth-measurement-done</type>
+</msg>
+<msg id="4" tool="runtool">
+  <type>collector-starts</type>
+</msg>
+<msg id="5" tool="runtool">
+  <type>marker-file</type>
+  <arg>/home/stud/S5843444/mandelbrot/advisor_results/mpi_analysis/hybrid_p4_t2/e000/trc000/trc000.advixe</arg>
+</msg>
+<msg id="6" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/usr/bin/dash</arg>
+  <arg>298608</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="7" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="8" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/usr/bin/dash</arg>
+  <arg>0x55c05b100000</arg>
+  <arg>0x55c05b121f6f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="9" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7fab7afbd000</arg>
+  <arg>0x7fab7aff12d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="10" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffe019bf000</arg>
+  <arg>0x7ffe019bfd7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="11" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7fab65afd000</arg>
+  <arg>0x7fab65cddf4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="12" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/usr/bin/whoami</arg>
+  <arg>298612</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="13" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="14" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/usr/bin/whoami</arg>
+  <arg>0x558caa195000</arg>
+  <arg>0x558caa19f3b7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="15" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7fe0615b1000</arg>
+  <arg>0x7fe0615e52d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="16" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffc4ff57000</arg>
+  <arg>0x7ffc4ff57d7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="17" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7fe04c12f000</arg>
+  <arg>0x7fe04c30ff4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:08 2025</timestamp>
+</msg>
+<msg id="18" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/usr/bin/whoami</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="19" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="20" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="21" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="22" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/usr/bin/whoami</arg>
+  <arg>298612</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="23" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>298692</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="24" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="25" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>0x400000</arg>
+  <arg>0x41992f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="26" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f64a9eed000</arg>
+  <arg>0x7f64a9f212d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="27" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffcfcdee000</arg>
+  <arg>0x7ffcfcdeed7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="28" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpicxx.so.12</arg>
+  <arg>0x7f6494a00000</arg>
+  <arg>0x7f6494c207a7</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="29" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpifort.so.12</arg>
+  <arg>0x7f6494400000</arg>
+  <arg>0x7f64947b1257</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="30" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12</arg>
+  <arg>0x7f6492800000</arg>
+  <arg>0x7f64942d0957</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="31" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <arg>0x7f6492400000</arg>
+  <arg>0x7f649261987f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="32" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7f6494320000</arg>
+  <arg>0x7f64943ff10f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="33" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <arg>0x7f6491e00000</arg>
+  <arg>0x7f649224114f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="34" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7f64947ce000</arg>
+  <arg>0x7f64947ed2c7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="35" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f649261f000</arg>
+  <arg>0x7f64927fff4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="36" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <arg>0x7f64947b5000</arg>
+  <arg>0x7f64947b901f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="37" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7f64942d9000</arg>
+  <arg>0x7f64942dd00f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="38" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7f64942d3000</arg>
+  <arg>0x7f64942d700f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="39" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <arg>0x7f648cbd3000</arg>
+  <arg>0x7f648cbdf897</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="40" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1</arg>
+  <arg>0x7f6400400000</arg>
+  <arg>0x7f6400655c6f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="41" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so</arg>
+  <arg>0x7f63ff800000</arg>
+  <arg>0x7f63ffa6619f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="42" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librdmacm.so.1</arg>
+  <arg>0x7f63ff79f000</arg>
+  <arg>0x7f63ff7bd227</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="43" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libibverbs.so.1</arg>
+  <arg>0x7f63ff732000</arg>
+  <arg>0x7f63ff75235f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="44" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-3.so.200</arg>
+  <arg>0x7f63ff70f000</arg>
+  <arg>0x7f63ff73190f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="45" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-route-3.so.200</arg>
+  <arg>0x7f63ff65d000</arg>
+  <arg>0x7f63ff6edb5f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="46" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.1-fi.so</arg>
+  <arg>0x7f63fec00000</arg>
+  <arg>0x7f63fee62e3f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="47" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so</arg>
+  <arg>0x7f63fe800000</arg>
+  <arg>0x7f63fea5804f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="48" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libshm-fi.so</arg>
+  <arg>0x7f63fe400000</arg>
+  <arg>0x7f63fe65f387</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="49" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so</arg>
+  <arg>0x7f63fe000000</arg>
+  <arg>0x7f63fe262497</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="50" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so</arg>
+  <arg>0x7f63fd400000</arg>
+  <arg>0x7f63fd7abdc7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="51" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuuid.so.1</arg>
+  <arg>0x7f648f5a9000</arg>
+  <arg>0x7f648f5b2027</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="52" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libmlx-fi.so</arg>
+  <arg>0x7f63fce00000</arg>
+  <arg>0x7f63fd044c7f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="53" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucp.so.0</arg>
+  <arg>0x7f63fd2f3000</arg>
+  <arg>0x7f63fd3ffbbf</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="54" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucs.so.0</arg>
+  <arg>0x7f63fd7e4000</arg>
+  <arg>0x7f63fd83faef</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="55" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuct.so.0</arg>
+  <arg>0x7f63fd2b1000</arg>
+  <arg>0x7f63fd2f2c57</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="56" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucm.so.0</arg>
+  <arg>0x7f63fd7ca000</arg>
+  <arg>0x7f63fd7e3597</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="57" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libefa-fi.so</arg>
+  <arg>0x7f63fba00000</arg>
+  <arg>0x7f63fbc8ba37</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="58" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libefa.so.1</arg>
+  <arg>0x7f63fbe0a000</arg>
+  <arg>0x7f63fbe1700f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="59" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libefa-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="60" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libefa.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="61" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify.so</arg>
+  <arg>0x7f63f8a00000</arg>
+  <arg>0x7f63f8c0c65f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="62" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/libpinjitprofiling.so</arg>
+  <arg>0x7f63f8d80000</arg>
+  <arg>0x7f63f8d84017</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="63" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libmlx-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="64" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="65" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuuid.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="66" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="67" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="68" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.1-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="69" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librdmacm.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="70" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libibverbs.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="71" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-route-3.so.200</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="72" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-3.so.200</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="73" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="74" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libshm-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="75" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="76" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="77" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="78" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpicxx.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="79" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpifort.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="80" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="81" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="82" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="83" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="84" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="85" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="86" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="87" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="88" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="89" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="90" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="91" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucp.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="92" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucs.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="93" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuct.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="94" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucm.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="95" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="96" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/libpinjitprofiling.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="97" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>DynamicCodeBin</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="98" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>298692</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="99" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/usr/bin/uname</arg>
+  <arg>298641</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="100" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="101" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/usr/bin/uname</arg>
+  <arg>0x56073db7f000</arg>
+  <arg>0x56073db89397</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="102" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f24cde1a000</arg>
+  <arg>0x7f24cde4e2d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="103" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffcc8868000</arg>
+  <arg>0x7ffcc8868d7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="104" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f24b8997000</arg>
+  <arg>0x7f24b8b77f4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="105" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/usr/bin/uname</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="106" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="107" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="108" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="109" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/usr/bin/uname</arg>
+  <arg>298641</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="110" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0/bin/mpiexec.hydra</arg>
+  <arg>298652</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="111" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="112" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0/bin/mpiexec.hydra</arg>
+  <arg>0x400000</arg>
+  <arg>0x744e1f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="113" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f5355918000</arg>
+  <arg>0x7f535594c2d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="114" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffe4e781000</arg>
+  <arg>0x7ffe4e781d7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="115" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7f53406ec000</arg>
+  <arg>0x7f53406f000f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="116" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7f5340661000</arg>
+  <arg>0x7f534066500f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="117" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7f533f920000</arg>
+  <arg>0x7f533f9ff10f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="118" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7f534026c000</arg>
+  <arg>0x7f534028b2c7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="119" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f533f73f000</arg>
+  <arg>0x7f533f91ff4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="120" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0/bin/hydra_pmi_proxy</arg>
+  <arg>298665</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="121" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="122" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0/bin/hydra_pmi_proxy</arg>
+  <arg>0x400000</arg>
+  <arg>0x71220f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="123" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7fdb67bd9000</arg>
+  <arg>0x7fdb67c0d2d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="124" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffc86763000</arg>
+  <arg>0x7ffc86763d7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="125" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7fdb52a5f000</arg>
+  <arg>0x7fdb52a6300f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="126" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7fdb5250e000</arg>
+  <arg>0x7fdb5251200f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="127" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7fdb52039000</arg>
+  <arg>0x7fdb5211810f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="128" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7fdb52019000</arg>
+  <arg>0x7fdb520382c7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="129" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7fdb51deb000</arg>
+  <arg>0x7fdb51fcbf4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="130" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <arg>0x7fdb50da1000</arg>
+  <arg>0x7fdb50dad897</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="131" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/usr/bin/grep</arg>
+  <arg>298644</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="132" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="133" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/usr/bin/grep</arg>
+  <arg>0x557311794000</arg>
+  <arg>0x5573117d6c8f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="134" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f0d5b138000</arg>
+  <arg>0x7f0d5b16c2d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="135" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffe3813b000</arg>
+  <arg>0x7ffe3813bd7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:09 2025</timestamp>
+</msg>
+<msg id="136" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpcre2-8.so.0</arg>
+  <arg>0x7f0d45def000</arg>
+  <arg>0x7f0d45e88387</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="137" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f0d45a83000</arg>
+  <arg>0x7f0d45c63f4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="138" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/usr/bin/grep</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="139" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="140" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="141" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpcre2-8.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="142" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="143" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/usr/bin/grep</arg>
+  <arg>298644</arg>
+  <arg>0x1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="144" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0/bin/hydra_bstrap_proxy</arg>
+  <arg>298665</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="145" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="146" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0/bin/hydra_bstrap_proxy</arg>
+  <arg>0x400000</arg>
+  <arg>0x6fa8cf</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="147" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7fed7b93d000</arg>
+  <arg>0x7fed7b9712d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="148" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffeab8b8000</arg>
+  <arg>0x7ffeab8b8d7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:10 2025</timestamp>
+</msg>
+<msg id="149" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7fed66b21000</arg>
+  <arg>0x7fed66b2500f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="150" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7fed662de000</arg>
+  <arg>0x7fed662e200f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="151" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7fed65df7000</arg>
+  <arg>0x7fed65ed610f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="152" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7fed65dd7000</arg>
+  <arg>0x7fed65df62c7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="153" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7fed65b9b000</arg>
+  <arg>0x7fed65d7bf4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="154" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/usr/bin/dash</arg>
+  <arg>298673</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="155" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="156" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/usr/bin/dash</arg>
+  <arg>0x55d098ae9000</arg>
+  <arg>0x55d098b0af6f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="157" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f9a25b81000</arg>
+  <arg>0x7f9a25bb52d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="158" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffd54f0d000</arg>
+  <arg>0x7ffd54f0dd7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="159" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f9a106c0000</arg>
+  <arg>0x7f9a108a0f4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:11 2025</timestamp>
+</msg>
+<msg id="160" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/usr/bin/dash</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="161" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="162" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="163" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="164" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/usr/bin/dash</arg>
+  <arg>298673</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="165" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>298694</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="166" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="167" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>0x400000</arg>
+  <arg>0x41992f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="168" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f69ed449000</arg>
+  <arg>0x7f69ed47d2d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="169" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffd1e981000</arg>
+  <arg>0x7ffd1e981d7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="170" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpicxx.so.12</arg>
+  <arg>0x7f69d7e00000</arg>
+  <arg>0x7f69d80207a7</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="171" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpifort.so.12</arg>
+  <arg>0x7f69d7a00000</arg>
+  <arg>0x7f69d7db1257</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="172" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12</arg>
+  <arg>0x7f69d5e00000</arg>
+  <arg>0x7f69d78d0957</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="173" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <arg>0x7f69d5a00000</arg>
+  <arg>0x7f69d5c1987f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="174" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7f69d5d20000</arg>
+  <arg>0x7f69d5dff10f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="175" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <arg>0x7f69d5400000</arg>
+  <arg>0x7f69d584114f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="176" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7f69d795c000</arg>
+  <arg>0x7f69d797b2c7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="177" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f69d521f000</arg>
+  <arg>0x7f69d53fff4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="178" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <arg>0x7f69d7dbb000</arg>
+  <arg>0x7f69d7dbf01f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="179" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7f69d7db2000</arg>
+  <arg>0x7f69d7db600f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="180" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7f69d7911000</arg>
+  <arg>0x7f69d791500f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="181" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <arg>0x7f69d0159000</arg>
+  <arg>0x7f69d0165897</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="182" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1</arg>
+  <arg>0x7f6943a00000</arg>
+  <arg>0x7f6943c55c6f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="183" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so</arg>
+  <arg>0x7f6942c00000</arg>
+  <arg>0x7f6942e6619f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="184" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librdmacm.so.1</arg>
+  <arg>0x7f6942f51000</arg>
+  <arg>0x7f6942f6f227</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="185" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libibverbs.so.1</arg>
+  <arg>0x7f6942ed6000</arg>
+  <arg>0x7f6942ef635f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="186" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-3.so.200</arg>
+  <arg>0x7f6942eb3000</arg>
+  <arg>0x7f6942ed590f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="187" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-route-3.so.200</arg>
+  <arg>0x7f6942b6f000</arg>
+  <arg>0x7f6942bffb5f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="188" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.1-fi.so</arg>
+  <arg>0x7f6942200000</arg>
+  <arg>0x7f6942462e3f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="189" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so</arg>
+  <arg>0x7f6941e00000</arg>
+  <arg>0x7f694205804f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="190" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libshm-fi.so</arg>
+  <arg>0x7f6941800000</arg>
+  <arg>0x7f6941a5f387</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="191" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so</arg>
+  <arg>0x7f6941400000</arg>
+  <arg>0x7f6941662497</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="192" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so</arg>
+  <arg>0x7f6940800000</arg>
+  <arg>0x7f6940babdc7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="193" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuuid.so.1</arg>
+  <arg>0x7f69d2bab000</arg>
+  <arg>0x7f69d2bb4027</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="194" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libmlx-fi.so</arg>
+  <arg>0x7f6940200000</arg>
+  <arg>0x7f6940444c7f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="195" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucp.so.0</arg>
+  <arg>0x7f6940bf3000</arg>
+  <arg>0x7f6940cffbbf</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="196" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucs.so.0</arg>
+  <arg>0x7f694167a000</arg>
+  <arg>0x7f69416d5aef</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="197" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuct.so.0</arg>
+  <arg>0x7f6940bb1000</arg>
+  <arg>0x7f6940bf2c57</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="198" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucm.so.0</arg>
+  <arg>0x7f69407e6000</arg>
+  <arg>0x7f69407ff597</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="199" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libefa-fi.so</arg>
+  <arg>0x7f693f000000</arg>
+  <arg>0x7f693f28ba37</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="200" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libefa.so.1</arg>
+  <arg>0x7f693f33f000</arg>
+  <arg>0x7f693f34c00f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="201" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libefa-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="202" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libefa.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="203" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify.so</arg>
+  <arg>0x7f693c000000</arg>
+  <arg>0x7f693c20c65f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="204" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/libpinjitprofiling.so</arg>
+  <arg>0x7f693c2c7000</arg>
+  <arg>0x7f693c2cb017</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="205" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libmlx-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="206" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="207" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuuid.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="208" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="209" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="210" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.1-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="211" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librdmacm.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="212" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libibverbs.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="213" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-route-3.so.200</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="214" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-3.so.200</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="215" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="216" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libshm-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="217" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="218" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="219" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="220" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpicxx.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="221" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpifort.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="222" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="223" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="224" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="225" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="226" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="227" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="228" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="229" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="230" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="231" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="232" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="233" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucp.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="234" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucs.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="235" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuct.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="236" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucm.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="237" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="238" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/libpinjitprofiling.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="239" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>DynamicCodeBin</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="240" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>298694</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="241" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/usr/bin/dash</arg>
+  <arg>298683</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="242" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="243" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/usr/bin/dash</arg>
+  <arg>0x55861e400000</arg>
+  <arg>0x55861e421f6f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="244" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7feaf29e9000</arg>
+  <arg>0x7feaf2a1d2d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="245" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7fff567ec000</arg>
+  <arg>0x7fff567ecd7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="246" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7feadd527000</arg>
+  <arg>0x7feadd707f4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:12 2025</timestamp>
+</msg>
+<msg id="247" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/usr/bin/dash</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="248" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="249" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="250" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="251" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/usr/bin/dash</arg>
+  <arg>298683</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="252" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>298690</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="253" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="254" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>0x400000</arg>
+  <arg>0x41992f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="255" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f125255a000</arg>
+  <arg>0x7f125258e2d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="256" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffd1fdf5000</arg>
+  <arg>0x7ffd1fdf5d7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="257" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpicxx.so.12</arg>
+  <arg>0x7f123d000000</arg>
+  <arg>0x7f123d2207a7</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="258" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpifort.so.12</arg>
+  <arg>0x7f123ca00000</arg>
+  <arg>0x7f123cdb1257</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="259" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12</arg>
+  <arg>0x7f123ae00000</arg>
+  <arg>0x7f123c8d0957</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="260" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <arg>0x7f123aa00000</arg>
+  <arg>0x7f123ac1987f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="261" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7f123c920000</arg>
+  <arg>0x7f123c9ff10f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="262" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <arg>0x7f123a400000</arg>
+  <arg>0x7f123a84114f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="263" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7f123ce3a000</arg>
+  <arg>0x7f123ce592c7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="264" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f123ac1f000</arg>
+  <arg>0x7f123adfff4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="265" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <arg>0x7f123ce06000</arg>
+  <arg>0x7f123ce0a01f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="266" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7f123cdde000</arg>
+  <arg>0x7f123cde200f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="267" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7f123cdc2000</arg>
+  <arg>0x7f123cdc600f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="268" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <arg>0x7f1235248000</arg>
+  <arg>0x7f1235254897</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="269" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1</arg>
+  <arg>0x7f11a8c00000</arg>
+  <arg>0x7f11a8e55c6f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="270" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so</arg>
+  <arg>0x7f11a7e00000</arg>
+  <arg>0x7f11a806619f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="271" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librdmacm.so.1</arg>
+  <arg>0x7f11a7de1000</arg>
+  <arg>0x7f11a7dff227</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="272" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libibverbs.so.1</arg>
+  <arg>0x7f11a7d6d000</arg>
+  <arg>0x7f11a7d8d35f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="273" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-3.so.200</arg>
+  <arg>0x7f11a7d40000</arg>
+  <arg>0x7f11a7d6290f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="274" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-route-3.so.200</arg>
+  <arg>0x7f11a7c89000</arg>
+  <arg>0x7f11a7d19b5f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="275" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.1-fi.so</arg>
+  <arg>0x7f11a7400000</arg>
+  <arg>0x7f11a7662e3f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="276" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so</arg>
+  <arg>0x7f11a6e00000</arg>
+  <arg>0x7f11a705804f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="277" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libshm-fi.so</arg>
+  <arg>0x7f11a6a00000</arg>
+  <arg>0x7f11a6c5f387</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="278" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so</arg>
+  <arg>0x7f11a6600000</arg>
+  <arg>0x7f11a6862497</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="279" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so</arg>
+  <arg>0x7f11a5a00000</arg>
+  <arg>0x7f11a5dabdc7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="280" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuuid.so.1</arg>
+  <arg>0x7f1237bdc000</arg>
+  <arg>0x7f1237be5027</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="281" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libmlx-fi.so</arg>
+  <arg>0x7f11a5400000</arg>
+  <arg>0x7f11a5644c7f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="282" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucp.so.0</arg>
+  <arg>0x7f11a58f3000</arg>
+  <arg>0x7f11a59ffbbf</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="283" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucs.so.0</arg>
+  <arg>0x7f11a5e05000</arg>
+  <arg>0x7f11a5e60aef</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="284" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuct.so.0</arg>
+  <arg>0x7f11a5dc3000</arg>
+  <arg>0x7f11a5e04c57</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="285" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucm.so.0</arg>
+  <arg>0x7f11a58d9000</arg>
+  <arg>0x7f11a58f2597</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="286" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libefa-fi.so</arg>
+  <arg>0x7f11a4000000</arg>
+  <arg>0x7f11a428ba37</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="287" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libefa.so.1</arg>
+  <arg>0x7f11a443d000</arg>
+  <arg>0x7f11a444a00f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="288" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libefa-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="289" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libefa.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="290" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify.so</arg>
+  <arg>0x7f11a1000000</arg>
+  <arg>0x7f11a120c65f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="291" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/libpinjitprofiling.so</arg>
+  <arg>0x7f11a13c7000</arg>
+  <arg>0x7f11a13cb017</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="292" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libmlx-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="293" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="294" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuuid.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="295" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="296" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="297" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.1-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="298" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librdmacm.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="299" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libibverbs.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="300" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-route-3.so.200</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="301" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-3.so.200</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="302" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="303" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libshm-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="304" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="305" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="306" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="307" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpicxx.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="308" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpifort.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="309" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="310" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="311" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="312" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="313" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="314" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="315" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="316" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="317" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="318" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="319" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="320" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucp.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="321" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucs.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="322" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuct.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="323" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucm.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="324" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="325" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/libpinjitprofiling.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="326" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>DynamicCodeBin</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="327" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>298690</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="328" tool="trc">
+  <type>PROCESS_START</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>298688</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="329" tool="trc">
+  <type>PROCESS_ANALYSIS_MODE</type>
+  <arg>full</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="330" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>0x400000</arg>
+  <arg>0x41992f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="331" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <arg>0x7f55e6ed5000</arg>
+  <arg>0x7f55e6f092d7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="332" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <arg>0x7ffd9397e000</arg>
+  <arg>0x7ffd9397ed7b</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="333" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpicxx.so.12</arg>
+  <arg>0x7f55d1a00000</arg>
+  <arg>0x7f55d1c207a7</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="334" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpifort.so.12</arg>
+  <arg>0x7f55d1400000</arg>
+  <arg>0x7f55d17b1257</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="335" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12</arg>
+  <arg>0x7f55cf800000</arg>
+  <arg>0x7f55d12d0957</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="336" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <arg>0x7f55cf400000</arg>
+  <arg>0x7f55cf61987f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="337" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <arg>0x7f55d1320000</arg>
+  <arg>0x7f55d13ff10f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="338" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <arg>0x7f55cee00000</arg>
+  <arg>0x7f55cf24114f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="339" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <arg>0x7f55d17b5000</arg>
+  <arg>0x7f55d17d42c7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="340" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <arg>0x7f55cf61f000</arg>
+  <arg>0x7f55cf7fff4f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="341" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <arg>0x7f55d12ef000</arg>
+  <arg>0x7f55d12f301f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="342" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <arg>0x7f55d12e8000</arg>
+  <arg>0x7f55d12ec00f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="343" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <arg>0x7f55cf61a000</arg>
+  <arg>0x7f55cf61e00f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:13 2025</timestamp>
+</msg>
+<msg id="344" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <arg>0x7f55c9bb6000</arg>
+  <arg>0x7f55c9bc2897</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="345" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1</arg>
+  <arg>0x7f553d400000</arg>
+  <arg>0x7f553d655c6f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="346" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so</arg>
+  <arg>0x7f553c600000</arg>
+  <arg>0x7f553c86619f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="347" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librdmacm.so.1</arg>
+  <arg>0x7f553c8bc000</arg>
+  <arg>0x7f553c8da227</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="348" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libibverbs.so.1</arg>
+  <arg>0x7f553c5be000</arg>
+  <arg>0x7f553c5de35f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="349" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-3.so.200</arg>
+  <arg>0x7f553c59b000</arg>
+  <arg>0x7f553c5bd90f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="350" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-route-3.so.200</arg>
+  <arg>0x7f553c4e9000</arg>
+  <arg>0x7f553c579b5f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="351" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.1-fi.so</arg>
+  <arg>0x7f553bc00000</arg>
+  <arg>0x7f553be62e3f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="352" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so</arg>
+  <arg>0x7f553b800000</arg>
+  <arg>0x7f553ba5804f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="353" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libshm-fi.so</arg>
+  <arg>0x7f553b200000</arg>
+  <arg>0x7f553b45f387</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="354" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so</arg>
+  <arg>0x7f553ae00000</arg>
+  <arg>0x7f553b062497</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="355" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so</arg>
+  <arg>0x7f553a200000</arg>
+  <arg>0x7f553a5abdc7</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="356" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuuid.so.1</arg>
+  <arg>0x7f55cc5ab000</arg>
+  <arg>0x7f55cc5b4027</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="357" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libmlx-fi.so</arg>
+  <arg>0x7f5539c00000</arg>
+  <arg>0x7f5539e44c7f</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="358" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucp.so.0</arg>
+  <arg>0x7f553a5d8000</arg>
+  <arg>0x7f553a6e4bbf</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="359" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucs.so.0</arg>
+  <arg>0x7f553a1a4000</arg>
+  <arg>0x7f553a1ffaef</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="360" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuct.so.0</arg>
+  <arg>0x7f553a162000</arg>
+  <arg>0x7f553a1a3c57</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="361" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucm.so.0</arg>
+  <arg>0x7f553a5be000</arg>
+  <arg>0x7f553a5d7597</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:14 2025</timestamp>
+</msg>
+<msg id="362" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libefa-fi.so</arg>
+  <arg>0x7f5538a00000</arg>
+  <arg>0x7f5538c8ba37</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="363" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libefa.so.1</arg>
+  <arg>0x7f55389d7000</arg>
+  <arg>0x7f55389e400f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="364" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libefa-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="365" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libefa.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="366" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify.so</arg>
+  <arg>0x7f5535800000</arg>
+  <arg>0x7f5535a0c65f</arg>
+  <arg>no</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="367" tool="trc">
+  <type>LOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/libpinjitprofiling.so</arg>
+  <arg>0x7f55357da000</arg>
+  <arg>0x7f55357de017</arg>
+  <arg>yes</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:15 2025</timestamp>
+</msg>
+<msg id="368" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libmlx-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="369" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="370" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuuid.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="371" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="372" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="373" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.1-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="374" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librdmacm.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="375" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libibverbs.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="376" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-route-3.so.200</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="377" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnl-3.so.200</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="378" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="379" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libshm-fi.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="380" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="381" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib64/ld-linux-x86-64.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="382" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>[vdso]</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="383" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpicxx.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="384" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/libmpifort.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="385" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="386" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libstdc++.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="387" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libm.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="388" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="389" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libgcc_s.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="390" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libc.so.6</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="391" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/librt.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="392" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libdl.so.2</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="393" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libpthread.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="394" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libnuma.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="395" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="396" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucp.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="397" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucs.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="398" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libuct.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="399" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/lib/x86_64-linux-gnu/libucm.so.0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="400" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="401" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>/opt/intel/oneapi/advisor/2023.2.0/lib64/libpinjitprofiling.so</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="402" tool="trc">
+  <type>UNLOAD_MODULE</type>
+  <arg>DynamicCodeBin</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="403" tool="trc">
+  <type>PROCESS_FINISH</type>
+  <arg>/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot</arg>
+  <arg>298688</arg>
+  <arg>0x0</arg>
+  <severity>INFO</severity>
+  <timestamp>Wed Jul  2 17:00:22 2025</timestamp>
+</msg>
+<msg id="404" tool="runtool">
+  <type>app-exit-code</type>
+  <arg>0</arg>
+</msg>
+<msg id="405" tool="runtool">
+  <type>marker-file</type>
+  <arg>/home/stud/S5843444/mandelbrot/advisor_results/mpi_analysis/hybrid_p4_t2/e000/trc000/trc000.advixe</arg>
+</msg>
+<msg id="406" tool="runtool">
+  <type>collector-done</type>
+</msg>
+<msg id="407" tool="runtool">
+  <type>log-end</type>
+  <arg>2025/07/02 17:00:27</arg>
+</msg>
+
+</log>
+

@@ -1,0 +1,923 @@
+# callstacks file version: 8
+#    rowid	    parent	       rva	 loop	 system	                                function	binary	instance_start_rva	instance_size	instance_end_rva	finst_rowid	roi	is_inlined	jit_method_id	tripcounts_roi	flops_roi	cachesim_roi	data_transfer_roi	projection_roi
+         1	        -1	     18272	    0	      0	                             func@0x4580	/usr/bin/dash	17792	528	0	6	0	0	0	0	0	0	0	0
+         2	        -1	     18272	    0	      0	                             func@0x4580	/usr/bin/dash	17792	528	0	6	0	0	0	0	0	0	0	0
+         3	        -1	      9360	    0	      0	                             func@0x2310	/usr/bin/whoami	8976	432	0	7	0	0	0	0	0	0	0	0
+         4	        -1	     18450	    0	      0	                                  _start	/opt/intel/oneapi/mpi/2021.10.0/bin/mpiexec.hydra	18450	46	0	31	0	0	0	0	0	0	0	0
+         5	        -1	     10000	    0	      0	                             func@0x2300	/usr/bin/uname	8960	1088	0	11	0	0	0	0	0	0	0	0
+         6	        -1	     25168	    0	      0	                             func@0x51a7	/usr/bin/grep	20903	4313	0	13	0	0	0	0	0	0	0	0
+         7	        -1	     18450	    0	      0	                                  _start	/opt/intel/oneapi/mpi/2021.10.0/bin/mpiexec.hydra	18450	46	0	31	0	0	0	0	0	0	0	0
+         8	        -1	     16978	    0	      0	                                  _start	/opt/intel/oneapi/mpi/2021.10.0/bin/hydra_bstrap_proxy	16978	46	0	27	0	0	0	0	0	0	0	0
+         9	        -1	     17938	    0	      0	                                  _start	/opt/intel/oneapi/mpi/2021.10.0/bin/hydra_pmi_proxy	17938	46	0	28	0	0	0	0	0	0	0	0
+        10	       698	   8787834	    1	      1	        [Loop@0x861768 in func@0x861740]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8787816	44	0	3841	0	0	0	0	0	0	0	0
+        11	        10	    977476	    0	      1	                            func@0xee7f0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	976880	752	0	3852	0	0	0	0	0	0	0	0
+        12	        11	   1001812	    0	      1	           tpss_unblock_profiling_signal	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	1001680	187	0	3857	0	0	0	0	0	0	0	0
+        13	        12	    411449	    0	      1	                             sigprocmask	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	411312	228	0	14	0	0	0	0	0	0	0	0
+        14	        13	    497460	    0	      1	                          OS_SigProcMask	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	497424	114	0	23	0	0	0	0	0	0	0	0
+        15	        14	    496927	    0	      1	                            OS_SyscallDo	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	496704	374	0	25	0	0	0	0	0	0	0	0
+        16	        15	    526563	    0	      1	    OS_BARESYSCALL_DoCallAsmIntel64Linux	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	526532	36	0	37	0	0	0	0	0	0	0	0
+        17	        -1	     17938	    0	      0	                                  _start	/opt/intel/oneapi/mpi/2021.10.0/bin/hydra_pmi_proxy	17938	46	0	28	0	0	0	0	0	0	0	0
+        18	        -1	     14176	    0	      0	                                  _start	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14176	34	0	16	0	0	0	0	0	0	0	0
+        19	        -1	     14208	    0	      0	                                  _start	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14176	34	0	16	0	0	0	0	0	0	0	0
+        20	       643	    160516	    1	      1	[Loop at line 347 in __libc_start_main_impl]	/lib/x86_64-linux-gnu/libc.so.6	160486,160616	126,59	0	147	0	0	0	0	0	0	0	0
+        21	        20	    160329	    0	      1	                  __libc_start_call_main	/lib/x86_64-linux-gnu/libc.so.6	160208	172	0	149	0	0	0	0	0	0	0	0
+        22	        21	     14560	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+        23	       780	   6000964	    0	      1	                        MPIR_Init_thread	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	6000604,6001096,6001181	477,52,431	0	2828	0	1	0	0	0	0	0	0
+        24	        23	   3091446	    0	      1	                               MPID_Init	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3087616	7872	0	2977	0	0	0	0	0	0	0	0
+        25	       783	   7610714	    0	      1	                         MPL_dynlib_load	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7610697	34	0	3190	0	1	0	0	0	0	0	0
+        26	       645	    546152	    0	      1	                   dlopen_implementation	/lib/x86_64-linux-gnu/libc.so.6	546120	42	0	150	0	1	0	0	0	0	0	0
+        27	        26	    544678	    0	      1	                            _dlerror_run	/lib/x86_64-linux-gnu/libc.so.6	544544	514	0	152	0	0	0	0	0	0	0	0
+        28	        27	   1372814	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372768	102	0	158	0	0	0	0	0	0	0	0
+        29	        28	   1372633	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372512	251	0	162	0	0	0	0	0	0	0	0
+        30	        29	    545975	    0	      1	                             dlopen_doit	/lib/x86_64-linux-gnu/libc.so.6	545888	146	0	164	0	0	0	0	0	0	0	0
+        31	       568	     46519	    1	      1	          [Loop at line 867 in _dl_open]	/lib64/ld-linux-x86-64.so.2	46444,46816	128,173	0	10	0	0	0	0	0	0	0	0
+        32	        31	   1372633	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372512	251	0	162	0	0	0	0	0	0	0	0
+        33	        32	     45509	    0	      1	                          dl_open_worker	/lib64/ld-linux-x86-64.so.2	45456	236	0	40	0	0	0	0	0	0	0	0
+        34	        33	   1372633	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372512	251	0	162	0	0	0	0	0	0	0	0
+        35	        34	     47839	    0	      1	                    dl_open_worker_begin	/lib64/ld-linux-x86-64.so.2	47456	2592	0	53	0	0	0	0	0	0	0	0
+        36	        35	   8778100	    0	      1	                           func@0x85f130	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8778032	128	0	3858	0	0	0	0	0	0	0	0
+        37	        36	   8776612	    0	      1	                           func@0x85eb40	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8776512	240	0	3860	0	0	0	0	0	0	0	0
+        38	       700	   8770630	    1	      1	        [Loop@0x85d420 in func@0x85c220]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8770592,8774599,8774857	435,18,120	0	3863	0	0	0	0	0	0	0	0
+        39	        38	   8554300	    0	      1	       LEVEL_PINCLIENT::ProcessImageLoad	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8554224	204	0	3948	0	0	0	0	0	0	0	0
+        40	        39	   8545711	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+        41	        40	   8850060	    0	      1	          LEVEL_PINCLIENT::ElfCookRegsym	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8849328	1670	0	4073	0	0	0	0	0	0	0	0
+        42	       702	   8857078	    1	      1	[Loop@0x872560 in LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856928,8857336,8859096	347,139,38	0	4100	0	0	0	0	0	0	0	0
+        43	        42	   8853545	    0	      1	std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__emplace_unique_key_args<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long><std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8853472	199	0	4131	0	0	0	0	0	0	0	0
+        44	       604	    151581	    1	      1	          [Loop@0x25016 in operator new]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151574,151601	16,14	0	3	0	0	0	0	0	0	0	0
+        45	        44	   3444721	    0	      1	          LEVEL_BASE::SWMALLOC::Allocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3443808	2616	0	24	0	0	0	0	0	0	0	0
+        46	       909	   3447913	    1	      1	[Loop@0x349ac8 in ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal]	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447496,3447896	108,48	0	153	0	0	0	0	0	0	0	0
+        47	        24	   7611287	    0	      1	                 MPIDI_OFI_mpi_init_hook	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7607376	12880	0	3193	0	0	0	0	0	0	0	0
+        48	        47	   7585576	    0	      1	                             open_fabric	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7585504	7872	0	3316	0	0	0	0	0	0	0	0
+        49	        48	   7593595	    0	      1	                           find_provider	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7593376	5168	0	3380	0	0	0	0	0	0	0	0
+        50	        49	     44139	    0	      0	                              fi_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42112	2880	0	9	0	0	0	0	0	0	0	0
+        51	        50	     41816	    0	      0	                                  fi_ini	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	41280	582	0	71	0	0	0	0	0	0	0	0
+        52	       772	     39895	    1	      0	       [Loop@0x9b90 in ofi_load_dl_prov]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	39824,40192	180,104	40008,40092	86	0	0	0	0	0	0	0	0
+        53	       647	    546152	    0	      1	                   dlopen_implementation	/lib/x86_64-linux-gnu/libc.so.6	546120	42	0	150	0	1	0	0	0	0	0	0
+        54	        53	    544678	    0	      1	                            _dlerror_run	/lib/x86_64-linux-gnu/libc.so.6	544544	514	0	152	0	0	0	0	0	0	0	0
+        55	        54	   1372814	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372768	102	0	158	0	0	0	0	0	0	0	0
+        56	        55	   1372633	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372512	251	0	162	0	0	0	0	0	0	0	0
+        57	        56	    545975	    0	      1	                             dlopen_doit	/lib/x86_64-linux-gnu/libc.so.6	545888	146	0	164	0	0	0	0	0	0	0	0
+        58	       570	     46519	    1	      1	          [Loop at line 867 in _dl_open]	/lib64/ld-linux-x86-64.so.2	46444,46816	128,173	0	10	0	0	0	0	0	0	0	0
+        59	        58	   1372633	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372512	251	0	162	0	0	0	0	0	0	0	0
+        60	        59	     45509	    0	      1	                          dl_open_worker	/lib64/ld-linux-x86-64.so.2	45456	236	0	40	0	0	0	0	0	0	0	0
+        61	        60	   1372633	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372512	251	0	162	0	0	0	0	0	0	0	0
+        62	        61	     47839	    0	      1	                    dl_open_worker_begin	/lib64/ld-linux-x86-64.so.2	47456	2592	0	53	0	0	0	0	0	0	0	0
+        63	        62	   8778100	    0	      1	                           func@0x85f130	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8778032	128	0	3858	0	0	0	0	0	0	0	0
+        64	        63	   8776612	    0	      1	                           func@0x85eb40	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8776512	240	0	3860	0	0	0	0	0	0	0	0
+        65	       704	   8770630	    1	      1	        [Loop@0x85d420 in func@0x85c220]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8770592,8774599,8774857	435,18,120	0	3863	0	0	0	0	0	0	0	0
+        66	        65	   8554300	    0	      1	       LEVEL_PINCLIENT::ProcessImageLoad	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8554224	204	0	3948	0	0	0	0	0	0	0	0
+        67	        66	   8545711	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+        68	        67	   8850060	    0	      1	          LEVEL_PINCLIENT::ElfCookRegsym	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8849328	1670	0	4073	0	0	0	0	0	0	0	0
+        69	       706	   8857115	    1	      1	[Loop@0x872560 in LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856928,8857336,8859096	347,139,38	0	4100	0	0	0	0	0	0	0	0
+        70	        69	   9203268	    0	      1	                   LEVEL_CORE::SYM_Alloc	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9203232	111	0	4138	0	0	0	0	0	0	0	0
+        71	       708	   8924334	    1	      1	[Loop@0x882c82 in LEVEL_BASE::ARRAYBASE::Memset]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8924290	54	0	4144	0	0	0	0	0	0	0	0
+        72	       594	    435136	    1	      1	                [Loop@0x6a3c0 in memset]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	435136	36	0	41	0	0	0	0	0	0	0	0
+        73	        66	   8546828	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+        74	       711	   8507187	    1	      1	        [Loop@0x81cd90 in func@0x81cd10]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506768,8508264,8508288,8508312,8508336,8508360,8508384,8508408,8508448,8508480,8508512,8508544	1432,18,18,15,18,18,18,30,30,30,30,309	0	4155	0	0	0	0	0	0	0	0
+        75	        74	   8297470	    0	      1	                 LEVEL_BASE::StringHex32	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8297280	282	0	4177	0	0	0	0	0	0	0	0
+        76	        66	   8545737	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+        77	        76	   8534454	    0	      1	                           func@0x823910	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8534288	9552	0	4186	0	0	0	0	0	0	0	0
+        78	        77	   8820578	    0	      1	     LEVEL_PINCLIENT::GetSubprogramsInfo	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8820416	2567	0	4316	0	0	0	0	0	0	0	0
+        79	        78	   1844826	    0	      1	               GetSubprogramsListInImage	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1844784	1617	0	45	0	0	0	0	0	0	0	0
+        80	        79	   1841002	    0	      1	                           func@0x1c0640	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1836608	7120	0	74	0	0	0	0	0	0	0	0
+        81	        80	   1931944	    0	      1	              llvm::DWARFContext::create	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1931730	307	0	125	0	0	0	0	0	0	0	0
+        82	       606	    151581	    1	      1	          [Loop@0x25016 in operator new]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151574,151601	16,14	0	3	0	0	0	0	0	0	0	0
+        83	        82	   3445465	    0	      1	          LEVEL_BASE::SWMALLOC::Allocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3443808	2616	0	24	0	0	0	0	0	0	0	0
+        84	        83	   3442267	    0	      1	          LEVEL_BASE::SWMALLOC::GetPages	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3442192	105	0	157	0	0	0	0	0	0	0	0
+        85	        54	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	1	0	0	0	0	0	0	0	0
+        86	        85	     80304	    0	      1	                            func@0x139b0	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	80304	6	0	46	0	0	0	0	0	0	0	0
+        87	       572	     19123	    1	      1	          [Loop at line 120 in _dl_init]	/lib64/ld-linux-x86-64.so.2	19096	34	0	99	0	0	0	0	0	0	0	0
+        88	       575	     18893	    1	      1	          [Loop at line 73 in call_init]	/lib64/ld-linux-x86-64.so.2	18880	22	0	106	0	0	0	0	0	0	0	0
+        89	        88	     77493	    0	      1	                                ucs_init	/lib/x86_64-linux-gnu/libucs.so.0	77360	332	0	8	0	0	0	0	0	0	0	0
+        90	        89	    204602	    0	      1	                      ucs_rand_seed_init	/lib/x86_64-linux-gnu/libucs.so.0	204592	25	0	18	0	0	0	0	0	0	0	0
+        91	        90	    221742	    0	      1	                       ucs_generate_uuid	/lib/x86_64-linux-gnu/libucs.so.0	221392	459	0	21	0	0	0	0	0	0	0	0
+        92	        91	     82683	    0	      1	                   ucs_x86_init_tsc_freq	/lib/x86_64-linux-gnu/libucs.so.0	82496	752	0	33	0	0	0	0	0	0	0	0
+        93	       769	     82215	    1	      1	          [Loop@0x14118 in func@0x140b0]	/lib/x86_64-linux-gnu/libucs.so.0	82200,82352	112,17	0	43	0	0	0	0	0	0	0	0
+        94	        93	    483533	    0	      1	                               _IO_fgets	/lib/x86_64-linux-gnu/libc.so.6	483392	338	0	172	0	0	0	0	0	0	0	0
+        95	       649	    487305	    1	      1	[Loop at line 55 in __GI__IO_getline_info]	/lib/x86_64-linux-gnu/libc.so.6	487224	116	0	176	0	0	0	0	0	0	0	0
+        96	        95	    536913	    0	      1	                  __GI__IO_default_uflow	/lib/x86_64-linux-gnu/libc.so.6	536864	87	0	186	0	0	0	0	0	0	0	0
+        97	        96	    532845	    0	      1	                  _IO_new_file_underflow	/lib/x86_64-linux-gnu/libc.so.6	532464	740	0	192	0	0	0	0	0	0	0	0
+        98	       713	   5087535	    1	      1	  [Loop@0x4da109 in tpss_read_mod1_ver0]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5087497	167	0	4337	0	0	0	0	0	0	0	0
+        99	        98	   1016413	    0	      1	                                   __GI_	/lib/x86_64-linux-gnu/libc.so.6	1016400	157	0	198	0	0	0	0	0	0	0	0
+       100	       775	     43317	    1	      0	             [Loop@0xa738 in fi_getinfo]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42808,42904,43224,43272,43432,43584,43640,43728,44004,44041,44532	91,244,41,150,138,52,83,87,32,8,73	43148,43422,43570,43815,44036	101	0	0	0	0	0	0	0	0
+       101	       100	     37691	    0	      0	                             rxm_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so	37344	1898	0	29	0	0	0	0	0	0	0	0
+       102	       618	    203293	    1	      0	          [Loop@0x319c0 in ofix_getinfo]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so	203200,203328,203352,203632,203696	107,21,279,55,251	203307	95	0	0	0	0	0	0	0	0
+       103	       102	    187601	    0	      0	                       ofi_get_core_info	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so	187232	613	0	109	0	0	0	0	0	0	0	0
+       104	       778	     43317	    1	      0	             [Loop@0xa738 in fi_getinfo]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42808,42904,43224,43272,43432,43584,43640,43728,44004,44041,44532	91,244,41,150,138,52,83,87,32,8,73	43148,43422,43570,43815,44036	101	0	0	0	0	0	0	0	0
+       105	       104	    100074	    0	      0	                             vrb_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so	100032	3454	0	70	0	0	0	0	0	0	0	0
+       106	       766	     90258	    1	      0	[Loop@0x16080 in vrb_init_info.constprop.10]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so	90240,91072	74,46	90314	122	0	0	0	0	0	0	0	0
+       107	       651	    486720	    1	      1	    [Loop at line 88 in __GI___getdelim]	/lib/x86_64-linux-gnu/libc.so.6	486608	200	0	202	0	0	0	0	0	0	0	0
+       108	       107	    532845	    0	      1	                  _IO_new_file_underflow	/lib/x86_64-linux-gnu/libc.so.6	532464	740	0	192	0	0	0	0	0	0	0	0
+       109	       715	   5087535	    1	      1	  [Loop@0x4da109 in tpss_read_mod1_ver0]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5087497	167	0	4337	0	0	0	0	0	0	0	0
+       110	       109	   1016413	    0	      1	                                   __GI_	/lib/x86_64-linux-gnu/libc.so.6	1016400	157	0	198	0	0	0	0	0	0	0	0
+       111	       108	   5088469	    0	      1	                     tpss_read_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5086496	2815	0	4339	0	0	0	0	0	0	0	0
+       112	       111	   6983695	    0	      1	                           func@0x6a8f90	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	6983568	176	0	4356	0	0	0	0	0	0	0	0
+       113	       787	   7614795	    0	      1	                              fi_recvmsg	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7614781	18	0	3421	0	1	0	0	0	0	0	0
+       114	       113	     72492	    0	      0	                        xnet_srx_recvmsg	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	72448	203	0	15	0	0	0	0	0	0	0	0
+       115	       114	     72399	    0	      0	                     xnet_alloc_srx_xfer	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	72224	212	0	20	0	0	0	0	0	0	0	0
+       116	       115	    214447	    0	      0	                        ofi_bufpool_grow	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	214064	997	0	26	0	0	0	0	0	0	0	0
+       117	       116	   1389642	    0	      1	            __memset_avx2_unaligned_erms	/lib/x86_64-linux-gnu/libc.so.6	1389440	317	0	242	0	0	0	0	0	0	0	0
+       118	        21	     14742	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       119	       118	    716262	    0	      1	           __kmp_api_omp_get_max_threads	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	716096	192	0	80	0	0	0	0	0	0	0	0
+       120	       891	    896764	    0	      1	            __kmp_acquire_bootstrap_lock	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	896745	20	0	159	0	1	0	0	0	0	0	0
+       121	       893	    800894	    0	      1	_INTERNAL77814fad::__kmp_acquire_ticket_lock_timed_template	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	800833,800842,800850,801358	3,5,496,50	0	179	0	1	0	0	0	0	0	0
+       122	       121	    270289	    0	      1	_INTERNALb4e99691::__kmp_itt_fsync_acquired_init_3_0	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	270208	128	0	190	0	0	0	0	0	0	0	0
+       123	       122	    244487	    0	      1	                   __kmp_itt_init_ittlib	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	242944	3456	0	207	0	0	0	0	0	0	0	0
+       124	       123	     77575	    0	      1	                          __itt_api_init	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	77456	816	0	19	0	0	0	0	0	0	0	0
+       125	       124	     37837	    0	      1	                             func@0x9210	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	37392	480	0	62	0	0	0	0	0	0	0	0
+       126	       125	     79307	    0	      1	                            func@0x13550	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	79184	176	0	75	0	0	0	0	0	0	0	0
+       127	        21	     15787	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       128	       127	    564514	    0	      1	                           [OpenMP fork]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	564096	576	0	243	0	0	0	0	0	0	0	0
+       129	       128	    859931	    0	      1	                         __kmp_fork_call	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	858240	11904	0	273	0	0	0	0	0	0	0	0
+       130	       895	    874466	    1	      1	[Loop at line 5897 in __kmp_allocate_team]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	874453	91	0	380	0	0	0	0	0	0	0	0
+       131	       130	    844934	    0	      1	                   __kmp_allocate_thread	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	842880	2880	0	403	0	0	0	0	0	0	0	0
+       132	       899	   1461383	    1	      1	[Loop at line 775 in __kmp_create_worker]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	1460281,1460434,1461642	99,1192,914	0	410	0	0	0	0	0	0	0	0
+       133	       902	    862036	    0	      1	_INTERNAL49d8b4ea::__kmp_itt_stack_caller_create	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	862035	2	0	425	0	1	0	0	0	0	0	0
+       134	       133	         3	    0	      0	                    [Stitch point frame]	n/a	0	0	0	2	0	0	0	0	0	0	0	0
+       135	       134	    857394	    0	      1	                     [OpenMP dispatcher]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	857088	512	0	429	0	0	0	0	0	0	0	0
+       136	       135	   1455250	    0	      1	                  __kmp_invoke_microtask	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	1455104	176	0	432	0	0	0	0	0	0	0	0
+       137	       625	     18558	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       138	       137	     23525	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       139	       137	     23406	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       140	       625	     18545	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       141	       137	     23575	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       142	       137	     23567	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       143	       625	     18511	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       144	       137	     23559	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       145	       137	     23579	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       146	       137	     23512	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       147	       137	     23445	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       148	       625	     18567	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       149	       137	     22560	    0	      0	                                    cabs	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	22560	18	0	115	0	0	0	0	0	0	0	0
+       150	       137	     23517	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       151	       137	     23530	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       152	       137	     23563	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       153	       137	     22718	    0	      0	                            __libm_hypot	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	22704	16	0	117	0	0	0	0	0	0	0	0
+       154	       137	     23547	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       155	       137	     23301	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       156	       137	     23478	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       157	       137	     23265	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       158	       137	     23368	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       159	       137	     23330	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       160	       137	     23337	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       161	       625	     18573	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       162	       137	     23353	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       163	       137	     23372	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       164	        21	     20553	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       165	       631	     22133	    1	      0	[Loop@0x405675 in std::vector<int, std::allocator<int>>::_M_default_append]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	22133	16	22149	127	0	0	0	0	0	0	0	0
+       166	        21	     16741	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       167	       790	   1578328	    0	      1	                        internal_Gatherv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	1575448,1575463,1575470,1578628	7,3,3140,1612	0	3882	0	1	0	0	0	0	0	0
+       168	       792	   3575844	    0	      1	                            MPID_Gatherv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3575771	76	0	3951	0	1	0	0	0	0	0	0
+       169	       168	   2171986	    0	      1	                       MPIDI_coll_select	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2171280	3776	0	4058	0	0	0	0	0	0	0	0
+       170	       796	   2387127	    0	      1	                    MPIDI_NM_mpi_gatherv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2385697,2387218	1514,266	0	4342	0	1	0	0	0	0	0	0
+       171	       170	   4390829	    0	      1	       MPIR_Gatherv_allcomm_linear_ssend	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4390160	1920	0	4850	0	0	0	0	0	0	0	0
+       172	       171	   4850429	    0	      1	                            MPIC_Waitall	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4850064	896	0	4937	0	0	0	0	0	0	0	0
+       173	       802	   8888648	    1	      1	  [Loop at line 42 in MPIR_Waitall_impl]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8888636	37	0	4953	0	0	0	0	0	0	0	0
+       174	       807	   3102484	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       175	       810	   7671359	    0	      1	                              fi_cq_read	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671341,7671353	4,7	0	5078	0	1	0	0	0	0	0	0
+       176	       175	     77944	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       177	       176	    190129	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       178	       177	     92915	    0	      0	                       xnet_run_progress	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	92864	560	0	73	0	0	0	0	0	0	0	0
+       179	       178	    102267	    0	      0	                  ofi_dynpoll_wait_epoll	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	102256	31	0	85	0	0	0	0	0	0	0	0
+       180	       179	   5597854	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       181	       180	   6983695	    0	      1	                           func@0x6a8f90	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	6983568	176	0	4356	0	0	0	0	0	0	0	0
+       182	       653	    547001	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       183	       717	   5598057	    1	      1	[Loop@0x556b44 in tpss_epoll_wait_mod1_ver0]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5598020	278	0	4407	0	0	0	0	0	0	0	0
+       184	       183	   1085158	    0	      1	                              epoll_wait	/lib/x86_64-linux-gnu/libc.so.6	1085072	163	0	290	0	0	0	0	0	0	0	0
+       185	       176	    190147	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       186	       185	    101056	    0	      0	                     ofi_mutex_lock_noop	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	101056	2	0	88	0	0	0	0	0	0	0	0
+       187	       179	   5599117	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       188	       187	   6983695	    0	      1	                           func@0x6a8f90	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	6983568	176	0	4356	0	0	0	0	0	0	0	0
+       189	       179	   5597105	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       190	       189	   7560739	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       191	       807	   3102899	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       192	       815	   9550628	    0	      1	                              impi_rdtsc	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	9	0	5579	0	1	0	0	0	0	0	0
+       193	       655	    546885	    1	      1	[Loop at line 37 in __GI___pthread_enable_asynccancel]	/lib/x86_64-linux-gnu/libc.so.6	546870,546916	19,4	0	294	0	0	0	0	0	0	0	0
+       194	       807	   3102984	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       195	       820	   7326829	    1	      1	[Loop at line 189 in MPIR_Progress_hook_exec_on_vci]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326773,7326889	80,79	0	5596	0	0	0	0	0	0	0	0
+       196	       653	    547007	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       197	       659	    547025	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       198	       175	     77927	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       199	       662	    574396	    0	      1	                lll_mutex_lock_optimized	/lib/x86_64-linux-gnu/libc.so.6	574365,574440,574584	37,24,20	0	322	0	1	0	0	0	0	0	0
+       200	       822	   9550866	    0	      1	                           idle_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550854	307	0	5606	0	1	0	0	0	0	0	0
+       201	       653	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       202	       191	   9551170	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       203	       189	   7560821	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       204	       177	     93095	    0	      0	                       xnet_run_progress	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	92864	560	0	73	0	0	0	0	0	0	0	0
+       205	       204	     43052	    0	      0	                  xnet_handle_event_list	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	42208	1680	0	91	0	0	0	0	0	0	0	0
+       206	       179	   5598483	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       207	       206	    161376	    0	      1	                   __GI___errno_location	/lib/x86_64-linux-gnu/libc.so.6	161376	17	0	371	0	0	0	0	0	0	0	0
+       208	       177	     92875	    0	      0	                       xnet_run_progress	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	92864	560	0	73	0	0	0	0	0	0	0	0
+       209	       820	   7326834	    1	      1	[Loop at line 189 in MPIR_Progress_hook_exec_on_vci]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326773,7326889	80,79	0	5596	0	0	0	0	0	0	0	0
+       210	       189	   7561552	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       211	       210	    948087	    0	      1	                     pthread_getspecific	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	948048	406	0	4437	0	0	0	0	0	0	0	0
+       212	       211	   8256186	    0	      1	                              sal_get_sp	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8256186	4	0	4448	0	0	0	0	0	0	0	0
+       213	       179	    546976	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       214	       825	   9550881	    0	      1	               is_available_forward_cell	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550854,9550872	6,15	0	5611	0	1	0	0	0	0	0	0
+       215	       174	   7671265	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       216	       215	   7478640	    0	      1	                  MPIDI_OFI_get_buffered	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7478640	256	0	5615	0	0	0	0	0	0	0	0
+       217	       179	    546848	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       218	       183	   1085082	    0	      1	                              epoll_wait	/lib/x86_64-linux-gnu/libc.so.6	1085072	163	0	290	0	0	0	0	0	0	0	0
+       219	       827	   3102390	    0	      1	                       MPIDI_vci_get_src	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102390,3102410,3103058	19,7,9,99	0	5621	0	1	0	0	0	0	0	0
+       220	       198	    574402	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       221	       175	     77898	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       222	       179	   5598411	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       223	       222	    953512	    0	      1	                applibc___errno_location	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	953504	120	0	4453	0	0	0	0	0	0	0	0
+       224	       223	   8256186	    0	      1	                              sal_get_sp	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8256186	4	0	4448	0	0	0	0	0	0	0	0
+       225	       662	    574383	    0	      1	                lll_mutex_lock_optimized	/lib/x86_64-linux-gnu/libc.so.6	574365,574440,574584	37,24,20	0	322	0	1	0	0	0	0	0	0
+       226	       655	    546887	    1	      1	[Loop at line 37 in __GI___pthread_enable_asynccancel]	/lib/x86_64-linux-gnu/libc.so.6	546870,546916	19,4	0	294	0	0	0	0	0	0	0	0
+       227	       210	    948201	    0	      1	                     pthread_getspecific	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	948048	406	0	4437	0	0	0	0	0	0	0	0
+       228	       189	   7560794	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       229	       179	140338863346128	    0	      0	              [Outside any known module]	n/a	0	0	0	4	0	0	0	0	0	0	0	0
+       230	       176	    190492	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       231	       230	    101072	    0	      0	                   ofi_mutex_unlock_noop	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	101072	2	0	116	0	0	0	0	0	0	0	0
+       232	       191	   9550853	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       233	       232	   5632917	    0	      1	                  impi_shm_heap_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5632464	1120	0	5631	0	0	0	0	0	0	0	0
+       234	       179	   5598442	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       235	       234	   7560720	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       236	       178	    102256	    0	      0	                  ofi_dynpoll_wait_epoll	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	102256	31	0	85	0	0	0	0	0	0	0	0
+       237	       179	   5598010	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       238	       237	   7560794	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       239	       174	   7671446	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       240	       175	     77965	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       241	       667	    580772	    0	      1	              lll_mutex_unlock_optimized	/lib/x86_64-linux-gnu/libc.so.6	580726,580768	26,16	0	375	0	1	0	0	0	0	0	0
+       242	       179	   5597205	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       243	        21	     17083	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       244	       243	   1251488	    0	      1	         std::ostream::_M_insert<double>	/lib/x86_64-linux-gnu/libstdc++.so.6	1251488	528	0	17	0	0	0	0	0	0	0	0
+       245	       633	     17558	    1	      0	                 [Loop@0x404479 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	17529	60	19423,17589	140	0	0	0	0	0	0	0	0
+       246	       245	   1248745	    0	      1	           std::ostream::_M_insert<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248624	520	0	36	0	0	0	0	0	0	0	0
+       247	       246	   1192897	    0	      1	std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::_M_insert_int<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1192640	620	0	59	0	0	0	0	0	0	0	0
+       248	       247	   1087940	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::xsputn	/lib/x86_64-linux-gnu/libstdc++.so.6	1087888	323	0	64	0	0	0	0	0	0	0	0
+       249	       248	    742672	    0	      1	std::codecvt<char, char, __mbstate_t>::do_always_noconv	/lib/x86_64-linux-gnu/libstdc++.so.6	742672	10	0	66	0	0	0	0	0	0	0	0
+       250	        21	     19464	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       251	       250	   1244263	    0	      1	                     std::ostream::flush	/lib/x86_64-linux-gnu/libstdc++.so.6	1244192	339	0	68	0	0	0	0	0	0	0	0
+       252	       251	   1085292	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::sync	/lib/x86_64-linux-gnu/libstdc++.so.6	1085264	51	0	77	0	0	0	0	0	0	0	0
+       253	       252	   1094109	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::overflow	/lib/x86_64-linux-gnu/libstdc++.so.6	1093904	510	0	81	0	0	0	0	0	0	0	0
+       254	       253	   1093155	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::_M_convert_to_external	/lib/x86_64-linux-gnu/libstdc++.so.6	1092976	346	0	90	0	0	0	0	0	0	0	0
+       255	        21	     19437	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       256	       255	   1248161	    0	      1	 std::operator<<<std::char_traits<char>>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248096	75	0	92	0	0	0	0	0	0	0	0
+       257	       256	   1245102	    0	      1	                       std::ostream::put	/lib/x86_64-linux-gnu/libstdc++.so.6	1245072	353	0	94	0	0	0	0	0	0	0	0
+       258	       257	    642768	    0	      1	                        [libstdc++.so.6]	/lib/x86_64-linux-gnu/libstdc++.so.6	0	0	0	103	0	0	0	0	0	0	0	0
+       259	       255	     12912	    0	      0	                           func@0x403270	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	12912	6	0	141	0	0	0	0	0	0	0	0
+       260	       247	   1087975	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::xsputn	/lib/x86_64-linux-gnu/libstdc++.so.6	1087888	323	0	64	0	0	0	0	0	0	0	0
+       261	       256	   1245128	    0	      1	                       std::ostream::put	/lib/x86_64-linux-gnu/libstdc++.so.6	1245072	353	0	94	0	0	0	0	0	0	0	0
+       262	       247	   1087888	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::xsputn	/lib/x86_64-linux-gnu/libstdc++.so.6	1087888	323	0	64	0	0	0	0	0	0	0	0
+       263	       256	   1245161	    0	      1	                       std::ostream::put	/lib/x86_64-linux-gnu/libstdc++.so.6	1245072	353	0	94	0	0	0	0	0	0	0	0
+       264	       253	   1093154	    0	      1	std::basic_filebuf<char, std::char_traits<char>>::_M_convert_to_external	/lib/x86_64-linux-gnu/libstdc++.so.6	1092976	346	0	90	0	0	0	0	0	0	0	0
+       265	       562	    826924	    1	      1	[Loop@0xc9e1f in std::__basic_file<char>::xsputn]	/lib/x86_64-linux-gnu/libstdc++.so.6	826911,826944	30,10	0	104	0	0	0	0	0	0	0	0
+       266	       669	   1016639	    0	      1	                                   __GI_	/lib/x86_64-linux-gnu/libc.so.6	1016610,1016696	55,21	0	397	0	1	0	0	0	0	0	0
+       267	       256	   1245147	    0	      1	                       std::ostream::put	/lib/x86_64-linux-gnu/libstdc++.so.6	1245072	353	0	94	0	0	0	0	0	0	0	0
+       268	       246	   1192825	    0	      1	std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char>>>::_M_insert_int<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1192640	620	0	59	0	0	0	0	0	0	0	0
+       269	       245	   1248634	    0	      1	           std::ostream::_M_insert<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248624	520	0	36	0	0	0	0	0	0	0	0
+       270	       245	   1248685	    0	      1	           std::ostream::_M_insert<long>	/lib/x86_64-linux-gnu/libstdc++.so.6	1248624	520	0	36	0	0	0	0	0	0	0	0
+       271	        -1	   1458176	    0	      1	      _INTERNAL1ebb3278::[OpenMP worker]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	1458176	1664	0	435	0	0	0	0	0	0	0	0
+       272	       137	     23460	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       273	       137	     23583	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       274	       137	     23483	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       275	       720	   8548360	    1	      1	        [Loop@0x826f9a in func@0x825e60]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8548250,8548496,8548544,8548560,8548640,8548800,8551854	198,40,13,71,18,13,44	0	4457	0	0	0	0	0	0	0	0
+       276	       275	   9151578	    0	      1	                   LEVEL_CORE::RTN_Alloc	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9151248	683	0	4466	0	0	0	0	0	0	0	0
+       277	       706	   8857078	    1	      1	[Loop@0x872560 in LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856928,8857336,8859096	347,139,38	0	4100	0	0	0	0	0	0	0	0
+       278	       277	   8853501	    0	      1	std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__emplace_unique_key_args<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long><std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8853472	199	0	4131	0	0	0	0	0	0	0	0
+       279	       725	   8853053	    1	      1	[Loop@0x87162e in std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8853038,8853288,8853368,8853400,8853424	218,75,22,8,33	0	4470	0	0	0	0	0	0	0	0
+       280	       596	    433361	    1	      1	                [Loop@0x69cb0 in memcmp]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	433328	101	0	47	0	0	0	0	0	0	0	0
+       281	       711	   8507454	    1	      1	        [Loop@0x81cd90 in func@0x81cd10]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506768,8508264,8508288,8508312,8508336,8508360,8508384,8508408,8508448,8508480,8508512,8508544	1432,18,18,15,18,18,18,30,30,30,30,309	0	4155	0	0	0	0	0	0	0	0
+       282	       281	   8297430	    0	      1	                 LEVEL_BASE::StringHex32	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8297280	282	0	4177	0	0	0	0	0	0	0	0
+       283	       598	    255783	    1	      1	                [Loop@0x3e720 in strlen]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	255776	9	0	57	0	0	0	0	0	0	0	0
+       284	        66	   8545389	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       285	       284	   8825453	    0	      1	          LEVEL_PINCLIENT::IMG_ReadImage	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8824784	2121	0	4492	0	0	0	0	0	0	0	0
+       286	       285	   8902421	    0	      1	LEVEL_IMGIO::IMG_UpdateImageFromElfHeaders	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8895264	12140	0	4523	0	0	0	0	0	0	0	0
+       287	       728	   8863909	    1	      1	        [Loop@0x873810 in func@0x873650]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8861712,8862200,8862224,8862328,8865409,8865664,8866613,8866663,8867059,8867760,8867824,8867888,8868192,8868240,8868264,8868288,8868312,8868336,8868360,8868384,8868408,8868432,8868456	466,15,75,3014,233,84,27,44,182,61,63,299,41,18,18,18,18,18,18,18,18,18,18	0	4610	0	0	0	0	0	0	0	0
+       288	       287	   7603693	    0	      1	std::__1::__put_character_sequence<char, std::__1::char_traits<char>>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7603584	266	0	4672	0	0	0	0	0	0	0	0
+       289	       288	   7603302	    0	      1	                           func@0x7403c0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7603136	448	0	4679	0	0	0	0	0	0	0	0
+       290	       560	    349250	    1	      1	[Loop@0x553d0 in std::__1::basic_streambuf<char, std::__1::char_traits<char>>::xsputn]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++.so	349136,349240	85,17	0	30	0	0	0	0	0	0	0	0
+       291	       290	    433464	    0	      1	                                  memcpy	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	433456	14	0	60	0	0	0	0	0	0	0	0
+       292	       291	    433910	    0	      1	                                 memmove	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	433712	1170	0	61	0	0	0	0	0	0	0	0
+       293	       284	   8824921	    0	      1	          LEVEL_PINCLIENT::IMG_ReadImage	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8824784	2121	0	4492	0	0	0	0	0	0	0	0
+       294	       293	    414721	    0	      1	                                    open	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	414608	178	0	72	0	0	0	0	0	0	0	0
+       295	       294	    511456	    0	      1	                               OS_OpenFD	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	511120	369	0	76	0	0	0	0	0	0	0	0
+       296	       295	    525508	    0	      1	            OS_RelocateAndReportFileOpen	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	525456	72	0	79	0	0	0	0	0	0	0	0
+       297	       296	    513740	    0	      1	                      OS_CloseFDInternal	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	513712	155	0	83	0	0	0	0	0	0	0	0
+       298	       297	    496927	    0	      1	                            OS_SyscallDo	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	496704	374	0	25	0	0	0	0	0	0	0	0
+       299	       298	    526563	    0	      1	    OS_BARESYSCALL_DoCallAsmIntel64Linux	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	526532	36	0	37	0	0	0	0	0	0	0	0
+       300	        85	     47839	    0	      1	                    dl_open_worker_begin	/lib64/ld-linux-x86-64.so.2	47456	2592	0	53	0	0	0	0	0	0	0	0
+       301	       300	   8778100	    0	      1	                           func@0x85f130	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8778032	128	0	3858	0	0	0	0	0	0	0	0
+       302	       301	   8776612	    0	      1	                           func@0x85eb40	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8776512	240	0	3860	0	0	0	0	0	0	0	0
+       303	       730	   8770630	    1	      1	        [Loop@0x85d420 in func@0x85c220]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8770592,8774599,8774857	435,18,120	0	3863	0	0	0	0	0	0	0	0
+       304	       303	   8554300	    0	      1	       LEVEL_PINCLIENT::ProcessImageLoad	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8554224	204	0	3948	0	0	0	0	0	0	0	0
+       305	       733	   8548394	    1	      1	        [Loop@0x826f9a in func@0x825e60]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8548250,8548496,8548544,8548560,8548640,8548800,8551854	198,40,13,71,18,13,44	0	4457	0	0	0	0	0	0	0	0
+       306	       305	   9154534	    0	      1	                 LEVEL_CORE::RTN_SetName	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9154464	262	0	4706	0	0	0	0	0	0	0	0
+       307	       306	   3442683	    0	      1	        LEVEL_BASE::SWMALLOC::Deallocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3442576	1078	0	161	0	0	0	0	0	0	0	0
+       308	       106	    486873	    0	      1	                         __GI___getdelim	/lib/x86_64-linux-gnu/libc.so.6	486448	676	0	203	0	0	0	0	0	0	0	0
+       309	       124	     37601	    0	      1	                             func@0x9210	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	37392	480	0	62	0	0	0	0	0	0	0	0
+       310	       309	    561734	    0	      1	                            func@0x891c0	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	561600	320	0	78	0	0	0	0	0	0	0	0
+       311	       905	    578034	    1	      1	          [Loop@0x8d097 in func@0x8cf80]	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	577687,578229	356,10	0	82	0	0	0	0	0	0	0	0
+       312	       311	    572866	    0	      1	                            func@0x8bd80	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	572800	304	0	93	0	0	0	0	0	0	0	0
+       313	       907	    573518	    1	      1	          [Loop@0x8c038 in func@0x8c010]	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	573496	30	0	97	0	0	0	0	0	0	0	0
+       314	       137	     23307	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       315	       624	     21055	    1	      0	                 [Loop@0x4047e9 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18409,21047	233,47	18642	111	0	0	0	0	0	0	0	0
+       316	       137	     24268	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       317	       137	     23410	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       318	       625	     18576	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       319	        21	     16815	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       320	       319	   4347176	    0	      1	                           PMPI_Finalize	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4346720	2912	0	5668	0	0	0	0	0	0	0	0
+       321	       320	   3082188	    0	      1	                           MPID_Finalize	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3081984	1360	0	5705	0	0	0	0	0	0	0	0
+       322	       321	   7538617	    0	      1	             MPIDI_OFI_mpi_finalize_hook	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7538336	6656	0	5770	0	0	0	0	0	0	0	0
+       323	       322	   1352400	    0	      1	               MPIR_Bcast_intra_binomial	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	1351184	1808	0	5821	0	0	0	0	0	0	0	0
+       324	       831	   4733910	    0	      1	                               MPID_Wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4733898	15	0	5849	0	1	0	0	0	0	0	0
+       325	       833	   8914544	    1	      1	     [Loop at line 34 in MPIR_Wait_impl]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8914533	43	0	6589	0	0	0	0	0	0	0	0
+       326	       837	   3102484	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       327	       840	   7671359	    0	      1	                              fi_cq_read	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671341,7671353	4,7	0	5078	0	1	0	0	0	0	0	0
+       328	       327	     77927	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       329	       671	    574396	    0	      1	                lll_mutex_lock_optimized	/lib/x86_64-linux-gnu/libc.so.6	574365,574440,574584	37,24,20	0	322	0	1	0	0	0	0	0	0
+       330	       327	     77944	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       331	       330	    190129	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       332	       331	     92915	    0	      0	                       xnet_run_progress	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	92864	560	0	73	0	0	0	0	0	0	0	0
+       333	       332	    102267	    0	      0	                  ofi_dynpoll_wait_epoll	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	102256	31	0	85	0	0	0	0	0	0	0	0
+       334	       735	   5598057	    1	      1	[Loop@0x556b44 in tpss_epoll_wait_mod1_ver0]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5598020	278	0	4407	0	0	0	0	0	0	0	0
+       335	       334	   1085158	    0	      1	                              epoll_wait	/lib/x86_64-linux-gnu/libc.so.6	1085072	163	0	290	0	0	0	0	0	0	0	0
+       336	       837	   3102984	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       337	       336	   7326727	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       338	       333	   5597854	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       339	       338	   6983695	    0	      1	                           func@0x6a8f90	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	6983568	176	0	4356	0	0	0	0	0	0	0	0
+       340	       837	   3102899	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       341	       340	   8504864	    0	      1	                     MPIDI_SHMI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8504864	16	0	6598	0	0	0	0	0	0	0	0
+       342	       330	    190112	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       343	       333	   5599117	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       344	       343	   6983695	    0	      1	                           func@0x6a8f90	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	6983568	176	0	4356	0	0	0	0	0	0	0	0
+       345	       847	   9550628	    0	      1	                              impi_rdtsc	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	9	0	5579	0	1	0	0	0	0	0	0
+       346	       327	     77965	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       347	       346	    580752	    0	      1	     __GI___pthread_mutex_unlock_usercnt	/lib/x86_64-linux-gnu/libc.so.6	580688	246	0	376	0	0	0	0	0	0	0	0
+       348	       137	     24274	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       349	       137	     24278	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       350	       137	     22715	    0	      0	                            __libm_hypot	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	22704	16	0	117	0	0	0	0	0	0	0	0
+       351	       625	     18493	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       352	       137	     22708	    0	      0	                            __libm_hypot	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	22704	16	0	117	0	0	0	0	0	0	0	0
+       353	       137	     23328	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       354	       137	     23393	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       355	       137	     23474	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       356	       137	     23252	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       357	       137	     23470	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       358	       137	     23436	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       359	       137	     23298	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       360	       137	     23450	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       361	       137	     23232	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       362	       137	     22564	    0	      0	                                    cabs	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	22560	18	0	115	0	0	0	0	0	0	0	0
+       363	        39	   8545737	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       364	       363	   8534454	    0	      1	                           func@0x823910	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8534288	9552	0	4186	0	0	0	0	0	0	0	0
+       365	       364	   8820578	    0	      1	     LEVEL_PINCLIENT::GetSubprogramsInfo	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8820416	2567	0	4316	0	0	0	0	0	0	0	0
+       366	       365	   1844826	    0	      1	               GetSubprogramsListInImage	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1844784	1617	0	45	0	0	0	0	0	0	0	0
+       367	       366	   1841002	    0	      1	                           func@0x1c0640	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1836608	7120	0	74	0	0	0	0	0	0	0	0
+       368	       367	   1931844	    0	      1	              llvm::DWARFContext::create	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1931730	307	0	125	0	0	0	0	0	0	0	0
+       369	       564	   1931595	    1	      1	        [Loop@0x1d7938 in func@0x1d5fb6]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1931576	35	0	135	0	0	0	0	0	0	0	0
+       370	       369	   1918783	    0	      1	                           func@0x1d4724	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1918756	186	0	156	0	0	0	0	0	0	0	0
+       371	       370	   5258898	    0	      1	    llvm::StringMapImpl::LookupBucketFor	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	5258844	251	0	163	0	0	0	0	0	0	0	0
+       372	       566	   5258656	    1	      1	        [Loop@0x503da0 in func@0x503d9b]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	5258656	18	0	165	0	0	0	0	0	0	0	0
+       373	        67	   8849917	    0	      1	          LEVEL_PINCLIENT::ElfCookRegsym	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8849328	1670	0	4073	0	0	0	0	0	0	0	0
+       374	       737	   9122973	    1	      1	[Loop@0x8b3350 in LEVEL_CORE::IMG_SortRegsymsByIaddr]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9122640,9122864,9122920	216,52,59	0	4713	0	0	0	0	0	0	0	0
+       375	       374	   3443042	    0	      1	        LEVEL_BASE::SWMALLOC::Deallocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3442576	1078	0	161	0	0	0	0	0	0	0	0
+       376	       375	   3442361	    0	      1	         LEVEL_BASE::SWMALLOC::FreePages	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3442304	130	0	170	0	0	0	0	0	0	0	0
+       377	       376	   2367197	    0	      1	                     LEVEL_VM::VM_Munmap	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	2367136	118	0	171	0	0	0	0	0	0	0	0
+       378	       377	   1043039	    0	      1	                   LEVEL_BASE::RawMunmap	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	1043008	108	0	184	0	0	0	0	0	0	0	0
+       379	       378	    496927	    0	      1	                            OS_SyscallDo	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	496704	374	0	25	0	0	0	0	0	0	0	0
+       380	       379	    526563	    0	      1	    OS_BARESYSCALL_DoCallAsmIntel64Linux	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	526532	36	0	37	0	0	0	0	0	0	0	0
+       381	       711	   8507761	    1	      1	        [Loop@0x81cd90 in func@0x81cd10]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506768,8508264,8508288,8508312,8508336,8508360,8508384,8508408,8508448,8508480,8508512,8508544	1432,18,18,15,18,18,18,30,30,30,30,309	0	4155	0	0	0	0	0	0	0	0
+       382	       381	    317845	    0	      1	std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::append	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++.so	317664	214	0	34	0	0	0	0	0	0	0	0
+       383	       382	    316504	    0	      1	std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::__grow_by_and_replace	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++.so	316240	400	0	39	0	0	0	0	0	0	0	0
+       384	       608	    151581	    1	      1	          [Loop@0x25016 in operator new]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151574,151601	16,14	0	3	0	0	0	0	0	0	0	0
+       385	       384	   3444721	    0	      1	          LEVEL_BASE::SWMALLOC::Allocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3443808	2616	0	24	0	0	0	0	0	0	0	0
+       386	       911	   3447928	    1	      1	[Loop@0x349ac8 in ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal]	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447496,3447896	108,48	0	153	0	0	0	0	0	0	0	0
+       387	        59	     45597	    0	      1	                          dl_open_worker	/lib64/ld-linux-x86-64.so.2	45456	236	0	40	0	0	0	0	0	0	0	0
+       388	       387	   1372723	    0	      1	                                    __GI	/lib/x86_64-linux-gnu/libc.so.6	1372512	251	0	162	0	0	0	0	0	0	0	0
+       389	       578	     19123	    1	      1	          [Loop at line 120 in _dl_init]	/lib64/ld-linux-x86-64.so.2	19096	34	0	99	0	0	0	0	0	0	0	0
+       390	       581	     18893	    1	      1	          [Loop at line 73 in call_init]	/lib64/ld-linux-x86-64.so.2	18880	22	0	106	0	0	0	0	0	0	0	0
+       391	       621	    785056	    1	      0	          [Loop@0xbfa95 in func@0xbf9a0]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so	785045	94	785514,785139	144	0	0	0	0	0	0	0	0
+       392	       740	   3719689	    1	      1	[Loop@0x38c1e3 in tpss_usleep_mod1_ver0]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	3719651,3720000	157,61	0	4729	0	0	0	0	0	0	0	0
+       393	       392	    867922	    0	      1	                        __GI___nanosleep	/lib/x86_64-linux-gnu/libc.so.6	867904	49	0	467	0	0	0	0	0	0	0	0
+       394	       393	    849155	    0	      1	                  __GI___clock_nanosleep	/lib/x86_64-linux-gnu/libc.so.6	849120	134	0	480	0	0	0	0	0	0	0	0
+       395	        67	   8849645	    0	      1	          LEVEL_PINCLIENT::ElfCookRegsym	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8849328	1670	0	4073	0	0	0	0	0	0	0	0
+       396	       742	   8857078	    1	      1	[Loop@0x872560 in LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856928,8857336,8859096	347,139,38	0	4100	0	0	0	0	0	0	0	0
+       397	       396	   8853501	    0	      1	std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__emplace_unique_key_args<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long><std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8853472	199	0	4131	0	0	0	0	0	0	0	0
+       398	       747	   8853309	    1	      1	[Loop@0x871671 in std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8853105,8853294,8853400,8853443	151,69,8,14	0	4745	0	0	0	0	0	0	0	0
+       399	       600	    433407	    1	      1	                [Loop@0x69cb0 in memcmp]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	433328	101	0	47	0	0	0	0	0	0	0	0
+       400	       584	     48137	    1	      1	[Loop at line 665 in dl_open_worker_begin]	/lib64/ld-linux-x86-64.so.2	48080,49024	67,80	0	114	0	0	0	0	0	0	0	0
+       401	       588	     58384	    0	      1	                             resolve_map	/lib64/ld-linux-x86-64.so.2	58032,58050,58196,59827,59968,60608	7,22,227,3,88,16	0	118	0	1	0	0	0	0	0	0
+       402	       591	     39276	    1	      1	       [Loop at line 77 in _dl_new_hash]	/lib64/ld-linux-x86-64.so.2	39264	40	0	167	0	0	0	0	0	0	0	0
+       403	       651	    486763	    1	      1	    [Loop at line 88 in __GI___getdelim]	/lib/x86_64-linux-gnu/libc.so.6	486608	200	0	202	0	0	0	0	0	0	0	0
+       404	       403	   1384479	    0	      1	                           __memchr_avx2	/lib/x86_64-linux-gnu/libc.so.6	1384320	663	0	484	0	0	0	0	0	0	0	0
+       405	       137	     23278	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       406	       625	     18538	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       407	       137	     23492	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       408	       625	     18551	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       409	       137	     23397	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       410	       137	     23542	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       411	       625	     18515	    1	      0	                 [Loop@0x404838 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18488	93	21047,18581	110	0	0	0	0	0	0	0	0
+       412	       137	     23359	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       413	       137	     23270	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       414	       137	     23322	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       415	       674	    580772	    0	      1	              lll_mutex_unlock_optimized	/lib/x86_64-linux-gnu/libc.so.6	580726,580768	26,16	0	375	0	1	0	0	0	0	0	0
+       416	       676	    546885	    1	      1	[Loop at line 37 in __GI___pthread_enable_asynccancel]	/lib/x86_64-linux-gnu/libc.so.6	546870,546916	19,4	0	294	0	0	0	0	0	0	0	0
+       417	       678	    546889	    0	      1	   cancel_enabled_and_canceled_and_async	/lib/x86_64-linux-gnu/libc.so.6	546889	6	0	490	0	1	0	0	0	0	0	0
+       418	       680	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       419	       624	     18460	    1	      0	                 [Loop@0x4047e9 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18409,21047	233,47	18642	111	0	0	0	0	0	0	0	0
+       420	       624	     18448	    1	      0	                 [Loop@0x4047e9 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18409,21047	233,47	18642	111	0	0	0	0	0	0	0	0
+       421	       137	     23551	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       422	       720	   8548394	    1	      1	        [Loop@0x826f9a in func@0x825e60]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8548250,8548496,8548544,8548560,8548640,8548800,8551854	198,40,13,71,18,13,44	0	4457	0	0	0	0	0	0	0	0
+       423	       422	   9154544	    0	      1	                 LEVEL_CORE::RTN_SetName	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9154464	262	0	4706	0	0	0	0	0	0	0	0
+       424	       610	    151581	    1	      1	          [Loop@0x25016 in operator new]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151574,151601	16,14	0	3	0	0	0	0	0	0	0	0
+       425	       424	   3444721	    0	      1	          LEVEL_BASE::SWMALLOC::Allocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3443808	2616	0	24	0	0	0	0	0	0	0	0
+       426	       913	   3447927	    1	      1	[Loop@0x349ac8 in ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal]	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447496,3447896	108,48	0	153	0	0	0	0	0	0	0	0
+       427	       426	   3823747	    0	      1	                 ATOMIC_CompareAndSwap64	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3823736	15	0	185	0	0	0	0	0	0	0	0
+       428	       751	   8548394	    1	      1	        [Loop@0x826f9a in func@0x825e60]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8548250,8548496,8548544,8548560,8548640,8548800,8551854	198,40,13,71,18,13,44	0	4457	0	0	0	0	0	0	0	0
+       429	       428	   9154558	    0	      1	                 LEVEL_CORE::RTN_SetName	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9154464	262	0	4706	0	0	0	0	0	0	0	0
+       430	       429	    313063	    0	      1	std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::basic_string	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++.so	312976	161	0	49	0	0	0	0	0	0	0	0
+       431	       612	    151581	    1	      1	          [Loop@0x25016 in operator new]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151574,151601	16,14	0	3	0	0	0	0	0	0	0	0
+       432	       431	   3444721	    0	      1	          LEVEL_BASE::SWMALLOC::Allocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3443808	2616	0	24	0	0	0	0	0	0	0	0
+       433	       915	   3447538	    1	      1	[Loop@0x349ac8 in ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal]	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447496,3447896	108,48	0	153	0	0	0	0	0	0	0	0
+       434	       433	   3823747	    0	      1	                 ATOMIC_CompareAndSwap64	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3823736	15	0	185	0	0	0	0	0	0	0	0
+       435	       711	   8507319	    1	      1	        [Loop@0x81cd90 in func@0x81cd10]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506768,8508264,8508288,8508312,8508336,8508360,8508384,8508408,8508448,8508480,8508512,8508544	1432,18,18,15,18,18,18,30,30,30,30,309	0	4155	0	0	0	0	0	0	0	0
+       436	       435	    866576	    0	      1	                            func@0xd3910	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	866576	6	0	4750	0	0	0	0	0	0	0	0
+       437	       751	   8548360	    1	      1	        [Loop@0x826f9a in func@0x825e60]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8548250,8548496,8548544,8548560,8548640,8548800,8551854	198,40,13,71,18,13,44	0	4457	0	0	0	0	0	0	0	0
+       438	       437	   9151289	    0	      1	                   LEVEL_CORE::RTN_Alloc	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9151248	683	0	4466	0	0	0	0	0	0	0	0
+       439	       755	   8924334	    1	      1	[Loop@0x882c82 in LEVEL_BASE::ARRAYBASE::Memset]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8924290	54	0	4144	0	0	0	0	0	0	0	0
+       440	       602	    435136	    1	      1	                [Loop@0x6a3c0 in memset]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	435136	36	0	41	0	0	0	0	0	0	0	0
+       441	       395	   8858518	    0	      1	  LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856624	2945	0	4101	0	0	0	0	0	0	0	0
+       442	       757	   8852483	    1	      1	[Loop@0x871318 in LEVEL_PINCLIENT::CookSymPltSec<Elf64_Sym>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8852248,8852624,8852696,8852792	327,65,89,36	0	4754	0	0	0	0	0	0	0	0
+       443	       442	    317845	    0	      1	std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::append	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++.so	317664	214	0	34	0	0	0	0	0	0	0	0
+       444	       443	    316504	    0	      1	std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::__grow_by_and_replace	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++.so	316240	400	0	39	0	0	0	0	0	0	0	0
+       445	       614	    151581	    1	      1	          [Loop@0x25016 in operator new]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151574,151601	16,14	0	3	0	0	0	0	0	0	0	0
+       446	       445	   3444721	    0	      1	          LEVEL_BASE::SWMALLOC::Allocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3443808	2616	0	24	0	0	0	0	0	0	0	0
+       447	       917	   3447538	    1	      1	[Loop@0x349ac8 in ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal]	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447496,3447896	108,48	0	153	0	0	0	0	0	0	0	0
+       448	       447	   3823747	    0	      1	                 ATOMIC_CompareAndSwap64	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3823736	15	0	185	0	0	0	0	0	0	0	0
+       449	        58	         0	    0	      0	                [Unknown stack frame(s)]	n/a	0	0	0	1	0	0	0	0	0	0	0	0
+       450	       449	     47839	    0	      1	                    dl_open_worker_begin	/lib64/ld-linux-x86-64.so.2	47456	2592	0	53	0	0	0	0	0	0	0	0
+       451	       450	   8778100	    0	      1	                           func@0x85f130	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8778032	128	0	3858	0	0	0	0	0	0	0	0
+       452	       451	   8776612	    0	      1	                           func@0x85eb40	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8776512	240	0	3860	0	0	0	0	0	0	0	0
+       453	       759	   8770630	    1	      1	        [Loop@0x85d420 in func@0x85c220]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8770592,8774599,8774857	435,18,120	0	3863	0	0	0	0	0	0	0	0
+       454	       453	   8554300	    0	      1	       LEVEL_PINCLIENT::ProcessImageLoad	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8554224	204	0	3948	0	0	0	0	0	0	0	0
+       455	       454	   8546828	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       456	       762	   8506896	    1	      1	        [Loop@0x81cd90 in func@0x81cd10]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506768,8508264,8508288,8508312,8508336,8508360,8508384,8508408,8508448,8508480,8508512,8508544	1432,18,18,15,18,18,18,30,30,30,30,309	0	4155	0	0	0	0	0	0	0	0
+       457	       456	   8506507	    0	      1	                           func@0x81cb90	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506256	384	0	4765	0	0	0	0	0	0	0	0
+       458	       616	    151581	    1	      1	          [Loop@0x25016 in operator new]	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151574,151601	16,14	0	3	0	0	0	0	0	0	0	0
+       459	       458	   3445465	    0	      1	          LEVEL_BASE::SWMALLOC::Allocate	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3443808	2616	0	24	0	0	0	0	0	0	0	0
+       460	       459	   3442260	    0	      1	          LEVEL_BASE::SWMALLOC::GetPages	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3442192	105	0	157	0	0	0	0	0	0	0	0
+       461	       460	   2367295	    0	      1	                                 VM_Mmap	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	2367264	37	0	187	0	0	0	0	0	0	0	0
+       462	       919	   2360966	    1	      1	[Loop@0x24065b in LEVEL_VM::MmapCheckedWithMemoryLimit]	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	2360923,2361192	221,41	0	188	0	0	0	0	0	0	0	0
+       463	       462	   1043189	    0	      1	                     LEVEL_BASE::RawMmap	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	1043120	356	0	226	0	0	0	0	0	0	0	0
+       464	       463	    496927	    0	      1	                            OS_SyscallDo	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	496704	374	0	25	0	0	0	0	0	0	0	0
+       465	       464	    526563	    0	      1	    OS_BARESYSCALL_DoCallAsmIntel64Linux	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	526532	36	0	37	0	0	0	0	0	0	0	0
+       466	       766	     90287	    1	      0	[Loop@0x16080 in vrb_init_info.constprop.10]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so	90240,91072	74,46	90314	122	0	0	0	0	0	0	0	0
+       467	       466	     42352	    0	      0	                             func@0xa570	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so	42352	6	0	155	0	0	0	0	0	0	0	0
+       468	       850	   3092729	    0	      1	                     init_coll_selection	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3092421,3093884	317,114	0	6602	0	1	0	0	0	0	0	0
+       469	       852	   3751241	    0	      1	             MPIU_Selection_init_storage	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3751212,3751256,3757356	42,19,10	0	6904	0	1	0	0	0	0	0	0
+       470	       854	   5229892	    0	      1	                           inline_malloc	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5228886,5229075	166,1199	0	6986	0	1	0	0	0	0	0	0
+       471	       470	   5230785	    0	      1	        allocate_object_from_huge_volume	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5230384	496	0	7019	0	0	0	0	0	0	0	0
+       472	       856	   5284927	    0	      1	               volume_object_constructor	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5284866,5284890,5284914,5284945	4,20,25,64	0	7041	0	1	0	0	0	0	0	0
+       473	       137	     23315	    0	      0	                         __libm_hypot_e7	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	23232	1047	0	113	0	0	0	0	0	0	0	0
+       474	       858	   2171653	    0	      1	       MPIDI_CH4_get_entry_and_container	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2171389,2171679,2171861,2171882,2172476,2172505	285,177,9,89,24,134	0	7048	0	1	0	0	0	0	0	0
+       475	       474	   3662078	    0	      1	   MPIU_Selection_set_coll_match_pattern	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3659696	4960	0	7057	0	0	0	0	0	0	0	0
+       476	       475	   1349231	    0	      1	                   MPIR_Bcast_intra_auto	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	1348880	656	0	7113	0	0	0	0	0	0	0	0
+       477	       476	   1352400	    0	      1	               MPIR_Bcast_intra_binomial	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	1351184	1808	0	5821	0	0	0	0	0	0	0	0
+       478	       861	   4733910	    0	      1	                               MPID_Wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4733898	15	0	5849	0	1	0	0	0	0	0	0
+       479	       863	   8914544	    1	      1	     [Loop at line 34 in MPIR_Wait_impl]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8914533	43	0	6589	0	0	0	0	0	0	0	0
+       480	       867	   3102484	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       481	       870	   7671359	    0	      1	                              fi_cq_read	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671341,7671353	4,7	0	5078	0	1	0	0	0	0	0	0
+       482	       481	     77944	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       483	       482	    190129	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       484	       483	     92915	    0	      0	                       xnet_run_progress	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	92864	560	0	73	0	0	0	0	0	0	0	0
+       485	       484	    102267	    0	      0	                  ofi_dynpoll_wait_epoll	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	102256	31	0	85	0	0	0	0	0	0	0	0
+       486	       485	   5597854	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       487	       486	   6983695	    0	      1	                           func@0x6a8f90	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	6983568	176	0	4356	0	0	0	0	0	0	0	0
+       488	       480	   7671326	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       489	       682	    547001	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       490	       764	   5598057	    1	      1	[Loop@0x556b44 in tpss_epoll_wait_mod1_ver0]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5598020	278	0	4407	0	0	0	0	0	0	0	0
+       491	       490	   1085158	    0	      1	                              epoll_wait	/lib/x86_64-linux-gnu/libc.so.6	1085072	163	0	290	0	0	0	0	0	0	0	0
+       492	       484	    102256	    0	      0	                  ofi_dynpoll_wait_epoll	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	102256	31	0	85	0	0	0	0	0	0	0	0
+       493	       481	     77927	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       494	       493	    574402	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       495	       685	    547025	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       496	       867	   3102984	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       497	       874	   7326829	    1	      1	[Loop at line 189 in MPIR_Progress_hook_exec_on_vci]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326773,7326889	80,79	0	5596	0	0	0	0	0	0	0	0
+       498	       485	   5599117	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       499	       498	   6983695	    0	      1	                           func@0x6a8f90	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	6983568	176	0	4356	0	0	0	0	0	0	0	0
+       500	       481	     77965	    0	      0	                        xnet_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	77888	92	0	63	0	0	0	0	0	0	0	0
+       501	       500	    101216	    0	      0	                     ofi_mutex_unlock_op	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	101216	5	0	119	0	0	0	0	0	0	0	0
+       502	       688	    546885	    1	      1	[Loop at line 37 in __GI___pthread_enable_asynccancel]	/lib/x86_64-linux-gnu/libc.so.6	546870,546916	19,4	0	294	0	0	0	0	0	0	0	0
+       503	       483	     93095	    0	      0	                       xnet_run_progress	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	92864	560	0	73	0	0	0	0	0	0	0	0
+       504	       503	     43052	    0	      0	                  xnet_handle_event_list	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	42208	1680	0	91	0	0	0	0	0	0	0	0
+       505	       485	   5597105	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       506	       505	   7560821	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       507	       867	   3102899	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       508	       507	   8504864	    0	      1	                     MPIDI_SHMI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8504864	16	0	6598	0	0	0	0	0	0	0	0
+       509	       505	   7561552	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       510	       509	    948216	    0	      1	                     pthread_getspecific	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	948048	406	0	4437	0	0	0	0	0	0	0	0
+       511	       490	   1085166	    0	      1	                              epoll_wait	/lib/x86_64-linux-gnu/libc.so.6	1085072	163	0	290	0	0	0	0	0	0	0	0
+       512	       867	   3102470	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       513	       881	   9550628	    0	      1	                              impi_rdtsc	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	9	0	5579	0	1	0	0	0	0	0	0
+       514	       885	   9550872	    0	      1	               is_available_forward_cell	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550854,9550872	6,15	0	5611	0	1	0	0	0	0	0	0
+       515	       507	   9550853	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       516	       515	   5632489	    0	      1	                  impi_shm_heap_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5632464	1120	0	5631	0	0	0	0	0	0	0	0
+       517	       867	   3102893	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       518	       493	    574341	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       519	       507	   9550607	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       520	       482	    190130	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       521	       480	   7671337	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       522	       682	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       523	       485	   5598442	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       524	       523	   7560746	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       525	       682	    547007	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546992,547088	95,16	0	251	0	1	0	0	0	0	0	0
+       526	       692	    580772	    0	      1	              lll_mutex_unlock_optimized	/lib/x86_64-linux-gnu/libc.so.6	580726,580768	26,16	0	375	0	1	0	0	0	0	0	0
+       527	       485	   5598483	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       528	       527	    953551	    0	      1	                applibc___errno_location	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	953504	120	0	4453	0	0	0	0	0	0	0	0
+       529	       509	    948048	    0	      1	                     pthread_getspecific	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	948048	406	0	4437	0	0	0	0	0	0	0	0
+       530	       493	    574353	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       531	       694	    574383	    0	      1	                lll_mutex_lock_optimized	/lib/x86_64-linux-gnu/libc.so.6	574365,574440,574584	37,24,20	0	322	0	1	0	0	0	0	0	0
+       532	       509	    948201	    0	      1	                     pthread_getspecific	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	948048	406	0	4437	0	0	0	0	0	0	0	0
+       533	       523	   7560834	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       534	       482	    190112	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       535	       694	    574396	    0	      1	                lll_mutex_lock_optimized	/lib/x86_64-linux-gnu/libc.so.6	574365,574440,574584	37,24,20	0	322	0	1	0	0	0	0	0	0
+       536	       485	   5598411	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       537	       536	    161376	    0	      1	                   __GI___errno_location	/lib/x86_64-linux-gnu/libc.so.6	161376	17	0	371	0	0	0	0	0	0	0	0
+       538	       482	    190096	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       539	       482	    190508	    0	      0	                         ofi_cq_readfrom	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	190096	489	0	65	0	0	0	0	0	0	0	0
+       540	       485	   5597879	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       541	       540	    953504	    0	      1	                applibc___errno_location	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	953504	120	0	4453	0	0	0	0	0	0	0	0
+       542	       884	   9550866	    0	      1	                           idle_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550854	307	0	5606	0	1	0	0	0	0	0	0
+       543	       496	   7326688	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       544	       692	    580726	    0	      1	              lll_mutex_unlock_optimized	/lib/x86_64-linux-gnu/libc.so.6	580726,580768	26,16	0	375	0	1	0	0	0	0	0	0
+       545	       493	    574434	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       546	       485	   5598010	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       547	       546	   7560794	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       548	       496	   7326756	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       549	       874	   7326834	    1	      1	[Loop at line 189 in MPIR_Progress_hook_exec_on_vci]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326773,7326889	80,79	0	5596	0	0	0	0	0	0	0	0
+       550	       485	   5599175	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       551	       536	    953512	    0	      1	                applibc___errno_location	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	953504	120	0	4453	0	0	0	0	0	0	0	0
+       552	       551	   8256186	    0	      1	                              sal_get_sp	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8256186	4	0	4448	0	0	0	0	0	0	0	0
+       553	       481	    189824	    0	      0	                             ofi_cq_read	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libtcp-fi.so	189824	12	0	121	0	0	0	0	0	0	0	0
+       554	       500	    580949	    0	      1	                 ___pthread_mutex_unlock	/lib/x86_64-linux-gnu/libc.so.6	580944	10	0	496	0	0	0	0	0	0	0	0
+       555	       505	   7560720	    0	      1	               tpss_thread_manager_enter	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	7560720	2936	0	4412	0	0	0	0	0	0	0	0
+       556	       485	    546976	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       557	       480	   7671542	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       558	       333	139922177335782	    0	      0	              [Outside any known module]	n/a	0	0	0	4	0	0	0	0	0	0	0	0
+       559	       340	   9550595	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       560	       289	    349136	    0	      1	std::__1::basic_streambuf<char, std::__1::char_traits<char>>::xsputn	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++.so	349104	158	0	32	0	0	0	0	0	0	0	0
+       561	       289	    349250	    0	      1	std::__1::basic_streambuf<char, std::__1::char_traits<char>>::xsputn	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++.so	349104	158	0	32	0	0	0	0	0	0	0	0
+       562	       264	    826911	    0	      1	         std::__basic_file<char>::xsputn	/lib/x86_64-linux-gnu/libstdc++.so.6	826880	110	0	105	0	0	0	0	0	0	0	0
+       563	       264	    826924	    0	      1	         std::__basic_file<char>::xsputn	/lib/x86_64-linux-gnu/libstdc++.so.6	826880	110	0	105	0	0	0	0	0	0	0	0
+       564	       368	   1931576	    0	      1	                           func@0x1d5fb6	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1925046	6684	0	136	0	0	0	0	0	0	0	0
+       565	       368	   1931595	    0	      1	                           func@0x1d5fb6	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	1925046	6684	0	136	0	0	0	0	0	0	0	0
+       566	       371	   5258656	    0	      1	                           func@0x503d9b	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	5258651	25	0	166	0	0	0	0	0	0	0	0
+       567	       371	   5258656	    0	      1	                           func@0x503d9b	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libpindwarf.so	5258651	25	0	166	0	0	0	0	0	0	0	0
+       568	        30	     46444	    0	      1	                                _dl_open	/lib64/ld-linux-x86-64.so.2	46352	739	0	12	0	0	0	0	0	0	0	0
+       569	        30	     46519	    0	      1	                                _dl_open	/lib64/ld-linux-x86-64.so.2	46352	739	0	12	0	0	0	0	0	0	0	0
+       570	        57	     46444	    0	      1	                                _dl_open	/lib64/ld-linux-x86-64.so.2	46352	739	0	12	0	0	0	0	0	0	0	0
+       571	        57	     46519	    0	      1	                                _dl_open	/lib64/ld-linux-x86-64.so.2	46352	739	0	12	0	0	0	0	0	0	0	0
+       572	        85	     19096	    0	      1	                                _dl_init	/lib64/ld-linux-x86-64.so.2	19008	298	0	100	0	0	0	0	0	0	0	0
+       573	        85	     19123	    0	      1	                                _dl_init	/lib64/ld-linux-x86-64.so.2	19008	298	0	100	0	0	0	0	0	0	0	0
+       574	        87	     18750	    0	      1	                               call_init	/lib64/ld-linux-x86-64.so.2	18688	315	0	108	0	0	0	0	0	0	0	0
+       575	       574	     18880	    0	      1	                               call_init	/lib64/ld-linux-x86-64.so.2	18750,18912	152,60	0	107	0	1	0	0	0	0	0	0
+       576	       574	     18893	    0	      1	                               call_init	/lib64/ld-linux-x86-64.so.2	18750,18912	152,60	0	107	0	1	0	0	0	0	0	0
+       577	        87	     18893	    0	      1	                               call_init	/lib64/ld-linux-x86-64.so.2	18688	315	0	108	0	0	0	0	0	0	0	0
+       578	       388	     19096	    0	      1	                                _dl_init	/lib64/ld-linux-x86-64.so.2	19008	298	0	100	0	0	0	0	0	0	0	0
+       579	       388	     19123	    0	      1	                                _dl_init	/lib64/ld-linux-x86-64.so.2	19008	298	0	100	0	0	0	0	0	0	0	0
+       580	       389	     18750	    0	      1	                               call_init	/lib64/ld-linux-x86-64.so.2	18688	315	0	108	0	0	0	0	0	0	0	0
+       581	       580	     18880	    0	      1	                               call_init	/lib64/ld-linux-x86-64.so.2	18750,18912	152,60	0	107	0	1	0	0	0	0	0	0
+       582	       580	     18893	    0	      1	                               call_init	/lib64/ld-linux-x86-64.so.2	18750,18912	152,60	0	107	0	1	0	0	0	0	0	0
+       583	       389	     18893	    0	      1	                               call_init	/lib64/ld-linux-x86-64.so.2	18688	315	0	108	0	0	0	0	0	0	0	0
+       584	        85	     48080	    0	      1	                    dl_open_worker_begin	/lib64/ld-linux-x86-64.so.2	47456	2592	0	53	0	0	0	0	0	0	0	0
+       585	        85	     48137	    0	      1	                    dl_open_worker_begin	/lib64/ld-linux-x86-64.so.2	47456	2592	0	53	0	0	0	0	0	0	0	0
+       586	       400	     56963	    0	      1	                     _dl_relocate_object	/lib64/ld-linux-x86-64.so.2	56272	8680	0	120	0	0	0	0	0	0	0	0
+       587	       586	     58032	    0	      1	                     elf_dynamic_do_Rela	/lib64/ld-linux-x86-64.so.2	56963,56989,57007,57015,57320,57536,60552,60608,60704,63445,63545,64461,64756,64823	19,7,4,289,24,2880,24,24,2352,33,827,264,31,117	0	128	0	1	0	0	0	0	0	0
+       588	       587	     58032	    0	      1	                        elf_machine_rela	/lib64/ld-linux-x86-64.so.2	58032,58050,58167,58531,59012,59131,59366,59400,59463,59502,59653,59896,59916,59968,60200,60608,62524,62552,63624,63678,64255,64903	7,22,361,0,109,0,26,55,31,148,203,17,12,88,216,16,25,5,51,5,117,37	0	123	0	1	0	0	0	0	0	0
+       589	       400	     58384	    0	      1	                     _dl_relocate_object	/lib64/ld-linux-x86-64.so.2	56272	8680	0	120	0	0	0	0	0	0	0	0
+       590	       401	     39239	    0	      1	                     _dl_lookup_symbol_x	/lib64/ld-linux-x86-64.so.2	39200	2806	0	169	0	0	0	0	0	0	0	0
+       591	       590	     39264	    0	      1	                            _dl_new_hash	/lib64/ld-linux-x86-64.so.2	39239,39856	65,40	0	168	0	1	0	0	0	0	0	0
+       592	       590	     39276	    0	      1	                            _dl_new_hash	/lib64/ld-linux-x86-64.so.2	39239,39856	65,40	0	168	0	1	0	0	0	0	0	0
+       593	       401	     39276	    0	      1	                     _dl_lookup_symbol_x	/lib64/ld-linux-x86-64.so.2	39200	2806	0	169	0	0	0	0	0	0	0	0
+       594	        71	    435136	    0	      1	                                  memset	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	435024	152	0	42	0	0	0	0	0	0	0	0
+       595	        71	    435136	    0	      1	                                  memset	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	435024	152	0	42	0	0	0	0	0	0	0	0
+       596	       279	    433328	    0	      1	                                  memcmp	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	433280	165	0	48	0	0	0	0	0	0	0	0
+       597	       279	    433361	    0	      1	                                  memcmp	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	433280	165	0	48	0	0	0	0	0	0	0	0
+       598	       282	    255776	    0	      1	                                  strlen	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	255760	35	0	58	0	0	0	0	0	0	0	0
+       599	       282	    255783	    0	      1	                                  strlen	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	255760	35	0	58	0	0	0	0	0	0	0	0
+       600	       398	    433328	    0	      1	                                  memcmp	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	433280	165	0	48	0	0	0	0	0	0	0	0
+       601	       398	    433407	    0	      1	                                  memcmp	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	433280	165	0	48	0	0	0	0	0	0	0	0
+       602	       439	    435136	    0	      1	                                  memset	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	435024	152	0	42	0	0	0	0	0	0	0	0
+       603	       439	    435136	    0	      1	                                  memset	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc-dynamic.so	435024	152	0	42	0	0	0	0	0	0	0	0
+       604	        43	    151574	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       605	        43	    151581	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       606	        81	    151574	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       607	        81	    151581	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       608	       383	    151574	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       609	       383	    151581	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       610	       423	    151574	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       611	       423	    151581	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       612	       430	    151574	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       613	       430	    151581	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       614	       444	    151574	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       615	       444	    151581	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       616	       457	    151574	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       617	       457	    151581	    0	      1	                            operator new	/opt/intel/oneapi/advisor/2023.2.0/lib64/pinruntime/libc++abi.so	151552	63	0	5	0	0	0	0	0	0	0	0
+       618	       101	    203200	    0	      0	                            ofix_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so	203104	843	0	96	0	0	0	0	0	0	0	0
+       619	       101	    203293	    0	      0	                            ofix_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/librxm-fi.so	203104	843	0	96	0	0	0	0	0	0	0	0
+       620	       390	    784997	    0	      0	                            func@0xbf9a0	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so	784800	1312	0	145	0	0	0	0	0	0	0	0
+       621	       620	    785045	    1	      0	          [Loop@0xbfa65 in func@0xbf9a0]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so	784997,785400,785514	262,79,55	785569,785259	146	0	0	0	0	0	0	0	0
+       622	       390	    785056	    0	      0	                            func@0xbf9a0	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libpsm3-fi.so	784800	1312	0	145	0	0	0	0	0	0	0	0
+       623	       136	     18228	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       624	       623	     18409	    1	      0	                 [Loop@0x404734 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18228,18329,21047	54,318,47	18282	112	0	0	0	0	0	0	0	0
+       625	       624	     18488	    1	      0	                 [Loop@0x4047e9 in main]	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	18409,21047	233,47	18642	111	0	0	0	0	0	0	0	0
+       626	       136	     18558	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       627	       136	     18545	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       628	       136	     18511	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       629	       136	     18567	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       630	       136	     18573	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       631	       164	     22133	    0	      0	std::vector<int, std::allocator<int>>::_M_default_append	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	21792	768	0	129	0	0	0	0	0	0	0	0
+       632	       164	     22133	    0	      0	std::vector<int, std::allocator<int>>::_M_default_append	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	21792	768	0	129	0	0	0	0	0	0	0	0
+       633	        21	     17529	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       634	        21	     17558	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       635	       136	     21055	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       636	       136	     18576	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       637	       136	     18493	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       638	       136	     18538	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       639	       136	     18551	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       640	       136	     18515	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       641	       136	     18460	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       642	       136	     18448	    0	      0	                                    main	/VM/stud/S5843444/mandelbrot/mpi/hybrid_openmp_mpi_mandelbrot	14416	6688	0	22	0	0	0	0	0	0	0	0
+       643	        19	    160486	    0	      1	                  __libc_start_main_impl	/lib/x86_64-linux-gnu/libc.so.6	160384	321	0	148	0	0	0	0	0	0	0	0
+       644	        19	    160516	    0	      1	                  __libc_start_main_impl	/lib/x86_64-linux-gnu/libc.so.6	160384	321	0	148	0	0	0	0	0	0	0	0
+       645	        25	    546120	    0	      1	                               ___dlopen	/lib/x86_64-linux-gnu/libc.so.6	546048	144	0	151	0	0	0	0	0	0	0	0
+       646	        25	    546152	    0	      1	                               ___dlopen	/lib/x86_64-linux-gnu/libc.so.6	546048	144	0	151	0	0	0	0	0	0	0	0
+       647	        52	    546120	    0	      1	                               ___dlopen	/lib/x86_64-linux-gnu/libc.so.6	546048	144	0	151	0	0	0	0	0	0	0	0
+       648	        52	    546152	    0	      1	                               ___dlopen	/lib/x86_64-linux-gnu/libc.so.6	546048	144	0	151	0	0	0	0	0	0	0	0
+       649	        94	    487224	    0	      1	                   __GI__IO_getline_info	/lib/x86_64-linux-gnu/libc.so.6	487136	413	0	177	0	0	0	0	0	0	0	0
+       650	        94	    487305	    0	      1	                   __GI__IO_getline_info	/lib/x86_64-linux-gnu/libc.so.6	487136	413	0	177	0	0	0	0	0	0	0	0
+       651	       106	    486608	    0	      1	                         __GI___getdelim	/lib/x86_64-linux-gnu/libc.so.6	486448	676	0	203	0	0	0	0	0	0	0	0
+       652	       106	    486720	    0	      1	                         __GI___getdelim	/lib/x86_64-linux-gnu/libc.so.6	486448	676	0	203	0	0	0	0	0	0	0	0
+       653	       179	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       654	       179	    547001	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       655	       179	    546870	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       656	       179	    546885	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       657	       179	    547007	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       658	       179	    547014	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       659	       658	    546992	    1	      1	[Loop at line 62 in __GI___pthread_disable_asynccancel]	/lib/x86_64-linux-gnu/libc.so.6	547014,547077	62,27	0	308	0	0	0	0	0	0	0	0
+       660	       658	    547025	    1	      1	[Loop at line 62 in __GI___pthread_disable_asynccancel]	/lib/x86_64-linux-gnu/libc.so.6	547014,547077	62,27	0	308	0	0	0	0	0	0	0	0
+       661	       179	    547025	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       662	       198	    574365	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       663	       198	    574396	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       664	       179	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       665	       198	    574383	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       666	       179	    546887	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       667	       240	    580726	    0	      1	     __GI___pthread_mutex_unlock_usercnt	/lib/x86_64-linux-gnu/libc.so.6	580688	246	0	376	0	0	0	0	0	0	0	0
+       668	       240	    580772	    0	      1	     __GI___pthread_mutex_unlock_usercnt	/lib/x86_64-linux-gnu/libc.so.6	580688	246	0	376	0	0	0	0	0	0	0	0
+       669	       265	   1016610	    0	      1	                                   __GI_	/lib/x86_64-linux-gnu/libc.so.6	1016560	157	0	398	0	0	0	0	0	0	0	0
+       670	       265	   1016639	    0	      1	                                   __GI_	/lib/x86_64-linux-gnu/libc.so.6	1016560	157	0	398	0	0	0	0	0	0	0	0
+       671	       328	    574365	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       672	       328	    574396	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       673	       106	    486763	    0	      1	                         __GI___getdelim	/lib/x86_64-linux-gnu/libc.so.6	486448	676	0	203	0	0	0	0	0	0	0	0
+       674	       346	    580726	    0	      1	     __GI___pthread_mutex_unlock_usercnt	/lib/x86_64-linux-gnu/libc.so.6	580688	246	0	376	0	0	0	0	0	0	0	0
+       675	       346	    580772	    0	      1	     __GI___pthread_mutex_unlock_usercnt	/lib/x86_64-linux-gnu/libc.so.6	580688	246	0	376	0	0	0	0	0	0	0	0
+       676	       333	    546870	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       677	       333	    546885	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       678	       333	    546889	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       679	       333	    546889	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       680	       333	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       681	       333	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       682	       485	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       683	       485	    547001	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       684	       485	    547014	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       685	       684	    546992	    1	      1	[Loop at line 62 in __GI___pthread_disable_asynccancel]	/lib/x86_64-linux-gnu/libc.so.6	547014,547077	62,27	0	308	0	0	0	0	0	0	0	0
+       686	       684	    547025	    1	      1	[Loop at line 62 in __GI___pthread_disable_asynccancel]	/lib/x86_64-linux-gnu/libc.so.6	547014,547077	62,27	0	308	0	0	0	0	0	0	0	0
+       687	       485	    547025	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       688	       485	    546870	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       689	       485	    546885	    0	      1	       __GI___pthread_enable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546848	115	0	295	0	0	0	0	0	0	0	0
+       690	       485	    546992	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       691	       485	    547007	    0	      1	      __GI___pthread_disable_asynccancel	/lib/x86_64-linux-gnu/libc.so.6	546976	128	0	252	0	0	0	0	0	0	0	0
+       692	       500	    580726	    0	      1	     __GI___pthread_mutex_unlock_usercnt	/lib/x86_64-linux-gnu/libc.so.6	580688	246	0	376	0	0	0	0	0	0	0	0
+       693	       500	    580772	    0	      1	     __GI___pthread_mutex_unlock_usercnt	/lib/x86_64-linux-gnu/libc.so.6	580688	246	0	376	0	0	0	0	0	0	0	0
+       694	       493	    574365	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       695	       493	    574383	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       696	       493	    574396	    0	      1	                   ___pthread_mutex_lock	/lib/x86_64-linux-gnu/libc.so.6	574320	726	0	324	0	0	0	0	0	0	0	0
+       697	       500	    580726	    0	      1	     __GI___pthread_mutex_unlock_usercnt	/lib/x86_64-linux-gnu/libc.so.6	580688	246	0	376	0	0	0	0	0	0	0	0
+       698	        -1	   8787816	    0	      1	                           func@0x861740	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8787776	208	0	3843	0	0	0	0	0	0	0	0
+       699	        -1	   8787834	    0	      1	                           func@0x861740	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8787776	208	0	3843	0	0	0	0	0	0	0	0
+       700	        37	   8770592	    0	      1	                           func@0x85c220	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8765984	10528	0	3864	0	0	0	0	0	0	0	0
+       701	        37	   8770630	    0	      1	                           func@0x85c220	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8765984	10528	0	3864	0	0	0	0	0	0	0	0
+       702	        41	   8856928	    0	      1	  LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856624	2945	0	4101	0	0	0	0	0	0	0	0
+       703	        41	   8857078	    0	      1	  LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856624	2945	0	4101	0	0	0	0	0	0	0	0
+       704	        64	   8770592	    0	      1	                           func@0x85c220	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8765984	10528	0	3864	0	0	0	0	0	0	0	0
+       705	        64	   8770630	    0	      1	                           func@0x85c220	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8765984	10528	0	3864	0	0	0	0	0	0	0	0
+       706	        68	   8856928	    0	      1	  LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856624	2945	0	4101	0	0	0	0	0	0	0	0
+       707	        68	   8857115	    0	      1	  LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856624	2945	0	4101	0	0	0	0	0	0	0	0
+       708	        70	   8924290	    0	      1	           LEVEL_BASE::ARRAYBASE::Memset	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8924176	273	0	4145	0	0	0	0	0	0	0	0
+       709	        70	   8924334	    0	      1	           LEVEL_BASE::ARRAYBASE::Memset	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8924176	273	0	4145	0	0	0	0	0	0	0	0
+       710	        73	   8506712	    0	      1	                           func@0x81cd10	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506640	2496	0	4158	0	0	0	0	0	0	0	0
+       711	       710	   8506768	    1	      1	        [Loop@0x81cd58 in func@0x81cd10]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506712,8506768,8508264,8508288,8508312,8508336,8508360,8508384,8508408,8508448,8508480,8508512,8508544	52,1471,18,18,15,18,18,18,30,30,30,30,309	0	4160	0	0	0	0	0	0	0	0
+       712	        73	   8507187	    0	      1	                           func@0x81cd10	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506640	2496	0	4158	0	0	0	0	0	0	0	0
+       713	        97	   5087497	    0	      1	                     tpss_read_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5086496	2815	0	4339	0	0	0	0	0	0	0	0
+       714	        97	   5087535	    0	      1	                     tpss_read_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5086496	2815	0	4339	0	0	0	0	0	0	0	0
+       715	       108	   5087497	    0	      1	                     tpss_read_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5086496	2815	0	4339	0	0	0	0	0	0	0	0
+       716	       108	   5087535	    0	      1	                     tpss_read_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5086496	2815	0	4339	0	0	0	0	0	0	0	0
+       717	       179	   5598020	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       718	       179	   5598057	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       719	        39	   8546704	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       720	       719	   8548250	    1	      1	        [Loop@0x826990 in func@0x825e60]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8546704,8547352,8548016,8548496,8548544,8548560,8548640,8548664,8548800,8548816,8548888,8549016,8551854	114,35,479,40,13,71,18,126,13,65,125,13,44	0	4460	0	0	0	0	0	0	0	0
+       721	        39	   8548360	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       722	        68	   8857078	    0	      1	  LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856624	2945	0	4101	0	0	0	0	0	0	0	0
+       723	       278	   8852992	    0	      1	std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8852896	561	0	4472	0	0	0	0	0	0	0	0
+       724	       723	   8853011	    1	      1	[Loop@0x871600 in std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8852992,8853288,8853368,8853400,8853424	264,75,22,8,33	0	4477	0	0	0	0	0	0	0	0
+       725	       724	   8853038	    1	      1	[Loop@0x871613 in std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8853011,8853288,8853368,8853400,8853424	245,75,22,8,33	0	4474	0	0	0	0	0	0	0	0
+       726	       278	   8853053	    0	      1	std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8852896	561	0	4472	0	0	0	0	0	0	0	0
+       727	        73	   8507454	    0	      1	                           func@0x81cd10	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506640	2496	0	4158	0	0	0	0	0	0	0	0
+       728	       286	   8861712	    0	      1	                           func@0x873650	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8861264	7229	0	4614	0	0	0	0	0	0	0	0
+       729	       286	   8863909	    0	      1	                           func@0x873650	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8861264	7229	0	4614	0	0	0	0	0	0	0	0
+       730	       302	   8770592	    0	      1	                           func@0x85c220	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8765984	10528	0	3864	0	0	0	0	0	0	0	0
+       731	       302	   8770630	    0	      1	                           func@0x85c220	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8765984	10528	0	3864	0	0	0	0	0	0	0	0
+       732	       304	   8546704	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       733	       732	   8548250	    1	      1	        [Loop@0x826990 in func@0x825e60]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8546704,8547352,8548016,8548496,8548544,8548560,8548640,8548664,8548800,8548816,8548888,8549016,8551854	114,35,479,40,13,71,18,126,13,65,125,13,44	0	4460	0	0	0	0	0	0	0	0
+       734	       304	   8548394	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       735	       333	   5598020	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       736	       333	   5598057	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       737	       373	   9122640	    0	      1	      LEVEL_CORE::IMG_SortRegsymsByIaddr	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9122528	810	0	4714	0	0	0	0	0	0	0	0
+       738	       373	   9122973	    0	      1	      LEVEL_CORE::IMG_SortRegsymsByIaddr	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	9122528	810	0	4714	0	0	0	0	0	0	0	0
+       739	        73	   8507761	    0	      1	                           func@0x81cd10	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506640	2496	0	4158	0	0	0	0	0	0	0	0
+       740	       391	   3719651	    0	      1	                   tpss_usleep_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	3718608	2921	0	4730	0	0	0	0	0	0	0	0
+       741	       391	   3719689	    0	      1	                   tpss_usleep_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	3718608	2921	0	4730	0	0	0	0	0	0	0	0
+       742	       395	   8856928	    0	      1	  LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856624	2945	0	4101	0	0	0	0	0	0	0	0
+       743	       395	   8857078	    0	      1	  LEVEL_PINCLIENT::CookSymSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8856624	2945	0	4101	0	0	0	0	0	0	0	0
+       744	       397	   8852992	    0	      1	std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8852896	561	0	4472	0	0	0	0	0	0	0	0
+       745	       744	   8853011	    1	      1	[Loop@0x871600 in std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8852992,8853288,8853368,8853400,8853424	264,75,22,8,33	0	4477	0	0	0	0	0	0	0	0
+       746	       745	   8853038	    1	      1	[Loop@0x871613 in std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8853011,8853288,8853368,8853400,8853424	245,75,22,8,33	0	4474	0	0	0	0	0	0	0	0
+       747	       746	   8853105	    1	      1	[Loop@0x87162e in std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8853038,8853288,8853368,8853400,8853424	218,75,22,8,33	0	4470	0	0	0	0	0	0	0	0
+       748	       397	   8853309	    0	      1	std::__1::__tree<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>, std::__1::allocator<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>>::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>, unsigned long>>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8852896	561	0	4472	0	0	0	0	0	0	0	0
+       749	        39	   8548394	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       750	        66	   8546704	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       751	       750	   8548250	    1	      1	        [Loop@0x826990 in func@0x825e60]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8546704,8547352,8548016,8548496,8548544,8548560,8548640,8548664,8548800,8548816,8548888,8549016,8551854	114,35,479,40,13,71,18,126,13,65,125,13,44	0	4460	0	0	0	0	0	0	0	0
+       752	        66	   8548394	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       753	        73	   8507319	    0	      1	                           func@0x81cd10	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506640	2496	0	4158	0	0	0	0	0	0	0	0
+       754	        66	   8548360	    0	      1	                           func@0x825e60	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8543840	10384	0	3952	0	0	0	0	0	0	0	0
+       755	       438	   8924290	    0	      1	           LEVEL_BASE::ARRAYBASE::Memset	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8924176	273	0	4145	0	0	0	0	0	0	0	0
+       756	       438	   8924334	    0	      1	           LEVEL_BASE::ARRAYBASE::Memset	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8924176	273	0	4145	0	0	0	0	0	0	0	0
+       757	       441	   8852248	    0	      1	LEVEL_PINCLIENT::CookSymPltSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8851952	932	0	4757	0	0	0	0	0	0	0	0
+       758	       441	   8852483	    0	      1	LEVEL_PINCLIENT::CookSymPltSec<Elf64_Sym>	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8851952	932	0	4757	0	0	0	0	0	0	0	0
+       759	       452	   8770592	    0	      1	                           func@0x85c220	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8765984	10528	0	3864	0	0	0	0	0	0	0	0
+       760	       452	   8770630	    0	      1	                           func@0x85c220	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8765984	10528	0	3864	0	0	0	0	0	0	0	0
+       761	       455	   8506712	    0	      1	                           func@0x81cd10	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506640	2496	0	4158	0	0	0	0	0	0	0	0
+       762	       761	   8506768	    1	      1	        [Loop@0x81cd58 in func@0x81cd10]	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506712,8506768,8508264,8508288,8508312,8508336,8508360,8508384,8508408,8508448,8508480,8508512,8508544	52,1471,18,18,15,18,18,18,30,30,30,30,309	0	4160	0	0	0	0	0	0	0	0
+       763	       455	   8506896	    0	      1	                           func@0x81cd10	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	8506640	2496	0	4158	0	0	0	0	0	0	0	0
+       764	       485	   5598020	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       765	       485	   5598057	    0	      1	               tpss_epoll_wait_mod1_ver0	/opt/intel/oneapi/advisor/2023.2.0/lib64/libtpsstool.so	5596896	3056	0	4361	0	0	0	0	0	0	0	0
+       766	       105	     90240	    0	      0	              vrb_init_info.constprop.10	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so	90064	6164	0	126	0	0	0	0	0	0	0	0
+       767	       105	     90258	    0	      0	              vrb_init_info.constprop.10	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so	90064	6164	0	126	0	0	0	0	0	0	0	0
+       768	       105	     90287	    0	      0	              vrb_init_info.constprop.10	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/prov/libverbs-1.12-fi.so	90064	6164	0	126	0	0	0	0	0	0	0	0
+       769	        92	     82200	    0	      1	                            func@0x140b0	/lib/x86_64-linux-gnu/libucs.so.0	82096	400	0	44	0	0	0	0	0	0	0	0
+       770	        92	     82215	    0	      1	                            func@0x140b0	/lib/x86_64-linux-gnu/libucs.so.0	82096	400	0	44	0	0	0	0	0	0	0	0
+       771	        51	     39752	    0	      0	                        ofi_load_dl_prov	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	39456	1073	0	87	0	0	0	0	0	0	0	0
+       772	       771	     39824	    1	      0	       [Loop@0x9b48 in ofi_load_dl_prov]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	39752,39824,40008,40192	66,180,114,161	40122	89	0	0	0	0	0	0	0	0
+       773	        51	     39895	    0	      0	                        ofi_load_dl_prov	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	39456	1073	0	87	0	0	0	0	0	0	0	0
+       774	        49	     42440	    0	      0	                              fi_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42112	2880	0	9	0	0	0	0	0	0	0	0
+       775	       774	     42808	    1	      0	             [Loop@0xa5c8 in fi_getinfo]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42440,42568,42904,43224,43272,43432,43584,43640,43728,43824,43952,43968,44532	14,331,316,41,155,143,52,83,92,117,8,81,73	42454,42478,43941	102	0	0	0	0	0	0	0	0
+       776	        49	     43317	    0	      0	                              fi_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42112	2880	0	9	0	0	0	0	0	0	0	0
+       777	       103	     42440	    0	      0	                              fi_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42112	2880	0	9	0	0	0	0	0	0	0	0
+       778	       777	     42808	    1	      0	             [Loop@0xa5c8 in fi_getinfo]	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42440,42568,42904,43224,43272,43432,43584,43640,43728,43824,43952,43968,44532	14,331,316,41,155,143,52,83,92,117,8,81,73	42454,42478,43941	102	0	0	0	0	0	0	0	0
+       779	       103	     43317	    0	      0	                              fi_getinfo	/opt/intel/oneapi/mpi/2021.10.0//libfabric/lib/libfabric.so.1	42112	2880	0	9	0	0	0	0	0	0	0	0
+       780	        22	   6000604	    0	      1	                        PMPI_Init_thread	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	6000528	1152	0	2829	0	0	0	0	0	0	0	0
+       781	        22	   6000964	    0	      1	                        PMPI_Init_thread	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	6000528	1152	0	2829	0	0	0	0	0	0	0	0
+       782	        24	   7610628	    0	      1	                 MPIDI_OFI_mpi_init_hook	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7607376	12880	0	3193	0	0	0	0	0	0	0	0
+       783	       782	   7610697	    0	      1	                            ofi_lib_load	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7610628,7616685,7619074,7619656	491,12,522,205	0	3195	0	1	0	0	0	0	0	0
+       784	        24	   7610714	    0	      1	                 MPIDI_OFI_mpi_init_hook	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7607376	12880	0	3193	0	0	0	0	0	0	0	0
+       785	        24	   7614559	    0	      1	                 MPIDI_OFI_mpi_init_hook	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7607376	12880	0	3193	0	0	0	0	0	0	0	0
+       786	       785	   7614703	    1	      1	[Loop at line 1765 in MPIDI_OFI_mpi_init_hook]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7614559,7616935,7617270	368,28,82	0	3427	0	0	0	0	0	0	0	0
+       787	       786	   7614781	    1	      1	[Loop at line 1777 in MPIDI_OFI_mpi_init_hook]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7614703,7616935,7617270	162,28,82	0	3424	0	0	0	0	0	0	0	0
+       788	       786	   7614795	    1	      1	[Loop at line 1777 in MPIDI_OFI_mpi_init_hook]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7614703,7616935,7617270	162,28,82	0	3424	0	0	0	0	0	0	0	0
+       789	        24	   7614795	    0	      1	                 MPIDI_OFI_mpi_init_hook	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7607376	12880	0	3193	0	0	0	0	0	0	0	0
+       790	       166	   1575448	    0	      1	                            PMPI_Gatherv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	1575424	4816	0	3888	0	0	0	0	0	0	0	0
+       791	       166	   1578328	    0	      1	                            PMPI_Gatherv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	1575424	4816	0	3888	0	0	0	0	0	0	0	0
+       792	       167	   3575771	    0	      1	                            MPIR_Gatherv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3573952	2704	0	3958	0	0	0	0	0	0	0	0
+       793	       167	   3575844	    0	      1	                            MPIR_Gatherv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3573952	2704	0	3958	0	0	0	0	0	0	0	0
+       794	       169	   2304550	    0	      1	                       MPIDI_coll_invoke	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2249472	159520	0	4344	0	0	0	0	0	0	0	0
+       795	       794	   2385686	    0	      1	                     MPID_Gatherv_invoke	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2304550,2304610,2384519,2408965	2,2496,3026,9	0	4352	0	1	0	0	0	0	0	0
+       796	       795	   2385697	    0	      1	   MPIDI_Gatherv_intra_composition_alpha	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2385686	1859	0	4350	0	1	0	0	0	0	0	0
+       797	       169	   2387127	    0	      1	                       MPIDI_coll_invoke	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2249472	159520	0	4344	0	0	0	0	0	0	0	0
+       798	       172	   8887872	    0	      1	                            MPIR_Waitall	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8887680	7392	0	4956	0	0	0	0	0	0	0	0
+       799	       798	   8888554	    1	      1	      [Loop at line 111 in MPIR_Waitall]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8887872,8891342,8891669	3402,252,216	0	4959	0	0	0	0	0	0	0	0
+       800	       799	   8888554	    0	      1	                            MPID_Waitall	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8888554,8888561,8888739,8891350,8894258	2,159,99,74,82	0	4958	0	1	0	0	0	0	0	0
+       801	       800	   8888616	    0	      1	                       MPIR_Waitall_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8888554,8888561,8888739,8891350,8894258	2,159,99,74,82	0	4955	0	1	0	0	0	0	0	0
+       802	       801	   8888636	    1	      1	  [Loop at line 41 in MPIR_Waitall_impl]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8888616	73	0	4957	0	0	0	0	0	0	0	0
+       803	       800	   8888648	    0	      1	                       MPIR_Waitall_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8888554,8888561,8888739,8891350,8894258	2,159,99,74,82	0	4955	0	1	0	0	0	0	0	0
+       804	       172	   8888648	    0	      1	                            MPIR_Waitall	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8887680	7392	0	4956	0	0	0	0	0	0	0	0
+       805	       173	   3102344	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       806	       805	   3102297	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       807	       806	   3102297	    0	      1	                 MPID_Progress_test_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102672,3102850	337,99,398	0	5056	0	1	0	0	0	0	0	0
+       808	       805	   3102484	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       809	       173	   3102484	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       810	       174	   7671341	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       811	       174	   7671359	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       812	       805	   3102899	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       813	       173	   3102899	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       814	       191	   9550626	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       815	       814	   9550626	    1	      1	 [Loop at line 277 in impi_shm_progress]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	194	0	5581	0	0	0	0	0	0	0	0
+       816	       814	   9550628	    1	      1	 [Loop at line 277 in impi_shm_progress]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	194	0	5581	0	0	0	0	0	0	0	0
+       817	       191	   9550628	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       818	       805	   3102984	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       819	       173	   3102984	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       820	       194	   7326773	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       821	       194	   7326829	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       822	       191	   9550854	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       823	       191	   9550866	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       824	       194	   7326834	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       825	       822	   9550854	    0	      1	                           idle_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550854	307	0	5606	0	1	0	0	0	0	0	0
+       826	       191	   9550881	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       827	       807	   3102297	    0	      1	                     MPIDI_Progress_test	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102359,3102370,3102672,3102850	19,7,264,99,398	0	5050	0	1	0	0	0	0	0	0
+       828	       805	   3102390	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       829	       173	   3102390	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       830	       323	   4733885	    0	      1	                               MPIC_Recv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4730224	16528	0	5851	0	0	0	0	0	0	0	0
+       831	       830	   4733898	    0	      1	                               MPIC_Wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4733885,4739316	63,186	0	5855	0	1	0	0	0	0	0	0
+       832	       323	   4733910	    0	      1	                               MPIC_Recv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4730224	16528	0	5851	0	0	0	0	0	0	0	0
+       833	       324	   8914533	    0	      1	                          MPIR_Wait_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8914496	176	0	6592	0	0	0	0	0	0	0	0
+       834	       324	   8914544	    0	      1	                          MPIR_Wait_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8914496	176	0	6592	0	0	0	0	0	0	0	0
+       835	       325	   3102344	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       836	       835	   3102297	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       837	       836	   3102297	    0	      1	                 MPID_Progress_test_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102672,3102850	337,99,398	0	5056	0	1	0	0	0	0	0	0
+       838	       835	   3102484	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       839	       325	   3102484	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       840	       326	   7671341	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       841	       326	   7671359	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       842	       835	   3102984	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       843	       325	   3102984	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       844	       835	   3102899	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       845	       325	   3102899	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       846	       340	   9550626	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       847	       846	   9550626	    1	      1	 [Loop at line 277 in impi_shm_progress]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	194	0	5581	0	0	0	0	0	0	0	0
+       848	       846	   9550628	    1	      1	 [Loop at line 277 in impi_shm_progress]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	194	0	5581	0	0	0	0	0	0	0	0
+       849	       340	   9550628	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       850	        23	   3092421	    0	      1	                               MPID_Init	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3087616	7872	0	2977	0	0	0	0	0	0	0	0
+       851	        23	   3092729	    0	      1	                               MPID_Init	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3087616	7872	0	2977	0	0	0	0	0	0	0	0
+       852	       468	   3751212	    0	      1	                     MPIU_Selection_init	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3750272	7248	0	6908	0	0	0	0	0	0	0	0
+       853	       468	   3751241	    0	      1	                     MPIU_Selection_init	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3750272	7248	0	6908	0	0	0	0	0	0	0	0
+       854	       469	   5228886	    0	      1	                             impi_malloc	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5228784	1600	0	6988	0	0	0	0	0	0	0	0
+       855	       469	   5229892	    0	      1	                             impi_malloc	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5228784	1600	0	6988	0	0	0	0	0	0	0	0
+       856	       471	   5284866	    0	      1	                         get_128_sectors	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5284704	336	0	7045	0	0	0	0	0	0	0	0
+       857	       471	   5284927	    0	      1	                         get_128_sectors	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	5284704	336	0	7045	0	0	0	0	0	0	0	0
+       858	       168	   2171389	    0	      1	                       MPIDI_coll_select	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2171280	3776	0	4058	0	0	0	0	0	0	0	0
+       859	       168	   2171653	    0	      1	                       MPIDI_coll_select	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	2171280	3776	0	4058	0	0	0	0	0	0	0	0
+       860	       477	   4733885	    0	      1	                               MPIC_Recv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4730224	16528	0	5851	0	0	0	0	0	0	0	0
+       861	       860	   4733898	    0	      1	                               MPIC_Wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4733885,4739316	63,186	0	5855	0	1	0	0	0	0	0	0
+       862	       477	   4733910	    0	      1	                               MPIC_Recv	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	4730224	16528	0	5851	0	0	0	0	0	0	0	0
+       863	       478	   8914533	    0	      1	                          MPIR_Wait_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8914496	176	0	6592	0	0	0	0	0	0	0	0
+       864	       478	   8914544	    0	      1	                          MPIR_Wait_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	8914496	176	0	6592	0	0	0	0	0	0	0	0
+       865	       479	   3102344	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       866	       865	   3102297	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       867	       866	   3102297	    0	      1	                 MPID_Progress_test_impl	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102297,3102672,3102850	337,99,398	0	5056	0	1	0	0	0	0	0	0
+       868	       865	   3102484	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       869	       479	   3102484	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       870	       480	   7671341	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       871	       480	   7671359	    0	      1	                      MPIDI_OFI_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7671120	496	0	5081	0	0	0	0	0	0	0	0
+       872	       865	   3102984	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       873	       479	   3102984	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       874	       496	   7326773	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       875	       496	   7326829	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       876	       865	   3102899	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       877	       479	   3102899	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       878	       865	   3102470	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       879	       479	   3102470	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       880	       507	   9550626	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       881	       880	   9550626	    1	      1	 [Loop at line 277 in impi_shm_progress]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	194	0	5581	0	0	0	0	0	0	0	0
+       882	       880	   9550628	    1	      1	 [Loop at line 277 in impi_shm_progress]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550626	194	0	5581	0	0	0	0	0	0	0	0
+       883	       507	   9550628	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       884	       507	   9550854	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       885	       884	   9550854	    0	      1	                           idle_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550854	307	0	5606	0	1	0	0	0	0	0	0
+       886	       507	   9550872	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       887	       865	   3102893	    1	      1	[Loop at line 177 in MPID_Progress_wait]	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102344,3102672	303,572	0	5053	0	0	0	0	0	0	0	0
+       888	       479	   3102893	    0	      1	                      MPID_Progress_wait	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	3102240	1008	0	5055	0	0	0	0	0	0	0	0
+       889	       507	   9550866	    0	      1	                       impi_shm_progress	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	9550560	672	0	5584	0	0	0	0	0	0	0	0
+       890	       496	   7326834	    0	      1	          MPIR_Progress_hook_exec_on_vci	/opt/intel/oneapi/mpi/2021.10.0//lib/release/libmpi.so.12	7326688	368	0	5599	0	0	0	0	0	0	0	0
+       891	       119	    896745	    0	      1	                 __kmp_middle_initialize	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	896704	576	0	160	0	0	0	0	0	0	0	0
+       892	       119	    896764	    0	      1	                 __kmp_middle_initialize	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	896704	576	0	160	0	0	0	0	0	0	0	0
+       893	       120	    800833	    0	      1	               __kmp_acquire_ticket_lock	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	800832	576	0	180	0	0	0	0	0	0	0	0
+       894	       120	    800894	    0	      1	               __kmp_acquire_ticket_lock	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	800832	576	0	180	0	0	0	0	0	0	0	0
+       895	       129	    874453	    0	      1	                     __kmp_allocate_team	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	870144	5888	0	382	0	0	0	0	0	0	0	0
+       896	       129	    874466	    0	      1	                     __kmp_allocate_team	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	870144	5888	0	382	0	0	0	0	0	0	0	0
+       897	       131	   1460221	    0	      1	                     __kmp_create_worker	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	1460032	2624	0	411	0	0	0	0	0	0	0	0
+       898	       897	   1460247	    1	      1	[Loop at line 775 in __kmp_create_worker]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	1460221,1461642	1405,914	0	413	0	0	0	0	0	0	0	0
+       899	       898	   1460281	    1	      1	[Loop at line 775 in __kmp_create_worker]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	1460247,1461642	1379,914	0	412	0	0	0	0	0	0	0	0
+       900	       131	   1461383	    0	      1	                     __kmp_create_worker	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	1460032	2624	0	411	0	0	0	0	0	0	0	0
+       901	       128	    860257	    0	      1	                         __kmp_fork_call	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	858240	11904	0	273	0	0	0	0	0	0	0	0
+       902	       901	    862035	    1	      1	  [Loop at line 2455 in __kmp_fork_call]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	860257,862123,864324	1846,86,1740	0	427	0	0	0	0	0	0	0	0
+       903	       901	    862036	    1	      1	  [Loop at line 2455 in __kmp_fork_call]	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	860257,862123,864324	1846,86,1740	0	427	0	0	0	0	0	0	0	0
+       904	       128	    862036	    0	      1	                         __kmp_fork_call	/opt/intel/oneapi/compiler/2023.2.1/linux/compiler/lib/intel64_lin/libiomp5.so	858240	11904	0	273	0	0	0	0	0	0	0	0
+       905	       310	    577687	    0	      1	                            func@0x8cf80	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	577408	912	0	84	0	0	0	0	0	0	0	0
+       906	       310	    578034	    0	      1	                            func@0x8cf80	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	577408	912	0	84	0	0	0	0	0	0	0	0
+       907	       312	    573496	    0	      1	                            func@0x8c010	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	573456	224	0	98	0	0	0	0	0	0	0	0
+       908	       312	    573518	    0	      1	                            func@0x8c010	/opt/intel/oneapi/advisor/2023.2.0/lib64/runtime/libittnotify_collector.so	573456	224	0	98	0	0	0	0	0	0	0	0
+       909	        45	   3447496	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       910	        45	   3447913	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       911	       385	   3447496	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       912	       385	   3447928	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       913	       425	   3447496	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       914	       425	   3447927	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       915	       432	   3447496	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       916	       432	   3447538	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       917	       446	   3447496	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       918	       446	   3447538	    0	      1	ATOMIC::LIFO_PTR<LEVEL_BASE::SWMALLOC::FREE_LIST_ELEMENT, (unsigned int)3, LEVEL_BASE::ATOMIC_STATS>::PopInternal	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	3447136	1982	0	154	0	0	0	0	0	0	0	0
+       919	       461	   2360923	    0	      1	    LEVEL_VM::MmapCheckedWithMemoryLimit	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	2359536	2471	0	191	0	0	0	0	0	0	0	0
+       920	       461	   2360966	    0	      1	    LEVEL_VM::MmapCheckedWithMemoryLimit	/opt/intel/oneapi/advisor/2023.2.0/bin64/pinbin	2359536	2471	0	191	0	0	0	0	0	0	0	0
+       921	        -1	         0	    0	      0	                      [Outside any loop]	n/a	0	0	0	13757	0	0	0	0	0	0	0	0

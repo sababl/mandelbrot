@@ -1,0 +1,10 @@
+
+=== Start: [2025/07/02 16:58:49] === 
+Peak bandwidth measurement started...
+Peak bandwidth measurement finished.
+Analysis started...
+Result file: /home/stud/S5843444/mandelbrot/advisor_results/mpi_analysis/mpi_pure_p4/e000/trc000/trc000.advixe 
+Application exit code: 0 
+Result file: /home/stud/S5843444/mandelbrot/advisor_results/mpi_analysis/mpi_pure_p4/e000/trc000/trc000.advixe 
+Analysis completed
+=== End: [2025/07/02 16:59:24] === 

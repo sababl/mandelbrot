@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- <!DOCTYPE IntelParallelAdvisorSummaryCollection SYSTEM  "IntelParallelAdvisorSummaryCollection.dtd"> -->
+
+<IntelParallelAdvisorSummary version="" 
+                             kind="DATAKIND_SURVEY_EX" >
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="main"
+           is_vectorized="1"
+           self_time="1.496043E+00"
+           total_time="1.326584E+01"
+           trip_counts=""
+           func_instance="110"
+           priority="0"/>
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="main"
+           is_vectorized="0"
+           self_time="3.599968E-02"
+           total_time="1.330184E+01"
+           trip_counts=""
+           func_instance="111"
+           priority="0"/>
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="std::vector&lt;int, std::allocator&lt;int&gt;&gt;::_M_default_append"
+           is_vectorized="1"
+           self_time="1.204679E-02"
+           total_time="1.204679E-02"
+           trip_counts=""
+           func_instance="127"
+           priority="0"/>
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="ofi_load_dl_prov"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="2.039101E-01"
+           trip_counts=""
+           func_instance="86"
+           priority="0"/>
+  <hotspot filename=""
+           line_no="4294967295"
+           routine="ofi_load_dl_prov"
+           is_vectorized="0"
+           self_time="0.000000E+00"
+           total_time="2.039101E-01"
+           trip_counts=""
+           func_instance="89"
+           priority="0"/>
+</IntelParallelAdvisorSummary >
